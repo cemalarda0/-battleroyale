@@ -86,6 +86,17 @@ eventChatCommand = function(name, cmd)
                 players[name].playing = true
             end
             tfm.exec.newGame(maps[2])
+        elseif cmd == "b" then
+            tfm.exec.newGame(maps[1])
+            for name in next, players do
+                for name in next, players do
+                    players[name] = {
+                        playing = false,
+                        cooldown = 1,
+                        lastObj
+                    }
+                end
+            end
         end
     end
 end
