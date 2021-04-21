@@ -179,6 +179,9 @@ eventKeyboard = function(name, key, down, x, y)
             if players[name].secondObj then
                 tfm.exec.removeObject(players[name].secondObj)
             end
+            if players[name].thirdObj then
+                tfm.exec.removeObject(players[name].thirdObj)
+            end
             if players[name][3] == 0 or players[name][3] == 2 then
                 if players[name].obj.count == 1 then
                     players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id,
@@ -193,6 +196,19 @@ eventKeyboard = function(name, key, down, x, y)
                                                   players[name][3] == 0 and x - players[name].obj.offset or x +
                                                       players[name].obj.offset, y - 15,
                                                   players[name][3] == 0 and -90 or 90)
+                elseif players[name].obj.count == 3 then
+                    players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id,
+                                                players[name][3] == 0 and x - players[name].obj.offset or x +
+                                                    players[name].obj.offset, y + 30,
+                                                players[name][3] == 0 and -90 or 90)
+                    players[name].secondObj = tfm.exec.addShamanObject(players[name].obj.id,
+                                                  players[name][3] == 0 and x - players[name].obj.offset or x +
+                                                      players[name].obj.offset, y,
+                                                  players[name][3] == 0 and -90 or 90)
+                    players[name].thirdObj = tfm.exec.addShamanObject(players[name].obj.id,
+                                                  players[name][3] == 0 and x - players[name].obj.offset or x +
+                                                      players[name].obj.offset, y - 30,
+                                                  players[name][3] == 0 and -90 or 90)
 
                 end
             else
@@ -205,6 +221,16 @@ eventKeyboard = function(name, key, down, x, y)
                                                 y - players[name].obj.offset or y + players[name].obj.offset,
                                                 players[name][3] == 1 and 0 or 180)
                     players[name].secondObj = tfm.exec.addShamanObject(players[name].obj.id, x - 15, players[name][3] == 1 and
+                                                y - players[name].obj.offset or y + players[name].obj.offset,
+                                                players[name][3] == 1 and 0 or 180)
+                elseif players[name].obj.count == 3 then
+                    players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x + 30, players[name][3] == 1 and
+                                                y - players[name].obj.offset or y + players[name].obj.offset,
+                                                players[name][3] == 1 and 0 or 180)
+                    players[name].secondObj = tfm.exec.addShamanObject(players[name].obj.id, x, players[name][3] == 1 and
+                                                y - players[name].obj.offset or y + players[name].obj.offset,
+                                                players[name][3] == 1 and 0 or 180)
+                    players[name].thirdObj = tfm.exec.addShamanObject(players[name].obj.id, x-30, players[name][3] == 1 and
                                                 y - players[name].obj.offset or y + players[name].obj.offset,
                                                 players[name][3] == 1 and 0 or 180)
                 end
@@ -234,7 +260,7 @@ end
 eventPlayerBonusGrabbed = function(name, id)
     tfm.exec.removeImage(bonus[id].img)
     tfm.exec.removeBonus(id, nil)
-    local event = math.random(1, 4)
+    local event = math.random(1, 5)
     if event == 1 then
         if players[name].speed < 95 then
             players[name].speed = players[name].speed + 5
@@ -250,6 +276,8 @@ eventPlayerBonusGrabbed = function(name, id)
         tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x, bonus[id].y + 30, 180)
     elseif event == 4 then
         players[name].obj.count = 2
+    elseif event == 5 then
+        players[name].obj.count = 3
     end
 end
 
