@@ -324,7 +324,8 @@ addBonusImg = function(event, name)
     if players[name].event.img then
         tfm.exec.removeImage(players[name].event.img)
     end
-    ui.addTextArea(textAreaIds.gift.backGround, "", name, 740, 340, 50, 50, 0xFFDDAA, 0x000000, 1, true)
+    local borderColor = event == 1 and 0x00AABB or event == 2 and 0xFF0000 or event == 3 and 0xE08800 or 0x000000
+    ui.addTextArea(textAreaIds.gift.backGround, "", name, 740, 340, 50, 50, 0xFFDDAA, borderColor, 1, true)
     if event == 1 or event == 2 then
         local color = event == 1 and '#00AABB' or '#FF0000' 
         players[name].event.img = tfm.exec.addImage("16fe31c49aa.png", "&100", 765, 365, name, 1, 1, math.rad(event == 1 and 0 or 180), 1,
