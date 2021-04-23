@@ -144,6 +144,10 @@ eventPlayerDied = function(name)
                 end
             end
             gameStarted = false
+        else
+            for name in next, players do
+                updatePlaying(name)
+            end
         end
     end
 end
