@@ -113,7 +113,6 @@ eventNewGame = function()
                 local i = math.random(#spawnPoints)
                 tfm.exec.movePlayer(name, spawnPoints[i].x, spawnPoints[i].y, false, 0, 0, false)
             end
-            tfm.exec.changePlayerSize(name, 1)
         end
     else
         tfm.exec.disableAfkDeath()
@@ -152,6 +151,7 @@ eventNewGame = function()
                 },
                 imgs = {aliveMice}
             }
+            tfm.exec.changePlayerSize(name, 1)
         end
         if newPlayer then
             for name in next, players do
@@ -393,6 +393,7 @@ eventPlayerBonusGrabbed = function(name, id)
             players[name].event.playerSize = players[name].event.playerSize - 0.1
             event = 8
         end
+        tfm.exec.addShamanObject(0, bonus[id].x, bonus[id].y, event == 8 and 0 or 180, 0, 0, false)
         tfm.exec.changePlayerSize(name, players[name].event.playerSize)
     elseif event == 8 then
         if players[name].event.playerSize > 0 then
@@ -401,6 +402,7 @@ eventPlayerBonusGrabbed = function(name, id)
             tfm.exec.changePlayerSize(name, players[name].event.playerSize + 0.1)
             event = 7
         end
+        tfm.exec.addShamanObject(0, bonus[id].x, bonus[id].y, event == 8 and 0 or 180, 0, 0, false)
         tfm.exec.changePlayerSize(name, players[name].event.playerSize)
     end
     addBonusImg(event, name)
