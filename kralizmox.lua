@@ -333,6 +333,7 @@ eventKeyboard = function(name, key, down, x, y)
             players[name].event.barrierPutted = true
             tfm.exec.removeImage(players[name].event.img)
             ui.removeTextArea(textAreaIds.gift.backGround, name)
+            ui.removeTextArea(textAreaIds.gift.onImg, name)
         end
     end
 end
@@ -357,14 +358,20 @@ end
 eventPlayerBonusGrabbed = function(name, id)
     tfm.exec.removeImage(bonus[id].img)
     tfm.exec.removeBonus(id, nil)
-    local event = 7 -- math.random(1, 7)
+    local event = math.random(1, 8)
     if event == 1 then
         if players[name].speed < 90 then
             players[name].speed = players[name].speed + 10
+        else
+            players[name].speed = players[name].speed - 10
+            event = 2
         end
     elseif event == 2 then
         if players[name].speed > 10 then
             players[name].speed = players[name].speed - 10
+        else
+            players[name].speed = players[name].speed + 10
+            event = 1
         end
     elseif event == 3 then
         tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x, bonus[id].y - 30, 0)
@@ -425,6 +432,7 @@ addBonusImg = function(event, name)
     if players[name].event.img then
         tfm.exec.removeImage(players[name].event.img)
     end
+    ui.removeTextArea(textAreaIds.gift.onImg, name)
     local borderColor = event == 1 and 0x00AABB or event == 2 and 0xFF0000 or event == 3 and 0xE08800 or event == 6 and
                             0xE08800 or event == 7 and 0x00AABB or event == 8 and 0xFF0000 or 0x000000
     ui.addTextArea(textAreaIds.gift.backGround, "", name, 740, 340, 50, 50, 0xFFDDAA, borderColor, 1, true)
