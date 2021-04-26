@@ -7,7 +7,7 @@ local mapPlaying, maps = 0,
      '<C><P reload="true" L="3000" G="0,0" bh="" H="3000" MEDATA="0,1;;;;-0;0::0,1,2,3,4,5,6,7:1-" segments="nogravmove" /><Z><S><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="26af2f" X="1500" c="4" Y="1500" T="12" H="3000" /><S P="0,0,0.3,0.2,90,0,0,0" L="3000" o="2b9732" X="1500" c="3" Y="-1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="-1500" c="3" Y="1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="4500" c="3" Y="1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="1500" c="3" Y="4500" T="12" H="3000" /><S P="1,999999,0.3,0,0,0,0,0" L="3000" X="1500" c="3" Y="3220" T="19" m="" H="40" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="-1500" Y="4500" T="12" H="3000" /><S P="1,999999,0.3,0,0,0,0,0" L="3000" X="1500" c="3" Y="-220" T="19" m="" H="40" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="4500" Y="4500" T="12" H="3000" /><S P="1,999999,0.3,0,0,0,0,0" L="40" X="-220" c="3" Y="1500" T="19" m="" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="4500" Y="-1500" T="12" H="3000" /><S P="1,999999,0.3,0,0,0,0,0" L="40" X="3220" c="3" Y="1500" T="19" m="" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="-1500" Y="-1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1dc525" H="10" Y="672" T="13" X="492" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1dc525" H="10" Y="1070" T="13" X="2518" /><S P="0,0,0.3,0.2,0,0,0,0" L="500" o="f5ff4a" X="2450" c="4" Y="1830" T="12" H="500" /><S P="0,0,0.3,0.2,90,0,0,0" L="52" o="ff8f00" X="2453" Y="2054" T="12" H="500" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="2207" c="3" Y="1818" T="19" H="420" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="2663" c="3" Y="1818" T="19" H="420" /><S P="0,0,0.3,0.2,0,0,0,0" L="52" o="ff8f00" X="2192" Y="1830" T="12" H="500" /><S P="0,0,0.3,0.2,0,0,0,0" L="52" o="ff8f00" X="2678" Y="1830" T="12" H="500" /><S P="0,0,0.3,0.2,0,0,0,0" L="1000" o="f5ff4a" X="1508" c="4" Y="653" T="12" H="500" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="1495" c="3" Y="665" T="19" H="420" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="1525" c="3" Y="665" T="19" H="420" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="1969" c="3" Y="665" T="19" H="420" /><S P="0,0,0.3,0.2,0,0,0,0" L="52" o="ff8f00" X="1510" Y="653" T="12" H="500" /><S P="0,0,0.3,0.2,90,0,0,0" L="52" o="ff8f00" X="1510" Y="429" T="12" H="1000" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="1048" c="3" Y="665" T="19" H="420" /><S P="0,0,0.3,0.2,0,0,0,0" L="52" o="ff8f00" X="1984" Y="653" T="12" H="500" /><S P="0,0,0.3,0.2,0,0,0,0" L="52" o="ff8f00" X="1033" Y="653" T="12" H="500" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="2540" T="13" X="515" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="2540" T="13" X="980" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="2095" T="13" X="515" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="2095" T="13" X="980" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="1650" T="13" X="515" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="1650" T="13" X="980" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="2095" T="13" X="1450" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="1650" T="13" X="1450" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1dc525" H="10" Y="2540" T="13" X="1450" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="d0d0d0" X="2733" Y="2570" T="12" H="500" /><S P="0,0,0.3,0.2,90,0,0,0" L="100" o="d0d0d0" X="2274" Y="2772" T="12" H="500" /><S P="0,0,0.3,0.2,90,0,0,0" L="100" o="d0d0d0" X="2274" Y="2372" T="12" H="500" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="d0d0d0" X="1813" Y="2570" T="12" H="500" /><S P="0,0,0.3,0.2,0,0,0,0" L="250" o="0046ff" X="349" c="4" Y="1241" T="13" H="10" /><S P="0,0,0.3,0.2,0,0,0,0" L="250" o="0046ff" X="1852" c="4" Y="1343" T="13" H="10" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="4500" c="3" Y="4500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="-1500" c="3" Y="4500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="4500" c="3" Y="-1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="-1500" c="3" Y="-1500" T="12" H="3000" /><S P="0,0,0.3,0,0,0,0,0" L="120" X="750" c="3" Y="2320" T="19" H="120" /><S P="0,0,0.3,0,0,0,0,0" L="120" X="1220" c="3" Y="1870" T="19" H="120" /><S P="0,0,0.3,0,0,0,0,0" L="120" X="2274" c="3" Y="2580" T="19" H="120" /><S P="0,0,0.3,0,180,0,0,0" L="40" X="1033" c="3" Y="1103" T="19" H="400" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="2192" c="3" Y="1380" T="19" H="400" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="492" c="3" Y="255" T="19" H="200" /><S P="0,0,0.3,0,0,0,0,0" L="80" X="145" c="3" Y="672" T="19" H="40" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="1510" c="3" Y="303" T="19" H="200" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="1813" c="3" Y="2020" T="19" H="600" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="1570" c="3" Y="1183" T="19" H="240" /><S P="0,0,0.3,0,90,0,0,0" L="40" X="2764" c="3" Y="2060" T="19" H="120" /><S P="0,0,0.3,0,0,0,0,0" L="40" X="980" c="3" Y="2880" T="19" H="240" /><S P="0,0,0.3,0,90,0,0,0" L="40" X="120" c="3" Y="2095" T="19" H="240" /><S P="0,0,0.3,0,90,0,0,0" L="40" X="2200" c="3" Y="653" T="19" H="380" /><S P="0,0,0.3,0,-90,0,0,0" L="40" X="2810" c="3" Y="653" T="19" H="380" /><S L="40" X="1270" H="40" Y="600" T="19" P="1,10000,0.3,0,0,0,0,0" /><S L="40" X="1745" H="40" Y="600" T="19" P="1,10000,0.3,0,0,0,0,0" /><S L="40" X="2435" H="40" Y="1890" T="19" P="1,10000,0.3,0,0,0,0,0" /><S P="1,999999,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="-1700" c="3" N="" Y="1500" T="12" H="3000" /><S P="1,999999,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="1500" c="3" N="" Y="4700" T="12" H="3000" /><S P="1,999999,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="4700" c="3" N="" Y="1500" T="12" H="3000" /><S P="1,999999,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="1500" c="3" N="" Y="-1700" T="12" H="3000" /></S><D><P X="870" Y="1190" T="1" P="1,0" /><P X="1376" Y="1464" T="1" P="1,0" /><P X="855" Y="1490" T="5" P="1,0" /><P X="755" Y="1896" T="5" P="1,0" /><P X="175" Y="2022" T="5" P="1,0" /><P X="1215" Y="2470" T="5" P="1,0" /><P X="1859" Y="2160" T="2" P="1,0" /><P X="2461" Y="2626" T="2" P="1,0" /><P X="729" Y="2847" T="2" P="1,0" /><P X="111" Y="888" T="2" P="1,0" /><P X="751" Y="442" T="12" P="1,0" /><P X="2033" Y="264" T="12" P="1,0" /><P X="2165" Y="1129" T="1" P="1,0" /><P X="866" Y="750" T="11" P="1,0" /><P X="1529" Y="1105" T="11" P="1,0" /><P X="1853" Y="1791" T="11" P="1,0" /><P X="2583" Y="2234" T="11" P="1,0" /><P X="2047" Y="2575" T="3" P="1,0" /><P X="1073" Y="254" T="3" P="1,0" /><P X="202" Y="290" T="1" P="1,0" /><P X="1420" Y="200" T="1" P="1,0" /><P X="2515" Y="523" T="1" P="1,0" /><P X="216" Y="2565" T="5" P="1,0" /><P X="253" Y="1372" T="84" P="1,0" /><P X="467" Y="1129" T="84" P="1,0" /><P X="1794" Y="1223" T="84" P="1,0" /><P X="1919" Y="1526" T="84" P="1,0" /><P C="4b8e72" Y="1248" T="85" X="330" P="1,0" /><P C="4b8e72" Y="1356" T="85" X="1831" P="1,0" /><P X="1614" Y="2906" T="2" P="1,0" /><P X="2819" Y="1893" T="12" P="1,0" /><P X="2903" Y="2549" T="12" P="1,0" /><P X="1198" Y="2943" T="1" P="1,0" /><P X="191" Y="2928" T="1" P="1,0" /><P X="2845" Y="1431" T="1" P="1,0" /><P X="2210" Y="729" T="3" P="1,0" /><P X="106" Y="558" T="3" P="1,0" /><P X="182" Y="1686" T="3" P="1,0" /><P X="733" Y="2448" T="3" P="1,0" /><P X="2263" Y="2499" T="11" P="1,0" /><DS Y="1500" X="1500" /></D><O /><L><JP M1="9" AXIS="1,0" MV="Infinity,-0.3" /><JP M1="11" AXIS="1,0" MV="Infinity,0.3" /><JP M1="7" AXIS="0,1" MV="Infinity,-0.3" /><JP M1="5" AXIS="0,1" MV="Infinity,0.3" /><JP M1="67" AXIS="1,0" MV="Infinity,-0.3" /><JP M1="69" AXIS="1,0" MV="Infinity,0.3" /><JP M1="70" AXIS="0,1" MV="Infinity,-0.3" /><JP M1="68" AXIS="0,1" MV="Infinity,0.3" /></L></Z></C>',
      '<C><P reload="true" L="3000" MEDATA=";19,1;;;-0;0::0,1,2,3,4,5,6,7:1-" G="0,0" H="3000" bh="" segments="nogravmove" /><Z><S><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="26af2f" X="1500" c="4" Y="1500" T="12" H="3000" /><S P="0,0,0.3,0.2,90,0,0,0" L="3000" o="2b9732" X="1500" c="3" Y="-1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="-1500" c="3" Y="1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="4500" c="3" Y="1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="1500" c="3" Y="4500" T="12" H="3000" /><S P="1,999999,0.3,0,0,0,0,0" L="3000" X="1500" c="3" Y="3220" T="19" m="" H="40" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="-1500" Y="4500" T="12" H="3000" /><S P="1,999999,0.3,0,0,0,0,0" L="3000" X="1500" c="3" Y="-220" T="19" m="" H="40" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="4500" Y="4500" T="12" H="3000" /><S P="1,999999,0.3,0,0,0,0,0" L="40" X="-220" c="3" Y="1500" T="19" m="" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="4500" Y="-1500" T="12" H="3000" /><S P="1,999999,0.3,0,0,0,0,0" L="40" X="3220" c="3" Y="1500" T="19" m="" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="2b9732" X="-1500" Y="-1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="4500" c="3" Y="4500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="-1500" c="3" Y="4500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="4500" c="3" Y="-1500" T="12" H="3000" /><S P="0,0,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="-1500" c="3" Y="-1500" T="12" H="3000" /><S P="1,999999,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="-1700" c="3" N="" Y="1500" T="12" H="3000" /><S P="1,999999,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="1500" c="3" N="" Y="4700" T="12" H="3000" /><S P="1,999999,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="4700" c="3" N="" Y="1500" T="12" H="3000" /><S P="1,999999,0.3,0.2,0,0,0,0" L="3000" o="C22626" X="1500" c="3" N="" Y="-1700" T="12" H="3000" /><S P="0,0,0.3,0,0,0,0,0" L="200" X="1500" c="3" Y="1100" T="19" H="40" /><S P="0,0,0.3,0,0,0,0,0" L="200" X="700" c="3" Y="700" T="19" H="200" /><S P="0,0,0.3,0,0,0,0,0" L="200" X="700" c="3" Y="2300" T="19" H="200" /><S P="0,0,0.3,0,0,0,0,0" L="200" X="2300" c="3" Y="2300" T="19" H="200" /><S P="0,0,0.3,0,0,0,0,0" L="200" X="2300" c="3" Y="700" T="19" H="200" /><S P="0,0,0.3,0,0,0,0,0" L="200" X="1500" c="3" Y="300" T="19" H="40" /><S P="0,0,0.3,0,180,0,0,0" L="200" X="1500" c="3" Y="1900" T="19" H="40" /><S P="0,0,0.3,0,180,0,0,0" L="200" X="1500" c="3" Y="2700" T="19" H="40" /><S P="0,0,0.3,0,90,0,0,0" L="200" X="1900" c="3" Y="1500" T="19" H="40" /><S P="0,0,0.3,0,90,0,0,0" L="200" X="2700" c="3" Y="1500" T="19" H="40" /><S P="0,0,0.3,0,-90,0,0,0" L="200" X="1100" c="3" Y="1500" T="19" H="40" /><S P="0,0,0.3,0,-90,0,0,0" L="200" X="300" c="3" Y="1500" T="19" H="40" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1DC525" H="10" Y="1500" T="13" X="2300" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1DC525" H="10" Y="700" T="13" X="1500" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1DC525" H="10" Y="2300" T="13" X="1500" /><S P="0,0,0.3,0.2,0,0,0,0" L="100" o="1DC525" H="10" Y="1500" T="13" X="700" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="300" Y="300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="300" Y="1900" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1900" Y="1900" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1900" Y="300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="700" Y="300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="700" Y="1900" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2300" Y="1900" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2300" Y="300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1100" Y="300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1100" Y="1900" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2700" Y="1900" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2700" Y="300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="700" Y="1100" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="700" Y="2700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2300" Y="2700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2300" Y="1100" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1100" Y="1100" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1100" Y="2700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2700" Y="2700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2700" Y="1100" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="300" Y="1100" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="300" Y="2700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1900" Y="2700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1900" Y="1100" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1100" Y="700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1100" Y="2300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2700" Y="2300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="2700" Y="700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="300" Y="700" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="300" Y="2300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1900" Y="2300" T="12" H="200" /><S P="0,0,0.3,0.2,0,0,0,0" L="200" o="1C8321" X="1900" Y="700" T="12" H="200" /></S><D><P X="960" Y="1694" T="5" P="1,0" /><P X="1932" Y="2126" T="5" P="1,0" /><P X="872" Y="2530" T="5" P="1,0" /><P X="84" Y="2202" T="5" P="1,0" /><P X="456" Y="2890" T="5" P="1,0" /><P X="204" Y="1314" T="5" P="1,0" /><P X="784" Y="882" T="5" P="1,0" /><P X="2088" Y="1070" T="5" P="1,0" /><P X="2520" Y="1566" T="5" P="1,0" /><P X="2824" Y="2118" T="5" P="1,0" /><P X="2492" Y="2878" T="5" P="1,0" /><P X="1568" Y="2874" T="5" P="1,0" /><P X="1560" Y="1414" T="5" P="1,0" /><P X="1600" Y="570" T="5" P="1,0" /><P X="104" Y="506" T="5" P="1,0" /><P X="836" Y="126" T="5" P="1,0" /><P X="2464" Y="122" T="5" P="1,0" /><P X="2072" Y="322" T="5" P="1,0" /><P X="2800" Y="918" T="5" P="1,0" /><P X="2900" Y="434" T="5" P="1,0" /><DS Y="1500" X="1500" /></D><O /><L><JP AXIS="1,0" MV="Infinity,-0.3" M1="9" /><JP AXIS="1,0" MV="Infinity,0.3" M1="11" /><JP AXIS="0,1" MV="Infinity,-0.3" M1="7" /><JP AXIS="0,1" MV="Infinity,0.3" M1="5" /><JP AXIS="1,0" MV="Infinity,-0.3" M1="17" /><JP AXIS="1,0" MV="Infinity,0.3" M1="19" /><JP AXIS="0,1" MV="Infinity,-0.3" M1="20" /><JP AXIS="0,1" MV="Infinity,0.3" M1="18" /></L></Z></C>',
      '<C><P L="3000" H="3000" G="0,0" DS="m;1500,1500,900,900,2100,900,2100,1500,2700,2500,300,500,900,1500,2100,2100,900,2100,1500,2100,1500,900" bh="" MEDATA=";;;;-0;0::0,1,2,3,4,5,6,7:1-" reload="true" segments="nogravmove"/><Z><S><S T="12" X="1500" Y="1500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="26af2f" c="4"/><S T="12" X="1500" Y="-1500" L="3000" H="3000" P="0,0,0.3,0.2,90,0,0,0" o="2b9732" c="3"/><S T="12" X="-1500" Y="1500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="2b9732" c="3"/><S T="12" X="4500" Y="1500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="2b9732" c="3"/><S T="12" X="1500" Y="4500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="2b9732" c="3"/><S T="19" X="1500" Y="3220" L="3000" H="40" P="1,999999,0.3,0,0,0,0,0" c="3" m=""/><S T="12" X="-1500" Y="4500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="2b9732"/><S T="19" X="1500" Y="-220" L="3000" H="40" P="1,999999,0.3,0,0,0,0,0" c="3" m=""/><S T="12" X="4500" Y="4500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="2b9732"/><S T="19" X="-220" Y="1500" L="40" H="3000" P="1,999999,0.3,0,0,0,0,0" c="3" m=""/><S T="12" X="4500" Y="-1500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="2b9732"/><S T="19" X="3220" Y="1500" L="40" H="3000" P="1,999999,0.3,0,0,0,0,0" c="3" m=""/><S T="12" X="-1500" Y="-1500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="2b9732"/><S T="12" X="4500" Y="4500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="C22626" c="3"/><S T="12" X="-1500" Y="4500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="C22626" c="3"/><S T="12" X="4500" Y="-1500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="C22626" c="3"/><S T="12" X="-1500" Y="-1500" L="3000" H="3000" P="0,0,0.3,0.2,0,0,0,0" o="C22626" c="3"/><S T="12" X="-1700" Y="1500" L="3000" H="3000" P="1,999999,0.3,0.2,0,0,0,0" o="C22626" c="3" N=""/><S T="12" X="1500" Y="4700" L="3000" H="3000" P="1,999999,0.3,0.2,0,0,0,0" o="C22626" c="3" N=""/><S T="12" X="4700" Y="1500" L="3000" H="3000" P="1,999999,0.3,0.2,0,0,0,0" o="C22626" c="3" N=""/><S T="12" X="1500" Y="-1700" L="3000" H="3000" P="1,999999,0.3,0.2,0,0,0,0" o="C22626" c="3" N=""/><S T="12" X="1500" Y="1500" L="400" H="400" P="0,0,0.3,0.2,0,0,0,0" o="F5FF4A" c="4"/><S T="12" X="300" Y="1500" L="400" H="400" P="0,0,0.3,0.2,0,0,0,0" o="F5FF4A" c="4"/><S T="12" X="2700" Y="1500" L="400" H="400" P="0,0,0.3,0.2,0,0,0,0" o="F5FF4A" c="4"/><S T="12" X="1500" Y="300" L="400" H="400" P="0,0,0.3,0.2,0,0,0,0" o="F5FF4A" c="4"/><S T="12" X="1500" Y="2700" L="400" H="400" P="0,0,0.3,0.2,0,0,0,0" o="F5FF4A" c="4"/><S T="12" X="1500" Y="1500" L="2000" H="200" P="0,0,0.3,0.2,0,0,0,0" o="F5FF4A" c="4"/><S T="12" X="1500" Y="1500" L="2000" H="200" P="0,0,0.3,0.2,-90,0,0,0" o="F5FF4A" c="4"/><S T="12" X="2100" Y="1400" L="820" H="20" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1600" Y="900" L="820" H="20" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="1600" Y="2100" L="820" H="20" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="1400" Y="2100" L="820" H="20" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="1400" Y="900" L="820" H="20" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="900" Y="1400" L="820" H="20" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="2100" Y="1600" L="820" H="20" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="900" Y="1600" L="820" H="20" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="19" X="1320" Y="1670" L="40" H="40" P="0,0,0.3,0,0,0,0,0" c="3"/><S T="19" X="1680" Y="1670" L="40" H="40" P="0,0,0.3,0,0,0,0,0" c="3"/><S T="12" X="1700" Y="1650" L="20" H="100" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1300" Y="1650" L="20" H="100" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="500" Y="1650" L="20" H="100" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1650" Y="1690" L="20" H="120" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="19" X="1320" Y="1330" L="40" H="40" P="0,0,0.3,0,0,0,0,0" c="3"/><S T="19" X="1680" Y="1330" L="40" H="40" P="0,0,0.3,0,0,0,0,0" c="3"/><S T="12" X="1650" Y="1310" L="20" H="120" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="1350" Y="1310" L="20" H="120" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="1350" Y="1690" L="20" H="120" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="2500" Y="1650" L="20" H="100" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="2500" Y="1350" L="20" H="100" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1650" Y="500" L="20" H="100" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="1350" Y="500" L="20" H="100" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="2550" Y="1310" L="20" H="120" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="1690" Y="450" L="20" H="120" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1690" Y="170" L="20" H="120" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1310" Y="170" L="20" H="120" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1310" Y="450" L="20" H="120" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1350" Y="2500" L="20" H="100" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="1650" Y="2500" L="20" H="100" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="1690" Y="2850" L="20" H="120" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1690" Y="2552" L="20" H="120" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1310" Y="2550" L="20" H="120" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1310" Y="2850" L="20" H="120" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="2850" Y="1310" L="20" H="120" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="2850" Y="1690" L="20" H="120" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="2550" Y="1690" L="20" H="120" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="2900" Y="1500" L="20" H="400" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1500" Y="110" L="20" H="400" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="1500" Y="2900" L="20" H="400" P="0,0,0.3,0.2,90,0,0,0" o="FF8F00"/><S T="12" X="100" Y="1500" L="20" H="400" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1700" Y="1350" L="20" H="100" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="1300" Y="1350" L="20" H="100" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="500" Y="1350" L="20" H="100" P="0,0,0.3,0.2,0,0,0,0" o="FF8F00"/><S T="12" X="450" Y="1310" L="20" H="120" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="450" Y="1690" L="20" H="120" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="150" Y="1690" L="20" H="120" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="150" Y="1310" L="20" H="120" P="0,0,0.3,0.2,-90,0,0,0" o="FF8F00"/><S T="12" X="2100" Y="900" L="600" H="600" P="0,0,0.3,0.2,0,0,0,0" o="0046FF" c="4"/><S T="12" X="900" Y="900" L="600" H="600" P="0,0,0.3,0.2,0,0,0,0" o="0046FF" c="4"/><S T="12" X="900" Y="2100" L="600" H="600" P="0,0,0.3,0.2,0,0,0,0" o="0046FF" c="4"/><S T="12" X="2100" Y="2100" L="600" H="600" P="0,0,0.3,0.2,0,0,0,0" o="0046FF" c="4"/><S T="19" X="1500" Y="2700" L="40" H="40" P="1,10000,0.3,0,0,0,0,0"/><S T="19" X="2700" Y="1500" L="40" H="40" P="1,10000,0.3,0,0,0,0,0"/><S T="19" X="300" Y="1500" L="40" H="40" P="1,10000,0.3,0,0,0,0,0"/><S T="19" X="1500" Y="300" L="40" H="40" P="1,10000,0.3,0,0,0,0,0"/><S T="19" X="2000" Y="2550" L="40" H="600" P="0,0,0.3,0,90,0,0,0" c="3"/><S T="19" X="1000" Y="2550" L="40" H="600" P="0,0,0.3,0,-90,0,0,0" c="3"/><S T="19" X="2550" Y="2000" L="40" H="600" P="0,0,0.3,0,180,0,0,0" c="3"/><S T="19" X="2550" Y="1000" L="40" H="600" P="0,0,0.3,0,360,0,0,0" c="3"/><S T="19" X="2000" Y="450" L="40" H="600" P="0,0,0.3,0,450,0,0,0" c="3"/><S T="19" X="1000" Y="450" L="40" H="600" P="0,0,0.3,0,270,0,0,0" c="3"/><S T="19" X="450" Y="1000" L="40" H="600" P="0,0,0.3,0,360,0,0,0" c="3"/><S T="19" X="450" Y="2000" L="40" H="600" P="0,0,0.3,0,180,0,0,0" c="3"/></S><D><P X="258" Y="383" T="1" P="1,0"/><P X="974" Y="329" T="1" P="1,0"/><P X="198" Y="1167" T="1" P="1,0"/><P X="196" Y="2071" T="1" P="1,0"/><P X="214" Y="2903" T="1" P="1,0"/><P X="996" Y="2929" T="1" P="1,0"/><P X="2158" Y="2913" T="1" P="1,0"/><P X="2780" Y="2917" T="1" P="1,0"/><P X="2794" Y="2191" T="1" P="1,0"/><P X="2794" Y="1087" T="1" P="1,0"/><P X="2002" Y="323" T="1" P="1,0"/><P X="2718" Y="379" T="1" P="1,0"/><P X="726" Y="557" T="0" P="1,0"/><P X="1148" Y="551" T="0" P="1,0"/><P X="1266" Y="1117" T="0" P="1,0"/><P X="1254" Y="695" T="0" P="1,0"/><P X="1680" Y="1069" T="0" P="1,0"/><P X="1684" Y="725" T="0" P="1,0"/><P X="1912" Y="1297" T="0" P="1,0"/><P X="2272" Y="1293" T="0" P="1,0"/><P X="2246" Y="1741" T="0" P="1,0"/><P X="1888" Y="1747" T="0" P="1,0"/><P X="1694" Y="2305" T="0" P="1,0"/><P X="2456" Y="2279" T="0" P="1,0"/><P X="2448" Y="1881" T="0" P="1,0"/><P X="2264" Y="2497" T="0" P="1,0"/><P X="1922" Y="2485" T="0" P="1,0"/><P X="1026" Y="2495" T="0" P="1,0"/><P X="1258" Y="2327" T="0" P="1,0"/><P X="1246" Y="1913" T="0" P="1,0"/><P X="1680" Y="1911" T="0" P="1,0"/><P X="520" Y="1975" T="0" P="1,0"/><P X="524" Y="2353" T="0" P="1,0"/><P X="706" Y="2481" T="0" P="1,0"/><P X="1032" Y="1753" T="0" P="1,0"/><P X="678" Y="1763" T="0" P="1,0"/><P X="2444" Y="1111" T="0" P="1,0"/><P X="2444" Y="739" T="0" P="1,0"/><P X="2248" Y="573" T="0" P="1,0"/><P X="1912" Y="577" T="0" P="1,0"/><P X="1080" Y="1315" T="0" P="1,0"/><P X="680" Y="1291" T="0" P="1,0"/><P X="518" Y="773" T="0" P="1,0"/><P X="520" Y="1125" T="0" P="1,0"/></D><O/><L><JP M1="9" AXIS="1,0" MV="Infinity,-0.3"/><JP M1="11" AXIS="1,0" MV="Infinity,0.3"/><JP M1="7" AXIS="0,1" MV="Infinity,-0.3"/><JP M1="5" AXIS="0,1" MV="Infinity,0.3"/><JP M1="17" AXIS="1,0" MV="Infinity,-0.3"/><JP M1="19" AXIS="1,0" MV="Infinity,0.3"/><JP M1="20" AXIS="0,1" MV="Infinity,-0.3"/><JP M1="18" AXIS="0,1" MV="Infinity,0.3"/></L></Z></C>'}
-local gameStarted, newPlayer, bonusTime, keys = false, false, 0, {0, 1, 2, 3, 32, 69, 80}
+local gameStarted, firstRun, newPlayer, bonusTime, keys = false, true, false, 0, {0, 1, 2, 3, 32, 69, 80}
 local textAreaIds = {
     aliveMice = 97,
     shopArea = 98,
@@ -162,6 +162,11 @@ eventNewPlayer = function(name)
             shopOpened = false
         }
     }
+    if not firstRun then
+        addShopImg(name, 775, 50)
+    else
+        firstRun = false
+    end
     system.bindMouse(name, true)
     tfm.exec.setPlayerScore(name, 0, false)
     for i = 1, #keys do
@@ -201,6 +206,7 @@ eventNewGame = function()
                 local i = math.random(#spawnPoints[mapPlaying])
                 tfm.exec
                     .movePlayer(name, spawnPoints[mapPlaying][i].x, spawnPoints[mapPlaying][i].y, false, 0, 0, false)
+                removeShopImg(name)
             end
         end
     else
@@ -267,12 +273,13 @@ eventPlayerDied = function(name)
             tfm.exec.newGame(maps[1])
             for name in next, players do
                 if players[name].playing then
-                    tfm.exec.setPlayerScore(name, 1, true)
+                    tfm.exec.setPlayerScore(name, 10, true)
                     ui.addTextArea(1,
                         "<p align='center'><font size='22'><font color='#FFFFFF'>Kazanan </font><font color='#FF0000'>" ..
                             name .. "</font><font color='#FFFFFF'> !</font></font></p>", nil, 0, 30, 800, 45, nil, nil,
                         0, true)
                     players[name].playing = false
+                    players[name].coin = players[name].coin + 10
                 end
             end
             gameStarted = false
@@ -303,12 +310,14 @@ eventChatCommand = function(name, cmd)
     end
 end
 eventMouse = function(name, x, y)
-    players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id,
-                                                players[name][3] == 0 and x - players[name].obj.offset or x +
-                                                    players[name].obj.offset, y, players[name][3] == 0 and -90 or 90)
-                    if players[name].obj.img then
-                        tfm.exec.addImage(players[name].obj.img, "#"..players[name].lastObj, -17.5, -16)
-                    end
+    if admins[name] then
+        players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, players[name][3] == 0 and x -
+                                    players[name].obj.offset or x + players[name].obj.offset, y,
+                                    players[name][3] == 0 and -90 or 90)
+        if players[name].obj.img then
+            tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+        end
+    end
 end
 
 eventKeyboard = function(name, key, down, x, y)
@@ -376,7 +385,7 @@ eventKeyboard = function(name, key, down, x, y)
                                                 players[name][3] == 0 and x - players[name].obj.offset or x +
                                                     players[name].obj.offset, y, players[name][3] == 0 and -90 or 90)
                     if players[name].obj.img then
-                        tfm.exec.addImage(players[name].obj.img, "#"..players[name].lastObj, -25, -25)
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
                     end
                 elseif players[name].obj.count == 2 then
                     players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id,
@@ -387,6 +396,10 @@ eventKeyboard = function(name, key, down, x, y)
                                                   players[name][3] == 0 and x - players[name].obj.offset or x +
                                                       players[name].obj.offset, y - 15,
                                                   players[name][3] == 0 and -90 or 90)
+                    if players[name].obj.img then
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].secondObj, -17.5, -16)
+                    end
                 elseif players[name].obj.count == 3 then
                     players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id,
                                                 players[name][3] == 0 and x - players[name].obj.offset or x +
@@ -399,6 +412,11 @@ eventKeyboard = function(name, key, down, x, y)
                                                  players[name][3] == 0 and x - players[name].obj.offset or x +
                                                      players[name].obj.offset, y - 30,
                                                  players[name][3] == 0 and -90 or 90)
+                    if players[name].obj.img then
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].secondObj, -17.5, -16)
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].thirdObj, -17.5, -16)
+                    end
 
                 end
             else
@@ -406,6 +424,9 @@ eventKeyboard = function(name, key, down, x, y)
                     players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x, players[name][3] == 1 and
                                                 y - players[name].obj.offset or y + players[name].obj.offset,
                                                 players[name][3] == 1 and 0 or 180)
+                    if players[name].obj.img then
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                    end
                 elseif players[name].obj.count == 2 then
                     players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x + 15,
                                                 players[name][3] == 1 and y - players[name].obj.offset or y +
@@ -413,6 +434,10 @@ eventKeyboard = function(name, key, down, x, y)
                     players[name].secondObj = tfm.exec.addShamanObject(players[name].obj.id, x - 15,
                                                   players[name][3] == 1 and y - players[name].obj.offset or y +
                                                       players[name].obj.offset, players[name][3] == 1 and 0 or 180)
+                    if players[name].obj.img then
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].secondObj, -17.5, -16)
+                    end
                 elseif players[name].obj.count == 3 then
                     players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x + 30,
                                                 players[name][3] == 1 and y - players[name].obj.offset or y +
@@ -423,6 +448,11 @@ eventKeyboard = function(name, key, down, x, y)
                     players[name].thirdObj = tfm.exec.addShamanObject(players[name].obj.id, x - 30, players[name][3] ==
                                                  1 and y - players[name].obj.offset or y + players[name].obj.offset,
                                                  players[name][3] == 1 and 0 or 180)
+                    if players[name].obj.img then
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].secondObj, -17.5, -16)
+                        tfm.exec.addImage(players[name].obj.img, "#" .. players[name].thirdObj, -17.5, -16)
+                    end
                 end
             end
             players[name].cooldown = 4
@@ -475,7 +505,7 @@ end
 eventPlayerBonusGrabbed = function(name, id)
     tfm.exec.removeImage(bonus[id].img)
     tfm.exec.removeBonus(id, nil)
-    local event = math.random(1, 9)
+    local event = math.random(1, 10)
     if event == 1 then
         if players[name].speed < 90 then
             players[name].speed = players[name].speed + 10
@@ -491,10 +521,15 @@ eventPlayerBonusGrabbed = function(name, id)
             event = 1
         end
     elseif event == 3 then
-        tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x, bonus[id].y - 30, 0)
-        tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x - 30, bonus[id].y, -90)
-        tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x + 30, bonus[id].y, 90)
-        tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x, bonus[id].y + 30, 180)
+        local a = tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x, bonus[id].y - 30, 0)
+        local b = tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x - 30, bonus[id].y, -90)
+        local c = tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x + 30, bonus[id].y, 90)
+        local d = tfm.exec.addShamanObject(players[name].obj.id, bonus[id].x, bonus[id].y + 30, 180)
+        if players[name].obj.img then
+            for _, i in next, {a, b, c, d} do
+                tfm.exec.addImage(players[name].obj.img, "#" .. i, -17.5, -16)
+            end
+        end
     elseif event == 4 then
         local count
         repeat
@@ -530,6 +565,10 @@ eventPlayerBonusGrabbed = function(name, id)
         else
             tfm.exec.giveCheese(name)
         end
+    elseif event == 10 then
+        local i = math.random(1, 3)
+        players[name].coin = players[name].coin + i
+        tfm.exec.setPlayerScore(name, players[name].coin, false)
     elseif event == 100 then
         local degree
         if getClosestPlayerTo(name, 1) then -- working fine
@@ -705,110 +744,118 @@ eventTextAreaCallback = function(id, name, event)
     elseif event == "drag1" then
         players[name].inventory[1] = true
         players[name].obj.img = false
-        removeShop(name)
-        displayShop(name)
-    elseif event == "drag2"then
+    elseif event == "drag2" then
         players[name].inventory[2] = true
         players[name].obj.img = cannon.golden
-        removeShop(name)
-        displayShop(name)
     elseif event == "drag3" then
         players[name].inventory[3] = true
         players[name].obj.img = cannon.orange
-        removeShop(name)
-        displayShop(name)
     elseif event == "drag4" then
         players[name].inventory[4] = true
         players[name].obj.img = cannon.silver
-        removeShop(name)
-        displayShop(name)
     elseif event == "drag5" then
         players[name].inventory[5] = true
         players[name].obj.img = cannon.bear
-        removeShop(name)
-        displayShop(name)
     elseif event == "drag6" then
         players[name].inventory[6] = true
         players[name].obj.img = cannon.hamburger
+    end
+    if players[name].ui.shopOpened then
+        removeShopImg(name)
+        addShopImg(name, 775, 50)
         removeShop(name)
         displayShop(name)
     end
 end
 
 addShopImg = function(name, x, y)
-    players[name].imgs.shopImg = tfm.exec.addImage("1752b1c10bc.png", ":0", x, y, name, 0.65, 0.65, 0, 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopArea, "<a href='event:shopEvent'> \n\n </a>", name, x - 10, y - 10, 20, 20, nil, nil,
-        0.5, true)
+    players[name].imgs.shopImg = tfm.exec.addImage(players[name].obj.img or cannon.normal, ":0", x, y, name, 0.70, 0.70, players[name].obj.img and math.rad(90) or 0, 1, 0.5, 0.5)
+    ui.addTextArea(textAreaIds.shopArea, "<a href='event:shopEvent'> \n\n </a>", name, x - 10, y - 10, 20, 20, nil, 0x000001,
+        0, true)
+end
+
+removeShopImg = function(name)
+    tfm.exec.removeImage(players[name].imgs.shopImg)
+    ui.removeTextArea(textAreaIds.shopArea, name)
 end
 
 displayShop = function(name)
-    local x1, x2, x3, x4, x5, x6
+    local x1, x2, x3, x4, x5, x6 = 'X', 'X', 'X', 'X', 'X', 'X'
+    local c1, c2, c3, c4, c5, c6 = 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00'
+    if players[name].obj.img == false then
+        players[name].inventory[1] = true
+    elseif players[name].obj.img == cannon.golden then
+        players[name].inventory[2] = true
+    elseif players[name].obj.img == cannon.orange then
+        players[name].inventory[3] = true
+    elseif players[name].obj.img == cannon.silver then
+        players[name].inventory[4] = true
+    elseif players[name].obj.img == cannon.bear then
+        players[name].inventory[5] = true
+    elseif players[name].obj.img == cannon.hamburger then
+        players[name].inventory[6] = true
+    end
     if players[name].inventory[1] then
         x1 = '&#10003;'
-    else
-        x1 = 'X'
+        c1 = '00C4FF'
     end
     if players[name].inventory[2] then
         x2 = '&#10003;'
-    else
-        x2 = 'X'
+        c2 = '00C4FF'
     end
     if players[name].inventory[3] then
         x3 = '&#10003;'
-    else
-        x3 = 'X'
+        c3 = '00C4FF'
     end
     if players[name].inventory[4] then
         x4 = '&#10003;'
-    else
-        x4 = 'X'
+        c4 = '00C4FF'
     end
     if players[name].inventory[5] then
         x5 = '&#10003;'
-    else
-        x5 = 'X'
+        c5 = '00C4FF'
     end
     if players[name].inventory[6] then
         x6 = '&#10003;'
-    else
-        x6 = 'X'
+        c6 = '00C4FF'
     end
     for i = 1, 6 do
         players[name].inventory[i] = false
     end
+
     players[name].imgs.shopUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 210, name, 1, 1, 0, 1, 0.5, 0.5)
     players[name].imgs.shopMoneyImg = tfm.exec.addImage("166e9893b89.png", "&0", 175, 100, name, nil, nil, 0, 1, 0.5,
                                           0.5)
-    ui.addTextArea(textAreaIds.shopUiArea.money, "<p align='right'><font color='#FFFF00'><font size='20'>" ..
-        players[name].coin .. "</font></font></p>", name, 165, 85, 60, 30, nil, 0xffff00, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea.money, "<p align='right'><font color='#FFF500'><font size='20'>" ..
+        players[name].coin .. "</font></font></p>", name, 165, 85, 60, 30, nil, 0xFFF500, 1, true)
 
     players[name].inShop[1] = tfm.exec.addImage(cannon.normal, "&0", 300, 150, name, nil, nil, 0, 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[1], "<a href='event:drag1'>\n\n\n<p align='center'>" .. x1 .. "</p></a>", name, 285, 135, 30, 60, nil,
-        nil, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea[1], "<a href='event:drag1'>\n\n\n<p align='center'><font color='#"..c1.."'>".. x1 .. "</font</p></a>",
+        name, 283, 133, 34, 61, nil, "0x"..c1, 1, true)
 
     players[name].inShop[2] = tfm.exec
                                   .addImage(cannon.golden, "&0", 400, 150, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[2], "<a href='event:drag2'>\n\n\n<p align='center'>" .. x2 .. "</p></a>", name, 385, 135, 30, 60, nil,
-        nil, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea[2], "<a href='event:drag2'>\n\n\n<p align='center'><font color='#"..c2.."'>" .. x2 .. "</font></p></a>",
+        name, 383, 133, 34, 61, nil, "0x"..c2, 1, true)
 
     players[name].inShop[3] = tfm.exec
                                   .addImage(cannon.orange, "&0", 500, 150, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[3], "<a href='event:drag3'>\n\n\n<p align='center'>" .. x3 .. "</p></a>", name, 485, 135, 30, 60, nil,
-        nil, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea[3], "<a href='event:drag3'>\n\n\n<p align='center'><font color='#"..c3.."'>" .. x3 .. "</font></p></a>",
+        name, 483, 133, 34, 61, nil, "0x"..c3, 1, true)
 
     players[name].inShop[4] = tfm.exec
                                   .addImage(cannon.silver, "&0", 300, 250, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[4], "<a href='event:drag4'>\n\n\n<p align='center'>" .. x4 .. "</p></a>", name, 285, 235, 30, 60, nil,
-        nil, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea[4], "<a href='event:drag4'>\n\n\n<p align='center'><font color='#"..c4.."'>" .. x4 .. "</font></p></a>",
+        name, 283, 233, 34, 61, nil, "0x"..c4, 1, true)
 
     players[name].inShop[5] = tfm.exec.addImage(cannon.bear, "&0", 400, 250, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[5], "<a href='event:drag5'>\n\n\n<p align='center'>" .. x5 .. "</p></a>", name, 385, 235, 30, 60, nil,
-        nil, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea[5], "<a href='event:drag5'>\n\n\n<p align='center'><font color='#"..c5.."'>" .. x5 .. "</font></p></a>",
+        name, 383, 233, 34, 61, nil, "0x"..c5, 1, true)
 
     players[name].inShop[6] = tfm.exec.addImage(cannon.hamburger, "&0", 500, 250, name, nil, nil, math.rad(90), 1, 0.5,
                                   0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[6], "<a href='event:drag6'>\n\n\n<p align='center'>" .. x6 .. "</p></a>", name, 485, 235, 30, 60, nil,
-        nil, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea[6], "<a href='event:drag6'>\n\n\n<p align='center'><font color='#"..c6.."'>" .. x6 .. "</font></p></a>",
+        name, 483, 233, 34, 61, nil, "0x"..c6, 1, true)
 end
 
 removeShop = function(name)
