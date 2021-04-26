@@ -74,8 +74,7 @@ local spawnPoints = {{{
 }, {
     x = 703,
     y = 2898
-}
-}}
+}}}
 
 for _, i in next, {'AutoShaman', 'MinimalistMode', 'WatchCommand', 'MortCommand', 'AutoNewGame', 'AutoScore',
                    'PhysicalConsumables'} do
@@ -230,7 +229,7 @@ eventChatCommand = function(name, cmd)
             gameStarted = true
             for name in next, tfm.get.room.playerList do
                 if not tfm.get.room.playerList[name].isDead then
-                players[name].playing = true
+                    players[name].playing = true
                 end
             end
             local i = math.random(2, 3)
@@ -279,7 +278,7 @@ eventKeyboard = function(name, key, down, x, y)
         end
     else
         if key == 80 then
-
+            print(getClosestPlayerTo(name))
         end
     end
     if key == 0 or key == 1 or key == 2 or key == 3 then
@@ -364,7 +363,7 @@ eventKeyboard = function(name, key, down, x, y)
                                                             players[name].obj.offset, y, {
                         height = 75
                     })
-                    tfm.exec.displayParticle(3, players[name][3] == 0 and x - players[name].obj.offset or x +
+                tfm.exec.displayParticle(3, players[name][3] == 0 and x - players[name].obj.offset or x +
                     players[name].obj.offset, y, 0, 0, 0, 0, nil)
             else
                 players[name].event.barrierPutted = tfm.exec.addPhysicObject(players[name].event.barrierId, x,
@@ -372,7 +371,7 @@ eventKeyboard = function(name, key, down, x, y)
                                                             players[name].obj.offset, {
                         width = 75
                     })
-                    tfm.exec.displayParticle(3, x, players[name][3] == 1 and y - players[name].obj.offset or y +
+                tfm.exec.displayParticle(3, x, players[name][3] == 1 and y - players[name].obj.offset or y +
                     players[name].obj.offset, 0, 0, 0, 0, nil)
             end
             players[name].event.hasBarrier = false
@@ -427,8 +426,8 @@ eventPlayerBonusGrabbed = function(name, id)
     elseif event == 4 then
         local count
         repeat
-            count = math.random(1,3)
-        until(count ~= players[name].obj.count)
+            count = math.random(1, 3)
+        until (count ~= players[name].obj.count)
         players[name].obj.count = count
     elseif event == 5 then
         tfm.exec.explosion(bonus[id].x, bonus[id].y, 40, 20, true)
@@ -459,6 +458,18 @@ eventPlayerBonusGrabbed = function(name, id)
         else
             tfm.exec.giveCheese(name)
         end
+    elseif event == 10 then
+        local degree
+        if getClosestPlayerTo(name, 1) then
+            degree = math.deg(math.atan(getClosestPlayerTo(name, "y")/getClosestPlayerTo(name, "x"))) + 90
+        elseif getClosestPlayerTo(name, 2) then
+            degree = -(math.deg(math.atan(getClosestPlayerTo(name, "x")/-getClosestPlayerTo(name, "y"))) + 90)
+        elseif getClosestPlayerTo(name, 3) then
+            degree = -(math.deg(math.atan(getClosestPlayerTo(name, "x")/getClosestPlayerTo(name, "y"))) + 90)
+        elseif getClosestPlayerTo(name, 4) then
+            degree = math.deg(math.atan(getClosestPlayerTo(name, "y")/getClosestPlayerTo(name, "x"))) + 90
+        end
+        tfm.exec.addShamanObject(players[name].obj.id, tfm.get.room.playerList[name].x, tfm.get.room.playerList[name].y, degree)
     end
     addBonusImg(event, name)
 end
@@ -522,10 +533,13 @@ addBonusImg = function(event, name)
         ui.addTextArea(textAreaIds.gift.onImg, "\n\n<p align ='right'><font color ='" .. color .. "'>" ..
             players[name].event.playerSize .. "</font></p>", name, 745, 348, 50, 50, nil, nil, 0, true)
     elseif event == 9 then
-        players[name].event.img = tfm.exec.addImage("168c3845081.png", "&100", 765, 362, name, 1, 1, math.rad(0), 1, 0.5, 0.5)
+        players[name].event.img = tfm.exec.addImage("168c3845081.png", "&100", 765, 362, name, 1, 1, math.rad(0), 1,
+                                      0.5, 0.5)
         local i = not tfm.get.room.playerList[name].hasCheese and '&#10003;' or 'X'
         local color = not tfm.get.room.playerList[name].hasCheese and '#00AABB' or '#FF0000'
-        ui.addTextArea(textAreaIds.gift.onImg, "\n\n<p align ='right'><font color='"..color.."'>"..i.."</font></p>", name, 745, 348, 50, 50, nil, nil, 0, true)
+        ui.addTextArea(textAreaIds.gift.onImg,
+            "\n\n<p align ='right'><font color='" .. color .. "'>" .. i .. "</font></p>", name, 745, 348, 50, 50, nil,
+            nil, 0, true)
     end
 end
 
@@ -548,3 +562,58 @@ getPlayerPos = function(name)
         end
     end
 end
+
+getClosestPlayerTo = function(name, type)
+    local list = {}
+    if getPlaying() > 1 then
+        for iname in next, players do
+            if name ~= iname then
+                if players[iname].playing then
+                    table.insert(list, iname)
+                    list[#list] = {((tfm.get.room.playerList[name].x - tfm.get.room.playerList[iname].x) ^ 2 +
+                        (tfm.get.room.playerList[name].y - tfm.get.room.playerList[iname].y) ^ 2) ^ 0.5, iname,
+                                   tfm.get.room.playerList[iname].x - tfm.get.room.playerList[name].x,
+                                    tfm.get.room.playerList[iname].y - tfm.get.room.playerList[name].y}
+                end
+            end
+        end
+        local tempLocation = list[1]
+        for i = 1, #list do
+            if list[i][1] < tempLocation[1] then
+                tempLocation = list[i]
+            end
+        end
+        local firstArea = false
+        local secondArea = false
+        local thirdArea = false
+        local fourthArea = false
+
+        if tfm.get.room.playerList[name].x <= tfm.get.room.playerList[tempLocation[2]].x and tfm.get.room.playerList[name].y >= tfm.get.room.playerList[tempLocation[2]].y then
+            firstArea = true
+        elseif tfm.get.room.playerList[name].x >= tfm.get.room.playerList[tempLocation[2]].x and tfm.get.room.playerList[name].y >= tfm.get.room.playerList[tempLocation[2]].y then
+            secondArea = true
+        elseif tfm.get.room.playerList[name].x >= tfm.get.room.playerList[tempLocation[2]].x and tfm.get.room.playerList[name].y <= tfm.get.room.playerList[tempLocation[2]].y then
+            thirdArea = true
+        elseif tfm.get.room.playerList[name].x <= tfm.get.room.playerList[tempLocation[2]].x and tfm.get.room.playerList[name].y <= tfm.get.room.playerList[tempLocation[2]].y then
+            fourthArea = true
+        end
+
+        if type == "nick" then
+            return tempLocation[2]
+        elseif type == "x" then
+            return tempLocation[3]
+        elseif type == "y" then
+            return tempLocation[4]
+        elseif type == 1 then
+            return firstArea
+        elseif type == 2 then
+            return secondArea
+        elseif type == 3 then
+            return thirdArea
+        elseif type == 4 then
+            return fourthArea
+        end
+    end
+end
+
+-- math.deg(math.asin(3/5))
