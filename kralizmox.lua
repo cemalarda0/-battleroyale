@@ -14,7 +14,10 @@ local textAreaIds = {
     aliveMice = 97,
     shopArea = 98,
     shopUiArea = {
-        money = 1001,
+        money = 998,
+        page = 999,
+        leftArrow = 1000,
+        rightArrow = 1001,
         [1] = 1002,
         [2] = 1003,
         [3] = 1004,
@@ -30,18 +33,44 @@ local textAreaIds = {
 local cannon = {
     price = {
         normal = "[FREE]",
-        golden = 500,
-        orange = 200,
         silver = 100,
+        orange = 200,
         bear = 300,
-        hamburger = 400
+        hamburger = 400,
+        golden = 500,
+        pokeball = 600,
+        sheep = 700,
+        chicken = 800,
+        soulFly = 900,
+        devilAngel = 1000,
+        thanos = 1100
+    },
+    positions = {
+    ["163e2f4401c.png"] = {x = -17.5, y = -16},
+    ["1655e6ce8f9.png"] = {x = -17.5, y = -16},
+    ["1655eb6443a.png"] = {x = -17.5, y = -16},
+    ["16b274484fb.png"] = {x = -17.5, y = -16},
+    ["16837dde712.png"] = {x = -17.5, y = -16},
+    ["163e2ef7cfb.png"] = {x = -17.5, y = -16},
+    ["16572c7e398.png"] = {x = -17.5, y = -16},
+    ["16bd2ca4f5a.png"] = {x = -30, y = -25},
+    ["16bd2c9e797.png"] = {x = -23, y = -20},
+    ["16bd87158e9.png"] = {x = -17.5, y = -16},
+    ["1687567eceb.png"] = {x = -27, y = -25},
+    ["16a2193836b.png"] = {x = -25, y = -20},
     },
     normal = "163e2f4401c.png",
-    golden = "163e2ef7cfb.png",
-    orange = "1655eb6443a.png",
     silver = "1655e6ce8f9.png",
+    orange = "1655eb6443a.png",
     bear = "16b274484fb.png",
-    hamburger = "16837dde712.png"
+    hamburger = "16837dde712.png",
+    golden = "163e2ef7cfb.png",
+    pokeball = "16572c7e398.png",
+    sheep = "16bd2ca4f5a.png",
+    chicken = "16bd2c9e797.png",
+    soulFly = "16bd87158e9.png",
+    devilAngel = "1687567eceb.png",
+    thanos = "16a2193836b.png"
 }
 local spawnPoints = {{{
     x = 779,
@@ -166,17 +195,24 @@ eventNewPlayer = function(name)
             playerSize = 1
         },
         inventory = {true, false, false, false, false, false},
-        imgs = {aliveMice, shopImg, shopUiImg, shopMoneyImg},
+        imgs = {aliveMice, shopImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
         inShop = {},
         bag = {
             silver = false,
             orange = false,
             bear = false,
             hamburger = false,
-            golden = false
+            golden = false,
+            pokeball = false,
+            sheep = false,
+            chicken = false,
+            soulFly = false,
+            devilAngel = false,
+            thanos = false
         },
         ui = {
-            shopOpened = false
+            shopOpened = false,
+            shopPage = 1
         }
     }
     if not firstRun then
@@ -217,7 +253,6 @@ eventNewGame = function()
         countDownTime = 0
         countDown = 10
         ui.removeTextArea(1)
-        addBonus()
         for name in next, players do
             updatePlaying(name)
             if players[name].playing then
@@ -269,17 +304,24 @@ eventNewGame = function()
                 },
                 inventory = {players[name].inventory[1], players[name].inventory[2], players[name].inventory[3],
                              players[name].inventory[4], players[name].inventory[5], players[name].inventory[6]},
-                imgs = {aliveMice, shopImg, shopUiImg, shopMoneyImg},
+                imgs = {aliveMice, shopImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
                 inShop = {},
                 bag = {
                     silver = players[name].bag.silver,
                     orange = players[name].bag.orange,
                     bear = players[name].bag.bear,
                     hamburger = players[name].bag.hamburger,
-                    golden = players[name].bag.golden
+                    golden = players[name].bag.golden,
+                    pokeball = players[name].bag.pokeball,
+                    sheep = players[name].bag.sheep,
+                    chicken = players[name].bag.chicken,
+                    soulFly = players[name].bag.soulFly,
+                    devilAngel = players[name].bag.devilAngel,
+                    thanos = players[name].bag.thanos
                 },
                 ui = {
-                    shopOpened = false
+                    shopOpened = false,
+                    shopPage = players[name].ui.shopPage
                 }
             }
             addShopImg(name, 775, 50)
@@ -361,7 +403,7 @@ eventMouse = function(name, x, y)
                                     players[name].obj.offset or x + players[name].obj.offset, y,
                                     players[name][3] == 0 and -90 or 90)
         if players[name].obj.img then
-            tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+            tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, cannon.positions[players[name].obj.img].x, cannon.positions[players[name].obj.img].y)
         end
     end
 end
@@ -633,13 +675,13 @@ eventPlayerBonusGrabbed = function(name, id)
         tfm.exec.setPlayerScore(name, players[name].coin, false)
     elseif event == 100 then
         local degree
-        if getClosestPlayerTo(name, 1) then -- working fine
+        if getClosestPlayerTo(name, 1) then -- works fine
             degree = math.deg(math.atan(getClosestPlayerTo(name, "y") / getClosestPlayerTo(name, "x"))) + 90
         elseif getClosestPlayerTo(name, 2) then
-            degree = math.deg(math.atan(getClosestPlayerTo(name, "y") / getClosestPlayerTo(name, "x")) + 90)
+            degree = -(math.deg(math.atan(getClosestPlayerTo(name, "y") / getClosestPlayerTo(name))) + 90)
         elseif getClosestPlayerTo(name, 3) then
-            degree = math.deg(math.atan(getClosestPlayerTo(name, "y") / getClosestPlayerTo(name, "x")) + 90)
-        elseif getClosestPlayerTo(name, 4) then -- working fine
+            degree = -(math.deg(math.atan(getClosestPlayerTo(name, "y") / getClosestPlayerTo(name))) + 90)
+        elseif getClosestPlayerTo(name, 4) then -- works fine
             degree = math.deg(math.atan(getClosestPlayerTo(name, "y") / getClosestPlayerTo(name, "x"))) + 90
         end
         tfm.exec.addShamanObject(players[name].obj.id, tfm.get.room.playerList[name].x, tfm.get.room.playerList[name].y,
@@ -765,17 +807,17 @@ getClosestPlayerTo = function(name, type)
         local thirdArea = false
         local fourthArea = false
 
-        if tfm.get.room.playerList[name].x <= tfm.get.room.playerList[tempLocation[2]].x and
-            tfm.get.room.playerList[name].y >= tfm.get.room.playerList[tempLocation[2]].y then
+        if tfm.get.room.playerList[name].x < tfm.get.room.playerList[tempLocation[2]].x and
+            tfm.get.room.playerList[name].y > tfm.get.room.playerList[tempLocation[2]].y then
             firstArea = true
-        elseif tfm.get.room.playerList[name].x >= tfm.get.room.playerList[tempLocation[2]].x and
-            tfm.get.room.playerList[name].y >= tfm.get.room.playerList[tempLocation[2]].y then
+        elseif tfm.get.room.playerList[name].x > tfm.get.room.playerList[tempLocation[2]].x and
+            tfm.get.room.playerList[name].y > tfm.get.room.playerList[tempLocation[2]].y then
             secondArea = true
-        elseif tfm.get.room.playerList[name].x >= tfm.get.room.playerList[tempLocation[2]].x and
-            tfm.get.room.playerList[name].y <= tfm.get.room.playerList[tempLocation[2]].y then
+        elseif tfm.get.room.playerList[name].x > tfm.get.room.playerList[tempLocation[2]].x and
+            tfm.get.room.playerList[name].y < tfm.get.room.playerList[tempLocation[2]].y then
             thirdArea = true
-        elseif tfm.get.room.playerList[name].x <= tfm.get.room.playerList[tempLocation[2]].x and
-            tfm.get.room.playerList[name].y <= tfm.get.room.playerList[tempLocation[2]].y then
+        elseif tfm.get.room.playerList[name].x < tfm.get.room.playerList[tempLocation[2]].x and
+            tfm.get.room.playerList[name].y < tfm.get.room.playerList[tempLocation[2]].y then
             fourthArea = true
         end
 
@@ -793,6 +835,8 @@ getClosestPlayerTo = function(name, type)
             return thirdArea
         elseif type == 4 then
             return fourthArea
+        else
+            return tempLocation[1]
         end
     end
 end
@@ -806,72 +850,170 @@ eventTextAreaCallback = function(id, name, event)
             players[name].ui.shopOpened = true
             displayShop(name)
         end
+    elseif event == "rightArrow" and players[name].ui.shopPage < 2 then
+        removeShop(name, players[name].ui.shopPage)
+        players[name].ui.shopPage = players[name].ui.shopPage + 1
+        displayShop(name)
+    elseif event == "leftArrow" and players[name].ui.shopPage > 1 then
+        removeShop(name, players[name].ui.shopPage)
+        players[name].ui.shopPage = players[name].ui.shopPage - 1
+        displayShop(name)
     elseif event == "drag1" then
-        players[name].inventory[1] = true
-        players[name].obj.img = false
+        if players[name].ui.shopPage == 1 then
+            players[name].inventory[1] = true
+            players[name].obj.img = false
+        elseif players[name].ui.shopPage == 2 then
+            if players[name].bag.pokeball then
+                players[name].bag["pokeball"] = true
+                players[name].inventory[7] = true
+                players[name].obj.img = cannon.pokeball
+            else
+                if players[name].coin >= cannon.price.pokeball then
+                    players[name].bag["pokeball"] = true
+                    players[name].inventory[7] = true
+                    players[name].obj.img = cannon.pokeball
+                    decreaseCoin(name, cannon.price.pokeball)
+                end
+            end
+        end
     elseif event == "drag2" then
-        if players[name].bag.silver then
-            players[name].bag["silver"] = true
-            players[name].inventory[2] = true
-            players[name].obj.img = cannon.silver
-        else
-            if players[name].coin >= cannon.price.silver then
+        if players[name].ui.shopPage == 1 then
+            if players[name].bag.silver then
                 players[name].bag["silver"] = true
                 players[name].inventory[2] = true
                 players[name].obj.img = cannon.silver
-                decreaseCoin(name, cannon.price.silver)
+            else
+                if players[name].coin >= cannon.price.silver then
+                    players[name].bag["silver"] = true
+                    players[name].inventory[2] = true
+                    players[name].obj.img = cannon.silver
+                    decreaseCoin(name, cannon.price.silver)
+                end
+            end
+        elseif players[name].ui.shopPage == 2 then
+            if players[name].bag.sheep then
+                players[name].bag["sheep"] = true
+                players[name].inventory[8] = true
+                players[name].obj.img = cannon.sheep
+            else
+                if players[name].coin >= cannon.price.sheep then
+                    players[name].bag["sheep"] = true
+                    players[name].inventory[8] = true
+                    players[name].obj.img = cannon.sheep
+                    decreaseCoin(name, cannon.price.sheep)
+                end
             end
         end
     elseif event == "drag3" then
-        if players[name].bag.orange then
-            players[name].bag["orange"] = true
-            players[name].inventory[3] = true
-            players[name].obj.img = cannon.orange
-        else
-            if players[name].coin >= cannon.price.orange then
+        if players[name].ui.shopPage == 1 then
+            if players[name].bag.orange then
                 players[name].bag["orange"] = true
                 players[name].inventory[3] = true
                 players[name].obj.img = cannon.orange
-                decreaseCoin(name, cannon.price.orange)
+            else
+                if players[name].coin >= cannon.price.orange then
+                    players[name].bag["orange"] = true
+                    players[name].inventory[3] = true
+                    players[name].obj.img = cannon.orange
+                    decreaseCoin(name, cannon.price.orange)
+                end
+            end
+        elseif players[name].ui.shopPage == 2 then
+            if players[name].bag.chicken then
+                players[name].bag["chicken"] = true
+                players[name].inventory[9] = true
+                players[name].obj.img = cannon.chicken
+            else
+                if players[name].coin >= cannon.price.chicken then
+                    players[name].bag["chicken"] = true
+                    players[name].inventory[9] = true
+                    players[name].obj.img = cannon.chicken
+                    decreaseCoin(name, cannon.price.chicken)
+                end
             end
         end
     elseif event == "drag4" then
-        if players[name].bag.bear then
-            players[name].bag["bear"] = true
-            players[name].inventory[4] = true
-            players[name].obj.img = cannon.bear
-        else
-            if players[name].coin >= cannon.price.bear then
+        if players[name].ui.shopPage == 1 then
+            if players[name].bag.bear then
                 players[name].bag["bear"] = true
                 players[name].inventory[4] = true
                 players[name].obj.img = cannon.bear
-                decreaseCoin(name, cannon.price.bear)
+            else
+                if players[name].coin >= cannon.price.bear then
+                    players[name].bag["bear"] = true
+                    players[name].inventory[4] = true
+                    players[name].obj.img = cannon.bear
+                    decreaseCoin(name, cannon.price.bear)
+                end
+            end
+        elseif players[name].ui.shopPage == 2 then
+            if players[name].bag.soulFly then
+                players[name].bag["soulFly"] = true
+                players[name].inventory[10] = true
+                players[name].obj.img = cannon.soulFly
+            else
+                if players[name].coin >= cannon.price.soulFly then
+                    players[name].bag["soulFly"] = true
+                    players[name].inventory[10] = true
+                    players[name].obj.img = cannon.soulFly
+                    decreaseCoin(name, cannon.price.soulFly)
+                end
             end
         end
     elseif event == "drag5" then
-        if players[name].bag.hamburger then
-            players[name].bag["hamburger"] = true
-            players[name].inventory[5] = true
-            players[name].obj.img = cannon.hamburger
-        else
-            if players[name].coin >= cannon.price.hamburger then
+        if players[name].ui.shopPage == 1 then
+            if players[name].bag.hamburger then
                 players[name].bag["hamburger"] = true
                 players[name].inventory[5] = true
                 players[name].obj.img = cannon.hamburger
-                decreaseCoin(name, cannon.price.hamburger)
+            else
+                if players[name].coin >= cannon.price.hamburger then
+                    players[name].bag["hamburger"] = true
+                    players[name].inventory[5] = true
+                    players[name].obj.img = cannon.hamburger
+                    decreaseCoin(name, cannon.price.hamburger)
+                end
+            end
+        elseif players[name].ui.shopPage == 2 then
+            if players[name].bag.devilAngel then
+                players[name].bag["devilAngel"] = true
+                players[name].inventory[11] = true
+                players[name].obj.img = cannon.devilAngel
+            else
+                if players[name].coin >= cannon.price.devilAngel then
+                    players[name].bag["devilAngel"] = true
+                    players[name].inventory[11] = true
+                    players[name].obj.img = cannon.devilAngel
+                    decreaseCoin(name, cannon.price.devilAngel)
+                end
             end
         end
     elseif event == "drag6" then
-        if players[name].bag.golden then
-            players[name].bag["golden"] = true
-            players[name].inventory[1] = true
-            players[name].obj.img = cannon.golden
-        else
-            if players[name].coin >= cannon.price.golden then
+        if players[name].ui.shopPage == 1 then
+            if players[name].bag.golden then
                 players[name].bag["golden"] = true
-                players[name].inventory[1] = true
+                players[name].inventory[6] = true
                 players[name].obj.img = cannon.golden
-                decreaseCoin(name, cannon.price.golden)
+            else
+                if players[name].coin >= cannon.price.golden then
+                    players[name].bag["golden"] = true
+                    players[name].inventory[6] = true
+                    players[name].obj.img = cannon.golden
+                    decreaseCoin(name, cannon.price.golden)
+                end
+            end
+        elseif players[name].ui.shopPage == 2 then
+            if players[name].bag.thanos then
+                players[name].bag["thanos"] = true
+                players[name].inventory[12] = true
+                players[name].obj.img = cannon.thanos
+            else
+                if players[name].coin >= cannon.price.thanos then
+                    players[name].bag["thanos"] = true
+                    players[name].inventory[12] = true
+                    players[name].obj.img = cannon.thanos
+                    decreaseCoin(name, cannon.price.thanos)
+                end
             end
         end
     end
@@ -898,126 +1040,251 @@ end
 displayShop = function(name)
     local x1, x2, x3, x4, x5, x6 = 'X', 'X', 'X', 'X', 'X', 'X'
     local c1, c2, c3, c4, c5, c6 = 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00'
-    local p1, p2, p3, p4, p5, p6 = cannon.price.normal, "[" .. cannon.price.silver .. "]",
-        "[" .. cannon.price.orange .. "]", "[" .. cannon.price.bear .. "]", "[" .. cannon.price.hamburger .. "]",
-        "[" .. cannon.price.golden .. "]"
-    if players[name].obj.img == false then
-        players[name].inventory[1] = true
-    elseif players[name].obj.img == cannon.silver then
-        players[name].inventory[2] = true
-    elseif players[name].obj.img == cannon.orange then
-        players[name].inventory[3] = true
-    elseif players[name].obj.img == cannon.bear then
-        players[name].inventory[4] = true
-    elseif players[name].obj.img == cannon.hamburger then
-        players[name].inventory[5] = true
-    elseif players[name].obj.img == cannon.golden then
-        players[name].inventory[6] = true
+    local p1, p2, p3, p4, p5, p6
+
+    if players[name].ui.shopPage == 1 then
+        p1, p2, p3, p4, p5, p6 = cannon.price.normal, "[" .. cannon.price.silver .. "]",
+            "[" .. cannon.price.orange .. "]", "[" .. cannon.price.bear .. "]", "[" .. cannon.price.hamburger .. "]",
+            "[" .. cannon.price.golden .. "]"
+    elseif players[name].ui.shopPage == 2 then
+        p1, p2, p3, p4, p5, p6 = "[" .. cannon.price.pokeball .. "]", "[" .. cannon.price.sheep .. "]",
+            "[" .. cannon.price.chicken .. "]", "[" .. cannon.price.soulFly .. "]",
+            "[" .. cannon.price.devilAngel .. "]", "[" .. cannon.price.thanos .. "]"
     end
 
-    if players[name].inventory[1] then
-        x1 = '&#10003;'
-        c1 = '00C4FF'
-    end
-    if players[name].inventory[2] then
-        x2 = '&#10003;'
-        c2 = '00C4FF'
-    end
-    if players[name].inventory[3] then
-        x3 = '&#10003;'
-        c3 = '00C4FF'
-    end
-    if players[name].inventory[4] then
-        x4 = '&#10003;'
-        c4 = '00C4FF'
-    end
-    if players[name].inventory[5] then
-        x5 = '&#10003;'
-        c5 = '00C4FF'
-    end
-    if players[name].inventory[6] then
-        x6 = '&#10003;'
-        c6 = '00C4FF'
-    end
-    for i = 1, 6 do
-        players[name].inventory[i] = false
+    if players[name].ui.shopPage == 1 then
+        if players[name].obj.img == false then
+            players[name].inventory[1] = true
+        elseif players[name].obj.img == cannon.silver then
+            players[name].inventory[2] = true
+        elseif players[name].obj.img == cannon.orange then
+            players[name].inventory[3] = true
+        elseif players[name].obj.img == cannon.bear then
+            players[name].inventory[4] = true
+        elseif players[name].obj.img == cannon.hamburger then
+            players[name].inventory[5] = true
+        elseif players[name].obj.img == cannon.golden then
+            players[name].inventory[6] = true
+        end
+    elseif players[name].ui.shopPage == 2 then
+        if players[name].obj.img == cannon.pokeball then
+            players[name].inventory[7] = true
+        elseif players[name].obj.img == cannon.sheep then
+            players[name].inventory[8] = true
+        elseif players[name].obj.img == cannon.chicken then
+            players[name].inventory[9] = true
+        elseif players[name].obj.img == cannon.soulFly then
+            players[name].inventory[10] = true
+        elseif players[name].obj.img == cannon.devilAngel then
+            players[name].inventory[11] = true
+        elseif players[name].obj.img == cannon.thanos then
+            players[name].inventory[12] = true
+        end
     end
 
-    if players[name].bag["silver"] then
-        p2 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+    if players[name].ui.shopPage == 1 then
+        if players[name].inventory[1] then
+            x1 = '&#10003;'
+            c1 = '00C4FF'
+        end
+        if players[name].inventory[2] then
+            x2 = '&#10003;'
+            c2 = '00C4FF'
+        end
+        if players[name].inventory[3] then
+            x3 = '&#10003;'
+            c3 = '00C4FF'
+        end
+        if players[name].inventory[4] then
+            x4 = '&#10003;'
+            c4 = '00C4FF'
+        end
+        if players[name].inventory[5] then
+            x5 = '&#10003;'
+            c5 = '00C4FF'
+        end
+        if players[name].inventory[6] then
+            x6 = '&#10003;'
+            c6 = '00C4FF'
+        end
+        for i = 1, 6 do
+            players[name].inventory[i] = false
+        end
+    elseif players[name].ui.shopPage == 2 then
+        if players[name].inventory[7] then
+            x1 = '&#10003;'
+            c1 = '00C4FF'
+        end
+        if players[name].inventory[8] then
+            x2 = '&#10003;'
+            c2 = '00C4FF'
+        end
+        if players[name].inventory[9] then
+            x3 = '&#10003;'
+            c3 = '00C4FF'
+        end
+        if players[name].inventory[10] then
+            x4 = '&#10003;'
+            c4 = '00C4FF'
+        end
+        if players[name].inventory[11] then
+            x5 = '&#10003;'
+            c5 = '00C4FF'
+        end
+        if players[name].inventory[12] then
+            x6 = '&#10003;'
+            c6 = '00C4FF'
+        end
+        for i = 7, 12 do
+            players[name].inventory[i] = false
+        end
     end
-    if players[name].bag["orange"] then
-        p3 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-    end
-    if players[name].bag["bear"] then
-        p4 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-    end
-    if players[name].bag["hamburger"] then
-        p5 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-    end
-    if players[name].bag["golden"] then
-        p6 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+
+    if players[name].ui.shopPage == 1 then
+        if players[name].bag["silver"] then
+            p2 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["orange"] then
+            p3 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["bear"] then
+            p4 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["hamburger"] then
+            p5 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["golden"] then
+            p6 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+    elseif players[name].ui.shopPage == 2 then
+        if players[name].bag["pokeball"] then
+            p1 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["sheep"] then
+            p2 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["chicken"] then
+            p3 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["soulFly"] then
+            p4 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["devilAngel"] then
+            p5 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
+        if players[name].bag["thanos"] then
+            p6 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+        end
     end
 
     players[name].imgs.shopUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 210, name, 1, 1, 0, 1, 0.5, 0.5)
-    players[name].imgs.shopMoneyImg = tfm.exec.addImage("166e9893b89.png", "&0", 175, 100, name, nil, nil, 0, 1, 0.5,
-                                          0.5)
+    players[name].imgs.shopMoneyImg = tfm.exec.addImage("166e9893b89.png", "&0", 175, 100, name, 1, 1, 0, 1, 0.5, 0.5)
+    players[name].imgs.shopRightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 150, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.shopLeftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 250, name, 1, 1, 0, 1, nil, nil)
+
     ui.addTextArea(textAreaIds.shopUiArea.money, "<p align='right'><font color='#FFF500'><font size='20'>" ..
         players[name].coin .. "</font></font></p>", name, 165, 85, 100, 30, nil, 0xFFF500, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea.page, "<p align='center'><font size='19'><font color='#000000'>" ..
+        players[name].ui.shopPage .. "</font></font></p>", name, 190, 213, 50, 25, 0xBC784B, 0x863E12, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea.rightArrow, "<a href='event:rightArrow'>\n\n\n</a>", name, 190, 150, 50, 50,
+        nil, nil, 0, true)
+    ui.addTextArea(textAreaIds.shopUiArea.leftArrow, "<a href='event:leftArrow'>\n\n\n</a>", name, 190, 250, 50, 50,
+        nil, nil, 0, true)
 
-    players[name].inShop[1] = tfm.exec.addImage(cannon.normal, "&0", 300, 140, name, nil, nil, 0, 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[1],
-        "<p align='center'><a href='event:drag1'>\n\n\n<font size='8'>" .. cannon.price.normal ..
-            "</font>\n<font color='#" .. c1 .. "'>" .. x1 .. "</font</p></a>", name, 283, 123, 34, 69, nil, "0x" .. c1,
-        1, true)
+    if players[name].ui.shopPage == 1 then
+        players[name].inShop[1] = tfm.exec.addImage(cannon.normal, "&0", 350, 140, name, nil, nil, 0, 1, 0.5, 0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[1],
+            "<p align='center'><a href='event:drag1'>\n\n\n<font size='8'>" .. p1 .. "</font>\n<font color='#" .. c1 ..
+                "'>" .. x1 .. "</font</p></a>", name, 333, 123, 34, 69, nil, "0x" .. c1, 1, true)
 
-    players[name].inShop[2] = tfm.exec
-                                  .addImage(cannon.silver, "&0", 400, 140, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[2],
-        "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p2 .. "</font>\n<font color='#" .. c2 .. "'>" ..
-            x2 .. "</font></p></a>", name, 383, 123, 34, 69, nil, "0x" .. c2, 1, true)
+        players[name].inShop[2] = tfm.exec.addImage(cannon.silver, "&0", 450, 140, name, nil, nil, math.rad(90), 1, 0.5,
+                                      0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[2],
+            "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p2 .. "</font>\n<font color='#" .. c2 ..
+                "'>" .. x2 .. "</font></p></a>", name, 433, 123, 34, 69, nil, "0x" .. c2, 1, true)
 
-    players[name].inShop[3] = tfm.exec
-                                  .addImage(cannon.orange, "&0", 500, 140, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[3],
-        "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p3 .. "</font>\n<font color='#" .. c3 .. "'>" ..
-            x3 .. "</font></p></a>", name, 483, 123, 34, 69, nil, "0x" .. c3, 1, true)
+        players[name].inShop[3] = tfm.exec.addImage(cannon.orange, "&0", 550, 140, name, nil, nil, math.rad(90), 1, 0.5,
+                                      0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[3],
+            "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p3 .. "</font>\n<font color='#" .. c3 ..
+                "'>" .. x3 .. "</font></p></a>", name, 533, 123, 34, 69, nil, "0x" .. c3, 1, true)
 
-    players[name].inShop[4] = tfm.exec.addImage(cannon.bear, "&0", 300, 240, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[4],
-        "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p4 .. "</font>\n<font color='#" .. c4 .. "'>" ..
-            x4 .. "</font></p></a>", name, 283, 223, 34, 69, nil, "0x" .. c4, 1, true)
+        players[name].inShop[4] = tfm.exec.addImage(cannon.bear, "&0", 350, 240, name, nil, nil, math.rad(90), 1, 0.5,
+                                      0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[4],
+            "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p4 .. "</font>\n<font color='#" .. c4 ..
+                "'>" .. x4 .. "</font></p></a>", name, 333, 223, 34, 69, nil, "0x" .. c4, 1, true)
 
-    players[name].inShop[5] = tfm.exec.addImage(cannon.hamburger, "&0", 400, 240, name, nil, nil, math.rad(90), 1, 0.5,
-                                  0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[5],
-        "<p align='center'><a href='event:drag5'>\n\n\n<font size='9'>" .. p5 .. "</font>\n<font color='#" .. c5 .. "'>" ..
-            x5 .. "</font></p></a>", name, 383, 223, 34, 69, nil, "0x" .. c5, 1, true)
+        players[name].inShop[5] = tfm.exec.addImage(cannon.hamburger, "&0", 450, 240, name, nil, nil, math.rad(90), 1,
+                                      0.5, 0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[5],
+            "<p align='center'><a href='event:drag5'>\n\n\n<font size='9'>" .. p5 .. "</font>\n<font color='#" .. c5 ..
+                "'>" .. x5 .. "</font></p></a>", name, 433, 223, 34, 69, nil, "0x" .. c5, 1, true)
 
-    players[name].inShop[6] = tfm.exec
-                                  .addImage(cannon.golden, "&0", 500, 240, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.shopUiArea[6],
-        "<p align='center'><a href='event:drag6'>\n\n\n<font size='9'>" .. p6 .. "</font>\n<font color='#" .. c6 .. "'>" ..
-            x6 .. "</font></p></a>", name, 483, 223, 34, 69, nil, "0x" .. c6, 1, true)
+        players[name].inShop[6] = tfm.exec.addImage(cannon.golden, "&0", 550, 240, name, nil, nil, math.rad(90), 1, 0.5,
+                                      0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[6],
+            "<p align='center'><a href='event:drag6'>\n\n\n<font size='9'>" .. p6 .. "</font>\n<font color='#" .. c6 ..
+                "'>" .. x6 .. "</font></p></a>", name, 533, 223, 34, 69, nil, "0x" .. c6, 1, true)
+    elseif players[name].ui.shopPage == 2 then
+        players[name].inShop[1] = tfm.exec.addImage(cannon.pokeball, "&0", 350, 140, name, nil, nil, 0, 1, 0.5, 0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[1],
+            "<p align='center'><a href='event:drag1'>\n\n\n<font size='8'>" .. p1 .. "</font>\n<font color='#" .. c1 ..
+                "'>" .. x1 .. "</font</p></a>", name, 333, 123, 34, 69, nil, "0x" .. c1, 1, true)
+
+        players[name].inShop[2] = tfm.exec.addImage(cannon.sheep, "&0", 450, 140, name, nil, nil, math.rad(90), 1, 0.5,
+                                      0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[2],
+            "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p2 .. "</font>\n<font color='#" .. c2 ..
+                "'>" .. x2 .. "</font></p></a>", name, 433, 123, 34, 69, nil, "0x" .. c2, 1, true)
+
+        players[name].inShop[3] = tfm.exec.addImage(cannon.chicken, "&0", 550, 140, name, nil, nil, math.rad(90), 1,
+                                      0.5, 0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[3],
+            "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p3 .. "</font>\n<font color='#" .. c3 ..
+                "'>" .. x3 .. "</font></p></a>", name, 533, 123, 34, 69, nil, "0x" .. c3, 1, true)
+
+        players[name].inShop[4] = tfm.exec.addImage(cannon.soulFly, "&0", 350, 240, name, nil, nil, math.rad(90), 1,
+                                      0.5, 0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[4],
+            "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p4 .. "</font>\n<font color='#" .. c4 ..
+                "'>" .. x4 .. "</font></p></a>", name, 333, 223, 34, 69, nil, "0x" .. c4, 1, true)
+
+        players[name].inShop[5] = tfm.exec.addImage(cannon.devilAngel, "&0", 450, 240, name, nil, nil, math.rad(90), 1,
+                                      0.5, 0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[5],
+            "<p align='center'><a href='event:drag5'>\n\n\n<font size='8'>" .. p5 .. "</font>\n<font color='#" .. c5 ..
+                "'>" .. x5 .. "</font></p></a>", name, 433, 223, 34, 69, nil, "0x" .. c5, 1, true)
+
+        players[name].inShop[6] = tfm.exec.addImage(cannon.thanos, "&0", 550, 240, name, nil, nil, math.rad(90), 1, 0.5,
+                                      0.5)
+        ui.addTextArea(textAreaIds.shopUiArea[6],
+            "<p align='center'><a href='event:drag6'>\n\n\n<font size='8'>" .. p6 .. "</font>\n<font color='#" .. c6 ..
+                "'>" .. x6 .. "</font></p></a>", name, 533, 223, 34, 69, nil, "0x" .. c6, 1, true)
+    end
 end
 
 removeShop = function(name)
-    tfm.exec.removeImage(players[name].imgs.shopUiImg)
-    tfm.exec.removeImage(players[name].imgs.shopMoneyImg)
     for i = 1, 6 do
         tfm.exec.removeImage(players[name].inShop[i])
-    end
-    ui.removeTextArea(textAreaIds.shopUiArea.money, name)
-    for i = 1, 6 do
         ui.removeTextArea(textAreaIds.shopUiArea[i], name)
     end
+
+    ui.removeTextArea(textAreaIds.shopUiArea.money, name)
+    ui.removeTextArea(textAreaIds.shopUiArea.rightArrow, name)
+    ui.removeTextArea(textAreaIds.shopUiArea.leftArrow, name)
+    ui.removeTextArea(textAreaIds.shopUiArea.page, name)
+    tfm.exec.removeImage(players[name].imgs.shopUiImg)
+    tfm.exec.removeImage(players[name].imgs.shopMoneyImg)
+    tfm.exec.removeImage(players[name].imgs.shopRightArrow)
+    tfm.exec.removeImage(players[name].imgs.shopLeftArrow)
 end
 
 addHelpButton = function(name, x, y)
 
 end
 
-function decreaseCoin(name, decreaseValue)
+decreaseCoin = function(name, decreaseValue)
     players[name].coin = tfm.get.room.playerList[name].score - decreaseValue
     tfm.exec.setPlayerScore(name, players[name].coin, false)
 end
