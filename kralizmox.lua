@@ -13,6 +13,7 @@ local textAreaIds = {
     countDown = 96,
     aliveMice = 97,
     shopArea = 98,
+    helpArea = 99,
     shopUiArea = {
         money = 998,
         page = 999,
@@ -195,7 +196,7 @@ eventNewPlayer = function(name)
             playerSize = 1
         },
         inventory = {true, false, false, false, false, false},
-        imgs = {aliveMice, shopImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
+        imgs = {aliveMice, shopImg, helpImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
         inShop = {},
         bag = {
             silver = false,
@@ -212,11 +213,13 @@ eventNewPlayer = function(name)
         },
         ui = {
             shopOpened = false,
+            helpMenuOpened = false,
             shopPage = 1
         }
     }
     if not firstRun then
-        addShopImg(name, 775, 50)
+        addShopImg(name, 745, 50)
+        addHelpButton(name, 775,50)
     end
     system.bindMouse(name, true)
     tfm.exec.setPlayerScore(name, 0, false)
@@ -240,7 +243,6 @@ end
 for name in next, tfm.get.room.playerList do
     eventNewPlayer(name)
 end
-firstRun = false
 
 eventPlayerLeft = function(name)
     players[name].playing = false
@@ -274,6 +276,9 @@ eventNewGame = function()
         end
         ui.removeTextArea(textAreaIds.aliveMice)
         for name in next, players do
+            if firstRun then
+                addHelpButton(name, 775,50)
+            end
             if players[name].event.img then
                 tfm.exec.removeImage(players[name].event.img)
             end
@@ -303,8 +308,8 @@ eventNewGame = function()
                     playerSize = 1
                 },
                 inventory = {players[name].inventory[1], players[name].inventory[2], players[name].inventory[3],
-                             players[name].inventory[4], players[name].inventory[5], players[name].inventory[6]},
-                imgs = {aliveMice, shopImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
+                players[name].inventory[4], players[name].inventory[5], players[name].inventory[6]},
+                imgs = {aliveMice, shopImg, helpImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
                 inShop = {},
                 bag = {
                     silver = players[name].bag.silver,
@@ -321,10 +326,11 @@ eventNewGame = function()
                 },
                 ui = {
                     shopOpened = false,
+                    helpMenuOpened = false,
                     shopPage = players[name].ui.shopPage
                 }
             }
-            addShopImg(name, 775, 50)
+            addShopImg(name, 745, 50)
             tfm.exec.changePlayerSize(name, 1)
         end
         if newPlayer then
@@ -335,6 +341,7 @@ eventNewGame = function()
             end
         end
     end
+    firstRun = false
 end
 
 eventPlayerDied = function(name)
@@ -1019,7 +1026,7 @@ eventTextAreaCallback = function(id, name, event)
     end
     if players[name].ui.shopOpened then
         removeShopImg(name)
-        addShopImg(name, 775, 50)
+        addShopImg(name, 745, 50)
         removeShop(name)
         displayShop(name)
     end
@@ -1035,6 +1042,11 @@ end
 removeShopImg = function(name)
     tfm.exec.removeImage(players[name].imgs.shopImg)
     ui.removeTextArea(textAreaIds.shopArea, name)
+end
+
+addHelpButton = function(name, x, y)
+    players[name].imgs.helpImg = tfm.exec.addImage("17136f9eefd.png", ":0", x, y, name, 0.75, 0.75, 0, 1, 0.5, 0.5)
+    ui.addTextArea(textAreaIds.helpArea, "<a href='event:helpButton'> \n\n </a>", name, x - 10, y - 10, 20, 20, nil, 0x000001, 0, true)
 end
 
 displayShop = function(name)
@@ -1278,10 +1290,6 @@ removeShop = function(name)
     tfm.exec.removeImage(players[name].imgs.shopMoneyImg)
     tfm.exec.removeImage(players[name].imgs.shopRightArrow)
     tfm.exec.removeImage(players[name].imgs.shopLeftArrow)
-end
-
-addHelpButton = function(name, x, y)
-
 end
 
 decreaseCoin = function(name, decreaseValue)
