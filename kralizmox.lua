@@ -614,8 +614,6 @@ eventLoop = function(a, b)
 end
 
 eventPlayerBonusGrabbed = function(name, id)
-    tfm.exec.removeImage(bonus[id].img)
-    tfm.exec.removeBonus(id, nil)
     local event = math.random(1, 10)
     if event == 1 then
         if players[name].speed < 90 then
@@ -694,6 +692,8 @@ eventPlayerBonusGrabbed = function(name, id)
         tfm.exec.addShamanObject(players[name].obj.id, tfm.get.room.playerList[name].x, tfm.get.room.playerList[name].y,
             degree)
     end
+    tfm.exec.removeImage(bonus[id].img)
+    tfm.exec.removeBonus(id, nil)
     addBonusImg(event, name)
 end
 
