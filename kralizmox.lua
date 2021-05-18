@@ -34,7 +34,7 @@ local textAreaIds = {
 }
 local cannon = {
     price = {
-        normal = "[FREE]",
+        normal = "&#10031;",
         silver = 100,
         orange = 200,
         bear = 300,
@@ -260,6 +260,7 @@ eventNewPlayer = function(name)
         imgs = {aliveMice, shopImg, helpImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
         inShop = {},
         bag = {
+            normal = true,
             silver = false,
             orange = false,
             bear = false,
@@ -373,6 +374,7 @@ eventNewGame = function()
                 imgs = {aliveMice, shopImg, helpImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
                 inShop = {},
                 bag = {
+                    normal = true,
                     silver = players[name].bag.silver,
                     orange = players[name].bag.orange,
                     bear = players[name].bag.bear,
@@ -1096,9 +1098,9 @@ eventTextAreaCallback = function(id, name, event)
     end
     if players[name].ui.shopOpened then
         removeShopImg(name)
-        addShopImg(name, 745, 50)
         removeShop(name)
         displayShop(name)
+        addShopImg(name, 745, 50)
     end
 end
 
@@ -1121,19 +1123,20 @@ addHelpButton = function(name, x, y)
 end
 
 displayShop = function(name)
-    local x1, x2, x3, x4, x5, x6 = 'X', 'X', 'X', 'X', 'X', 'X'
-    local c1, c2, c3, c4, c5, c6 = 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00', 'FF7D00'
-    local p1, p2, p3, p4, p5, p6
+    local x = {}
+    local c = {}
+    local p = {}
+    for i = 1, 12 do
+        x[i] = 'X'
+        c[i] = 'FF7D00'
+    end
 
-    if players[name].ui.shopPage == 1 then
-        p1, p2, p3, p4, p5, p6 = cannon.price.normal, "[" .. cannon.price.silver .. "]",
+    p["normal"], p["silver"], p["orange"], p["bear"], p["hamburger"], p["golden"] = cannon.price.normal, "[" .. cannon.price.silver .. "]",
             "[" .. cannon.price.orange .. "]", "[" .. cannon.price.bear .. "]", "[" .. cannon.price.hamburger .. "]",
             "[" .. cannon.price.golden .. "]"
-    elseif players[name].ui.shopPage == 2 then
-        p1, p2, p3, p4, p5, p6 = "[" .. cannon.price.pokeball .. "]", "[" .. cannon.price.sheep .. "]",
+    p["pokeball"], p["sheep"], p["chicken"], p["soulFly"], p["devilAngel"], p["thanos"] = "[" .. cannon.price.pokeball .. "]", "[" .. cannon.price.sheep .. "]",
             "[" .. cannon.price.chicken .. "]", "[" .. cannon.price.soulFly .. "]",
             "[" .. cannon.price.devilAngel .. "]", "[" .. cannon.price.thanos .. "]"
-    end
 
     if players[name].ui.shopPage == 1 then
         if players[name].obj.img == false then
@@ -1165,98 +1168,18 @@ displayShop = function(name)
         end
     end
 
-    if players[name].ui.shopPage == 1 then
-        if players[name].inventory[1] then
-            x1 = '&#10003;'
-            c1 = '00C4FF'
+    
+    for i = 1, 12 do
+        if players[name].inventory[i] then
+                x[i] = '&#10003;'
+                c[i] = '00C4FF'
         end
-        if players[name].inventory[2] then
-            x2 = '&#10003;'
-            c2 = '00C4FF'
-        end
-        if players[name].inventory[3] then
-            x3 = '&#10003;'
-            c3 = '00C4FF'
-        end
-        if players[name].inventory[4] then
-            x4 = '&#10003;'
-            c4 = '00C4FF'
-        end
-        if players[name].inventory[5] then
-            x5 = '&#10003;'
-            c5 = '00C4FF'
-        end
-        if players[name].inventory[6] then
-            x6 = '&#10003;'
-            c6 = '00C4FF'
-        end
-        for i = 1, 6 do
-            players[name].inventory[i] = false
-        end
-    elseif players[name].ui.shopPage == 2 then
-        if players[name].inventory[7] then
-            x1 = '&#10003;'
-            c1 = '00C4FF'
-        end
-        if players[name].inventory[8] then
-            x2 = '&#10003;'
-            c2 = '00C4FF'
-        end
-        if players[name].inventory[9] then
-            x3 = '&#10003;'
-            c3 = '00C4FF'
-        end
-        if players[name].inventory[10] then
-            x4 = '&#10003;'
-            c4 = '00C4FF'
-        end
-        if players[name].inventory[11] then
-            x5 = '&#10003;'
-            c5 = '00C4FF'
-        end
-        if players[name].inventory[12] then
-            x6 = '&#10003;'
-            c6 = '00C4FF'
-        end
-        for i = 7, 12 do
-            players[name].inventory[i] = false
-        end
+        players[name].inventory[i] = false
     end
 
-    if players[name].ui.shopPage == 1 then
-        if players[name].bag["silver"] then
-            p2 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["orange"] then
-            p3 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["bear"] then
-            p4 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["hamburger"] then
-            p5 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["golden"] then
-            p6 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-    elseif players[name].ui.shopPage == 2 then
-        if players[name].bag["pokeball"] then
-            p1 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["sheep"] then
-            p2 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["chicken"] then
-            p3 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["soulFly"] then
-            p4 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["devilAngel"] then
-            p5 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
-        end
-        if players[name].bag["thanos"] then
-            p6 = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
+    for i in next, players[name].bag do
+        if players[name].bag[i] then
+            p[i] = '<font size="11"><font color="#FFFF00">&#10031;</font></font>'
         end
     end
 
@@ -1277,73 +1200,73 @@ displayShop = function(name)
     if players[name].ui.shopPage == 1 then
         players[name].inShop[1] = tfm.exec.addImage(cannon.normal, "&0", 350, 140, name, nil, nil, 0, 1, 0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[1],
-            "<p align='center'><a href='event:drag1'>\n\n\n<font size='8'>" .. p1 .. "</font>\n<font color='#" .. c1 ..
-                "'>" .. x1 .. "</font</p></a>", name, 333, 123, 34, 69, nil, "0x" .. c1, 1, true)
+            "<p align='center'><a href='event:drag1'>\n\n\n<font size='8'>" .. p["normal"] .. "</font>\n<font color='#" .. c[1] ..
+                "'>" .. x[1] .. "</font</p></a>", name, 333, 123, 34, 69, nil, "0x" .. c[1], 1, true)
 
         players[name].inShop[2] = tfm.exec.addImage(cannon.silver, "&0", 450, 140, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[2],
-            "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p2 .. "</font>\n<font color='#" .. c2 ..
-                "'>" .. x2 .. "</font></p></a>", name, 433, 123, 34, 69, nil, "0x" .. c2, 1, true)
+            "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p["silver"] .. "</font>\n<font color='#" .. c[2] ..
+                "'>" .. x[2] .. "</font></p></a>", name, 433, 123, 34, 69, nil, "0x" .. c[2], 1, true)
 
         players[name].inShop[3] = tfm.exec.addImage(cannon.orange, "&0", 550, 140, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[3],
-            "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p3 .. "</font>\n<font color='#" .. c3 ..
-                "'>" .. x3 .. "</font></p></a>", name, 533, 123, 34, 69, nil, "0x" .. c3, 1, true)
+            "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p["orange"] .. "</font>\n<font color='#" .. c[3] ..
+                "'>" .. x[3] .. "</font></p></a>", name, 533, 123, 34, 69, nil, "0x" .. c[3], 1, true)
 
         players[name].inShop[4] = tfm.exec.addImage(cannon.bear, "&0", 350, 240, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[4],
-            "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p4 .. "</font>\n<font color='#" .. c4 ..
-                "'>" .. x4 .. "</font></p></a>", name, 333, 223, 34, 69, nil, "0x" .. c4, 1, true)
+            "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p["bear"] .. "</font>\n<font color='#" .. c[4] ..
+                "'>" .. x[4] .. "</font></p></a>", name, 333, 223, 34, 69, nil, "0x" .. c[4], 1, true)
 
         players[name].inShop[5] = tfm.exec.addImage(cannon.hamburger, "&0", 450, 240, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[5],
-            "<p align='center'><a href='event:drag5'>\n\n\n<font size='9'>" .. p5 .. "</font>\n<font color='#" .. c5 ..
-                "'>" .. x5 .. "</font></p></a>", name, 433, 223, 34, 69, nil, "0x" .. c5, 1, true)
+            "<p align='center'><a href='event:drag5'>\n\n\n<font size='9'>" .. p["hamburger"] .. "</font>\n<font color='#" .. c[5] ..
+                "'>" .. x[5] .. "</font></p></a>", name, 433, 223, 34, 69, nil, "0x" .. c[5], 1, true)
 
         players[name].inShop[6] = tfm.exec.addImage(cannon.golden, "&0", 550, 240, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[6],
-            "<p align='center'><a href='event:drag6'>\n\n\n<font size='9'>" .. p6 .. "</font>\n<font color='#" .. c6 ..
-                "'>" .. x6 .. "</font></p></a>", name, 533, 223, 34, 69, nil, "0x" .. c6, 1, true)
+            "<p align='center'><a href='event:drag6'>\n\n\n<font size='9'>" .. p["golden"] .. "</font>\n<font color='#" .. c[6] ..
+                "'>" .. x[6] .. "</font></p></a>", name, 533, 223, 34, 69, nil, "0x" .. c[6], 1, true)
     elseif players[name].ui.shopPage == 2 then
-        players[name].inShop[1] = tfm.exec.addImage(cannon.pokeball, "&0", 350, 140, name, nil, nil, 0, 1, 0.5, 0.5)
+        players[name].inShop[1] = tfm.exec.addImage(cannon.pokeball, "&0", 350, 140, name, nil, nil, math.rad(90), 1, 0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[1],
-            "<p align='center'><a href='event:drag1'>\n\n\n<font size='9'>" .. p1 .. "</font>\n<font color='#" .. c1 ..
-                "'>" .. x1 .. "</font</p></a>", name, 333, 123, 34, 69, nil, "0x" .. c1, 1, true)
+            "<p align='center'><a href='event:drag1'>\n\n\n<font size='9'>" .. p["pokeball"] .. "</font>\n<font color='#" .. c[7] ..
+                "'>" .. x[7] .. "</font</p></a>", name, 333, 123, 34, 69, nil, "0x" .. c[7], 1, true)
 
         players[name].inShop[2] = tfm.exec.addImage(cannon.sheep, "&0", 450, 140, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[2],
-            "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p2 .. "</font>\n<font color='#" .. c2 ..
-                "'>" .. x2 .. "</font></p></a>", name, 433, 123, 34, 69, nil, "0x" .. c2, 1, true)
+            "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p["sheep"] .. "</font>\n<font color='#" .. c[8] ..
+                "'>" .. x[8] .. "</font></p></a>", name, 433, 123, 34, 69, nil, "0x" .. c[8], 1, true)
 
         players[name].inShop[3] = tfm.exec.addImage(cannon.chicken, "&0", 550, 140, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[3],
-            "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p3 .. "</font>\n<font color='#" .. c3 ..
-                "'>" .. x3 .. "</font></p></a>", name, 533, 123, 34, 69, nil, "0x" .. c3, 1, true)
+            "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p["chicken"] .. "</font>\n<font color='#" .. c[9] ..
+                "'>" .. x[9] .. "</font></p></a>", name, 533, 123, 34, 69, nil, "0x" .. c[9], 1, true)
 
         players[name].inShop[4] = tfm.exec.addImage(cannon.soulFly, "&0", 350, 240, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[4],
-            "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p4 .. "</font>\n<font color='#" .. c4 ..
-                "'>" .. x4 .. "</font></p></a>", name, 333, 223, 34, 69, nil, "0x" .. c4, 1, true)
+            "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p["soulFly"] .. "</font>\n<font color='#" .. c[10] ..
+                "'>" .. x[10] .. "</font></p></a>", name, 333, 223, 34, 69, nil, "0x" .. c[10], 1, true)
 
         players[name].inShop[5] = tfm.exec.addImage(cannon.devilAngel, "&0", 450, 240, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[5],
-            "<p align='center'><a href='event:drag5'>\n\n\n<font size='8'>" .. p5 .. "</font>\n<font color='#" .. c5 ..
-                "'>" .. x5 .. "</font></p></a>", name, 433, 223, 34, 69, nil, "0x" .. c5, 1, true)
+            "<p align='center'><a href='event:drag5'>\n\n\n<font size='8'>" .. p["devilAngel"] .. "</font>\n<font color='#" .. c[11] ..
+                "'>" .. x[11] .. "</font></p></a>", name, 433, 223, 34, 69, nil, "0x" .. c[11], 1, true)
 
         players[name].inShop[6] = tfm.exec.addImage(cannon.thanos, "&0", 550, 240, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[6],
-            "<p align='center'><a href='event:drag6'>\n\n\n<font size='8'>" .. p6 .. "</font>\n<font color='#" .. c6 ..
-                "'>" .. x6 .. "</font></p></a>", name, 533, 223, 34, 69, nil, "0x" .. c6, 1, true)
+            "<p align='center'><a href='event:drag6'>\n\n\n<font size='8'>" .. p["thanos"] .. "</font>\n<font color='#" .. c[12] ..
+                "'>" .. x[12] .. "</font></p></a>", name, 533, 223, 34, 69, nil, "0x" .. c[12], 1, true)
     end
 end
 
