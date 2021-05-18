@@ -513,7 +513,15 @@ eventKeyboard = function(name, key, down, x, y)
     end
     if not gameStarted then
         if key == 80 then
-            print(getClosestPlayerTo(name))
+            if not players[name].playing and down then
+                if players[name].ui.shopOpened then
+                    players[name].ui.shopOpened = false
+                    removeShop(name)
+                else
+                    players[name].ui.shopOpened = true
+                    displayShop(name)
+                end
+            end
         end
     end
     if key == 0 or key == 1 or key == 2 or key == 3 then
@@ -1344,15 +1352,12 @@ removeShop = function(name)
         tfm.exec.removeImage(players[name].inShop[i])
         ui.removeTextArea(textAreaIds.shopUiArea[i], name)
     end
-
-    ui.removeTextArea(textAreaIds.shopUiArea.money, name)
-    ui.removeTextArea(textAreaIds.shopUiArea.rightArrow, name)
-    ui.removeTextArea(textAreaIds.shopUiArea.leftArrow, name)
-    ui.removeTextArea(textAreaIds.shopUiArea.page, name)
-    tfm.exec.removeImage(players[name].imgs.shopUiImg)
-    tfm.exec.removeImage(players[name].imgs.shopMoneyImg)
-    tfm.exec.removeImage(players[name].imgs.shopRightArrow)
-    tfm.exec.removeImage(players[name].imgs.shopLeftArrow)
+    for i in next, textAreaIds.shopUiArea do
+        ui.removeTextArea(textAreaIds.shopUiArea[i], name)
+    end
+    for _, i in next, {"shopUiImg","shopMoneyImg","shopRightArrow","shopLeftArrow"} do
+        tfm.exec.removeImage(players[name].imgs[i])
+    end
 end
 
 decreaseCoin = function(name, decreaseValue)
