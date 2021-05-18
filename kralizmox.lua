@@ -615,7 +615,7 @@ eventKeyboard = function(name, key, down, x, y)
             players[name].cooldown = 4
         end
     elseif key == 69 then
-        if players[name].event.hasBarrier then
+        if players[name].event.hasBarrier and players[name].playing then
             if players[name][3] == 0 or players[name][3] == 2 then
                 players[name].event.barrierPutted = tfm.exec.addPhysicObject(players[name].event.barrierId,
                                                         players[name][3] == 0 and x - players[name].obj.offset or x +
