@@ -27,6 +27,13 @@ local textAreaIds = {
         [5] = 1006,
         [6] = 1007
     },
+    helpUiArea = {
+        title = 998,
+        mid = 999,
+        page = 1000,
+        leftArrow = 1001,
+        rightArrow = 1002
+    },
     gift = {
         backGround = 100,
         onImg = 101
@@ -262,7 +269,7 @@ eventNewPlayer = function(name)
             playerSize = 1
         },
         inventory = {true, false, false, false, false, false},
-        imgs = {aliveMice, shopImg, helpImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
+        imgs = {aliveMice, shopImg, helpImg, helpUiImg, shopUiImg, shopMoneyImgi, leftArrow, rightArrow},
         inShop = {},
         bag = {
             normal = true,
@@ -281,7 +288,8 @@ eventNewPlayer = function(name)
         ui = {
             shopOpened = false,
             helpMenuOpened = false,
-            shopPage = 1
+            shopPage = 1,
+            helpPage = 1
         }
     }
     if not firstRun then
@@ -383,7 +391,7 @@ eventNewGame = function()
                 },
                 inventory = {players[name].inventory[1], players[name].inventory[2], players[name].inventory[3],
                              players[name].inventory[4], players[name].inventory[5], players[name].inventory[6]},
-                imgs = {aliveMice, shopImg, helpImg, shopUiImg, shopMoneyImgi, shopLeftArrow, shopRightArrow},
+                imgs = {aliveMice, shopImg, helpImg, helpUiImg, shopUiImg, shopMoneyImgi, leftArrow, rightArrow},
                 inShop = {},
                 bag = {
                     normal = true,
@@ -402,7 +410,8 @@ eventNewGame = function()
                 ui = {
                     shopOpened = false,
                     helpMenuOpened = false,
-                    shopPage = players[name].ui.shopPage
+                    shopPage = players[name].ui.shopPage,
+                    helpPage = players[name].ui.helpPage
                 }
             }
             addShopImg(name, 745, 50)
@@ -536,11 +545,9 @@ eventKeyboard = function(name, key, down, x, y)
         if key == 80 then
             if not players[name].playing and down then
                 if players[name].ui.shopOpened then
-                    players[name].ui.shopOpened = false
-                    removeShop(name)
+                    eventTextAreaCallback(nil, name, "shopEvent")
                 else
-                    players[name].ui.shopOpened = true
-                    displayShop(name)
+                    eventTextAreaCallback(nil, name, "shopEvent")
                 end
             end
         end
@@ -566,17 +573,29 @@ eventKeyboard = function(name, key, down, x, y)
                 players[name].event.barrierPutted = false
             end
             if players[name].moving.up and players[name].moving.left then
-                players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id,
-                                                     x - players[name].obj.offset, y - players[name].obj.offset, -45)
+                players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x - players[name].obj.offset,
+                                            y - players[name].obj.offset, -45)
+                if players[name].obj.img then
+                    tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                end
             elseif players[name].moving.up and players[name].moving.right then
-                players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x + players[name].obj.offset, y - players[name].obj.offset, 45)
+                players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x + players[name].obj.offset,
+                                            y - players[name].obj.offset, 45)
+                if players[name].obj.img then
+                    tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                end
             elseif players[name].moving.down and players[name].moving.left then
-                players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id,
-                                                    x - players[name].obj.offset , y + players[name].obj.offset, 180+45)
+                players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x - players[name].obj.offset,
+                                            y + players[name].obj.offset, 180 + 45)
+                if players[name].obj.img then
+                    tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                end
             elseif players[name].moving.down and players[name].moving.right then
-                players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id,
-                                                    x +
-                                                        players[name].obj.offset, y + players[name].obj.offset, -180-45)
+                players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, x + players[name].obj.offset,
+                                            y + players[name].obj.offset, -180 - 45)
+                if players[name].obj.img then
+                    tfm.exec.addImage(players[name].obj.img, "#" .. players[name].lastObj, -17.5, -16)
+                end
             else
                 if players[name][3] == 0 or players[name][3] == 2 then
                     if players[name].obj.count == 1 then
@@ -968,20 +987,30 @@ end
 eventTextAreaCallback = function(id, name, event)
     if event == "shopEvent" then
         if players[name].ui.shopOpened then
-            players[name].ui.shopOpened = false
             removeShop(name)
         else
-            players[name].ui.shopOpened = true
+            if players[name].ui.helpMenuOpened then
+                removeHelp(name)
+            end
             displayShop(name)
         end
     elseif event == "rightArrow" and players[name].ui.shopPage < 2 then
-        removeShop(name, players[name].ui.shopPage)
         players[name].ui.shopPage = players[name].ui.shopPage + 1
-        displayShop(name)
     elseif event == "leftArrow" and players[name].ui.shopPage > 1 then
-        removeShop(name, players[name].ui.shopPage)
         players[name].ui.shopPage = players[name].ui.shopPage - 1
-        displayShop(name)
+    elseif event == "helpButton" then
+        if players[name].ui.helpMenuOpened then
+            removeHelp(name)
+        else
+            if players[name].ui.shopOpened then
+                removeShop(name)
+            end
+            displayHelp(name)
+        end
+    elseif event == "hRightArrow" and players[name].ui.helpPage < 5 then
+        players[name].ui.helpPage = players[name].ui.helpPage + 1
+    elseif event == "hLeftArrow" and players[name].ui.helpPage > 1 then
+        players[name].ui.helpPage = players[name].ui.helpPage - 1
     elseif event == "drag1" then
         if players[name].ui.shopPage == 1 then
             players[name].inventory[1] = true
@@ -1146,6 +1175,9 @@ eventTextAreaCallback = function(id, name, event)
         removeShop(name)
         displayShop(name)
         addShopImg(name, 745, 50)
+    elseif players[name].ui.helpMenuOpened then
+        removeHelp(name)
+        displayHelp(name)
     end
 end
 
@@ -1168,6 +1200,7 @@ addHelpButton = function(name, x, y)
 end
 
 displayShop = function(name)
+    players[name].ui.shopOpened = true
     local x = {}
     local c = {}
     local p = {}
@@ -1229,8 +1262,8 @@ displayShop = function(name)
 
     players[name].imgs.shopUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 210, name, 1, 1, 0, 1, 0.5, 0.5)
     players[name].imgs.shopMoneyImg = tfm.exec.addImage("166e9893b89.png", "&0", 175, 100, name, 1, 1, 0, 1, 0.5, 0.5)
-    players[name].imgs.shopRightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 150, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.shopLeftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 250, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 150, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 250, name, 1, 1, 0, 1, nil, nil)
 
     ui.addTextArea(textAreaIds.shopUiArea.money, "<p align='right'><font color='#FFF500'><font size='20'>" ..
         players[name].coin .. "</font></font></p>", name, 165, 85, 100, 30, nil, 0xFFF500, 1, true)
@@ -1319,15 +1352,52 @@ displayShop = function(name)
 end
 
 removeShop = function(name)
+    players[name].ui.shopOpened = false
     for i = 1, 6 do
         tfm.exec.removeImage(players[name].inShop[i])
-        ui.removeTextArea(textAreaIds.shopUiArea[i], name)
     end
     for i in next, textAreaIds.shopUiArea do
         ui.removeTextArea(textAreaIds.shopUiArea[i], name)
     end
-    for _, i in next, {"shopUiImg", "shopMoneyImg", "shopRightArrow", "shopLeftArrow"} do
+    for _, i in next, {"shopUiImg", "shopMoneyImg", "rightArrow", "leftArrow"} do
         tfm.exec.removeImage(players[name].imgs[i])
+    end
+end
+
+displayHelp = function(name)
+    local titles = {["en"] = {'How To Play?', 'Controls', 'Events', 'info', 'Credits'}}
+    local mids = {["en"] = {'\n<font color="#00ED00">•</font> Welcome To <font color="#ffff00">#battleroyale</font> Game! its PVP Multiplayer Game.\n\n\n<font color="#00ED00">•</font> Your goal in this game, Push the mice with Cannon balls And push to Acid grounds or Red rectangles to kill mice. Last Mice Survive to Win!\n<font color="#00ED00">•</font> Acid Grounds and Red rectangles Will kill you.\n<font color="#00ED00">•</font> Gift Boxes Gives Events. ( Example : Double cannon ball, Triple Cannon ball And more )',
+'\n<font color="#00ED00">•</font> Spacebar key to shoot ( Face Left, Face Right, Face Down, Face Up )\n<font color="#00ED00">•</font> Shield For "E" key From Gifts ( Face Left, Face Right, Face Down, Face Up )',
+'<font size="10"><font color="#00ED00">•</font> <font color="#FFFF00">Speed</font> : increases Your Mice Movement Speed to +10 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Low Speed</font> : decreases Your Mice Movement Speed to -10 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Straight Shoot</font> : Left, Right, Down, Up Shoot ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Double Cannon ball</font> : increases Your +1 Cannon Ball \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Triple Cannon ball</font> : increases Your +2 Cannon Ball \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomb</font> : Only Gives Your Mice, Explosion 30% ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Shield</font> : Gives Your Shield ( E key For shield )\n<font color="#00ED00">•</font> <font color="#FFFF00">Small Potion</font> : increases Your Mice small to -0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Big Potion</font> : increases Your Mice Big to +0.1 ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Money</font> : Gives Money 1-2 random ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Cheese</font> : Gives Your cheese ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">No Cheese</font> : Removes your cheese ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FF0000">Note</font> : This Events From Gift Boxes.</font>',
+'\n<font color="#00ED00">•</font> Gift Boxes Spawn in 0.50 Second \n<font color="#ffff00">( 1 second = 2 Gift Boxes )</font>',
+'\n<font color="#00ED00">•</font> <font color="#ffff00">Module Developer</font> By : <font color="#aa00ff">Poklava#0000</font>\n<font color="#00ED00">•</font> <font color="#ffff00">Maps</font> And <font color="#ffff00">ideas</font> By : <font color="#0000FF">Kralizmox#0000</font>'
+}}
+
+    players[name].ui.helpMenuOpened = true
+    players[name].imgs.helpUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 210, name, nil, nil, 0, nil, 0.5, 0.5)
+
+    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 150, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 250, name, 1, 1, 0, 1, nil, nil)
+    ui.addTextArea(textAreaIds.helpUiArea.rightArrow, "<a href='event:hRightArrow'>\n\n\n</a>", name, 190, 150, 50, 50,
+    nil, nil, 0, true)
+    ui.addTextArea(textAreaIds.helpUiArea.leftArrow, "<a href='event:hLeftArrow'>\n\n\n</a>", name, 190, 250, 50, 50,
+    nil, nil, 0, true)
+
+    ui.addTextArea(textAreaIds.helpUiArea.page, "<p align='center'><font size='19'><font color='#000000'>" ..
+        players[name].ui.helpPage .. "</font></font></p>", name, 190, 213, 50, 25, 0xBC784B, 0x863E12, 1, true)
+
+    ui.addTextArea(textAreaIds.helpUiArea.title, "<p align ='center'><font size='22'><font color='#FF0000'>".. titles.en[players[name].ui.helpPage].."</font></font></p>", name, 290, 85, 350, 250, 0xBC784B, 0x863E12, 1, true)
+    ui.addTextArea(textAreaIds.helpUiArea.mid, "<p align='left'><font color='#000000'>"..mids.en[players[name].ui.helpPage].."</font></p>", name, 290, 110, 350, 250, nil, nil, 0, true)
+end
+
+removeHelp = function(name)
+    players[name].ui.helpMenuOpened = false
+    tfm.exec.removeImage(players[name].imgs.helpUiImg)
+    tfm.exec.removeImage(players[name].imgs.rightArrow)
+    tfm.exec.removeImage(players[name].imgs.leftArrow)
+
+    for i in next, textAreaIds.helpUiArea do
+        ui.removeTextArea(textAreaIds.helpUiArea[i], name)
     end
 end
 
