@@ -19,13 +19,16 @@ local mapPlaying, maps = 0,
      [2] = {
          '\n<font color="#00ED00">•</font> <font color="#ffff00">#battleroyale</font> Oyununa Hoş Geldiniz! PVP Çok Oyunculu Oyun.\n\n\n<font color="#00ED00">•</font> Bu oyunda amacınız, fareleri Top topları ile itin ve fareleri öldürmek için Asit alanlarına veya Kırmızı dikdörtgenlere itin. Son Fareler Kazanmak İçin Hayatta Kalır!\n<font color="#00ED00">•</font> Asit Zeminleri ve Kırmızı dikdörtgenler sizi öldürecek.\n<font color="#00ED00">•</font> Hediye Kutuları Etkinlik Verir. \n(Örnek: Çift savaş topu, Üçlü Top ve daha fazlası)\n',
          '\n<font color="#00ED00">•</font> Ateş etmek için boşluk tuşu \n( Sol, Sağ, Aşağı, Yukarı )\n<font color="#00ED00">•</font> Hediyelerde "E" tuşu için Kalkan \n( Sol, Sağ, Aşağı, Yukarı )',
-         '\n<font size="9"><font color="#00ED00">•</font> <font color="#FFFF00">Hız</font> : Farenizin Hareket Hızını 10 Yükseltir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Düşük Hız</font> : Farenizin Hareket Hızını 10 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Dörtlü Saldırı</font> : Sol, Sağ, Aşağı, Yukarı Gülle atar \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Çift Top</font> : Top Sayınızı 2 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Üçlü Savaş Topu</font> : Top Sayınızı 3 yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomba</font> : Patlama Yaratır, Patlama% 30 (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Kalkan</font> : Kalkan Verir (Kalkan için E tuşu)\n<font color="#00ED00">•</font> <font color="#FFFF00">Küçük İksir</font> : Farenizin Büyüklüğünü 0,1 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Büyük İksir</font> : Farenizin Büyüklüğünü 0,1 Yükseltir \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Para</font> : 1-2 Arası Para Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir</font> : Farenizin Sırtına Peynir Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir Yok</font> : Farenizin Sırtından Peyniri Alır (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#ff0000">Not</font> : Bunlar Hediye Kutularından Gelen Etkinlikler.</font>',
+         '\n<font size="9"><font color="#00ED00">•</font> <font color="#FFFF00">Hız</font> : Farenizin Hareket Hızını 10 Yükseltir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Düşük Hız</font> : Farenizin Hareket Hızını 10 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Dörtlü Saldırı</font> : Sol, Sağ, Aşağı, Yukarı Gülle atar \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Çift Top</font> : Top Sayınızı 2 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Üçlü Savaş Topu</font> : Top Sayınızı 3 yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomba</font> : Patlama Yaratır, Patlama% 30 (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Kalkan</font> : Kalkan Verir (Kalkan için E tuşu)\n<font color="#00ED00">•</font> <font color="#FFFF00">Küçük İksir</font> : Farenizin Büyüklüğünü 0,1 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Büyük İksir</font> : Farenizin Büyüklüğünü 0,1 Yükseltir \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Para</font> : 1 veya 2 Para Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir</font> : Farenizin Sırtına Peynir Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir Yok</font> : Farenizin Sırtından Peyniri Alır (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#ff0000">Not</font> : Bunlar Hediye Kutularından Gelen Etkinlikler.</font>',
          '\n<font color="#00ED00">•</font> Hediye Kutuları 0.50 Saniyede Bir Ortaya Çıkar \n<font color="#ffff00">( 1 Saniye = 2 Hediye Kutusu)</font>',
          '\n<font color="#00ED00">•</font> <font color="#ffff00">Modül Geliştirici</font> : <font color="#aa00ff">Poklava#0000</font>\n<font color="#00ED00">•</font> <font color="#ffff00">Fikir</font> Ve <font color="#ffff00">Harita Yapımcısı</font> : <font color="#0000FF">Kralizmox#0000</font>'
      }}
 
      local gameStarted, firstRun, newPlayer, playerWon, bonusTime, countDownTime, countDown, keys = false, true, false,
     false, 0, 0, 10, {0, 1, 2, 3, 32, 69, 72, 80}
+    local colors = {"a", "b", "c", "d", "e", "f", "1", "2","3","4","5","6","7","8","9"}
+    local color
+
     local communities = {[1] = "en", [2] = "tr"}
 local textAreaIds = {
     countDown = 96,
@@ -725,12 +728,8 @@ eventKeyboard = function(name, key, down, x, y)
 end
 
 eventLoop = function(a, b)
-    local color = {"#ff0000", "#00ff00", "#ffff00", "#0000ff", "#ff00ff", "#ff9900", "#ef287c", "#79c4ba"}
-    ui.setMapName("#BATTLE<font color ='" .. color[math.random(#color)] .. "'>R</font><font color ='" ..
-                      color[math.random(#color)] .. "'>O</font><font color ='" .. color[math.random(#color)] ..
-                      "'>Y</font><font color ='" .. color[math.random(#color)] .. "'>A</font><font color ='" ..
-                      color[math.random(#color)] .. "'>L</font><font color ='" .. color[math.random(#color)] ..
-                      "'>E</font>")
+    color = "#" .. colors[math.random(#colors)] .. colors[math.random(#colors)] .. colors[math.random(#colors)] .. colors[math.random(#colors)] .. colors[math.random(#colors)] .. colors[math.random(#colors)]
+    ui.setMapName("#<font color='#ff0000'>BATTLE</font><font color ='" .. color .. "'>ROYALE</font>")
     if gameStarted then
         if a <= 12000 then
             countDownTime = countDownTime + 1
@@ -1306,8 +1305,8 @@ displayShop = function(name)
     players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 250, name, 1, 1, 0, 1, nil, nil)
 
     ui.addTextArea(textAreaIds.shopUiArea.money, "<p align='right'><font color='#FFF500'><font size='20'>" ..
-        players[name].coin .. "</font></font></p>", name, 165, 85, 100, 30, nil, 0xFFF500, 1, true)
-    ui.addTextArea(textAreaIds.shopUiArea.page, "<p align='center'><font size='19'><font color='#000000'>" ..
+        players[name].coin .. "</font></font></p>", name, 165, 85, 100, 30, 0xBC784B, 0xFFF500, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea.page, "<p align='center'><font size='19'><font color='"..color.."'>" ..
         players[name].ui.shopPage .. "</font></font></p>", name, 190, 213, 50, 25, 0xBC784B, 0x863E12, 1, true)
     ui.addTextArea(textAreaIds.shopUiArea.rightArrow, "<a href='event:rightArrow'>\n\n\n</a>", name, 190, 150, 50, 50,
         nil, nil, 0, true)
@@ -1417,10 +1416,10 @@ displayHelp = function(name)
     ui.addTextArea(textAreaIds.helpUiArea.leftArrow, "<a href='event:hLeftArrow'>\n\n\n</a>", name, 190, 250, 50, 50,
     nil, nil, 0, true)
 
-    players[name].imgs.flag = tfm.exec.addImage(""..flags[players[name].community], "&0", 200, 100, name, 2, 2, 0, nil, nil, nil)
-    ui.addTextArea(textAreaIds.helpUiArea.flag, "<p aling='center'><font size='18'><font color='#ff0000'><a href='event:flagLeft'>←</a>        <a href='event:flagRight'>→</a></font></font></p>", name, 172, 95, 90, 30, 0xBC784B, 0x863E12, 1, true)
+    players[name].imgs.flag = tfm.exec.addImage(""..flags[players[name].community], "&0", 200, 99, name, 2, 2, 0, nil, nil, nil)
+    ui.addTextArea(textAreaIds.helpUiArea.flag, "<p aling='center'><font size='18'><font color='".. color .."'><a href='event:flagLeft'>←</a>        <a href='event:flagRight'>→</a></font></font></p>", name, 172, 95, 90, 30, 0xBC784B, 0x863E12, 1, true)
 
-    ui.addTextArea(textAreaIds.helpUiArea.page, "<p align='center'><font size='19'><font color='#000000'>" ..
+    ui.addTextArea(textAreaIds.helpUiArea.page, "<p align='center'><font size='19'><font color='"..color.."'>" ..
         players[name].ui.helpPage .. "</font></font></p>", name, 190, 213, 50, 25, 0xBC784B, 0x863E12, 1, true)
 
     ui.addTextArea(textAreaIds.helpUiArea.title, "<p align ='center'><font size='22'><font color='#FF0000'>".. titles[players[name].community][players[name].ui.helpPage].."</font></font></p>", name, 290, 85, 350, 250, 0xBC784B, 0x863E12, 1, true)
