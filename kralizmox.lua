@@ -20,12 +20,12 @@ local titles = {
 local mids = {
     [1] = {'\n<font color="#00ED00">•</font> Welcome To <font color="#ffff00"><font size="20">#battleroyale</font></font> Game! \nIts PVP Multiplayer Game.\n\n\n<font color="#00ED00">•</font> Your goal in this game, Push the mice with Cannon Balls And push to <font color="#00ff00">Acid</font> Grounds or <font color="#ff0000">Red</font> Zone to kill mice. \nLast Mice Survive to Win!\n<font color="#00ED00">•</font> <font color="#00ff00">Acid</font> Grounds and <font color="#ff0000">Red</font> Zone Will kill you.\n<font color="#00ED00">•</font> Gift Boxes Gives Events. \n( Example : Double Cannon Ball, Triple Cannon Ball And more )',
            '\n<font color="#00ED00">•</font> "SPACEBAR" key to shoot \n( It Shoots In The Direction In Which You Are Moving )\n<font color="#00ED00">•</font> Shield For "B" key From Gifts \n( Puts In The Direction You Move )',
-           '<font size="9"><font color="#00ED00">•</font> <font color="#FFFF00">Speed</font> : Increases Your Mouse Movement Speed By 10  \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Low Speed</font> : Decreases Your Mouse Movement Speed By 10 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Quadruple Attack </font> : Shoots In 4 Directions  ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Double Cannon Ball</font> : Sets Your Cannon Ball Counts to 2 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Triple Cannon Ball</font> : Sets Your Cannon Ball Counts to 3 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomb</font> : Only Gives Your Mice, Explosion 30% ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Shield</font> : Gives A Shield To You ( "B" key For shield )\n<font color="#00ED00">•</font> <font color="#FFFF00">Small Potion</font> : Decreases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Big Potion</font> : Increases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Money</font> : Gives Money 1-2 random ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Cheese</font> : Gives A Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">No Cheese</font> : Removes The Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FF0000">Note</font> : This Events From Gift Boxes.</font>',
+           '<font size="9"><font color="#00ED00">•</font> <font color="#FFFF00">Speed</font> : Increases Your Mouse Movement Speed By 5  \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Low Speed</font> : Decreases Your Mouse Movement Speed By 5 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Quadruple Attack </font> : Shoots In 4 Directions  ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Double Cannon Ball</font> : Sets Your Cannon Ball Counts to 2 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Triple Cannon Ball</font> : Sets Your Cannon Ball Counts to 3 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomb</font> : Only Gives Your Mice, Explosion 30% ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Shield</font> : Gives A Shield To You ( "B" key For shield )\n<font color="#00ED00">•</font> <font color="#FFFF00">Small Potion</font> : Decreases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Big Potion</font> : Increases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Money</font> : Gives Money 1-2 random ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Cheese</font> : Gives A Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">No Cheese</font> : Removes The Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FF0000">Note</font> : This Events From Gift Boxes.</font>',
            '\n<font color="#00ED00">•</font> Gift Boxes Spawn in 0.50 Second \n<font color="#ffff00">( 1 Second = 2 Gift Boxes )</font>',
            '\n<font color="#00ED00">•</font> <font color="#ffff00">Module Developer</font> By : <font color="#aa00ff">Poklava#0000</font>\n<font color="#00ED00">•</font> <font color="#ffff00">Maps</font> And <font color="#ffff00">Ideas</font> By : <font color="#0000FF">Kralizmox#0000</font>'},
     [2] = {'\n<font color="#00ED00">•</font> <font color="#ffff00"><font size="20">#battleroyale</font></font> Oyununa Hoş Geldiniz! \nÇok Oyunculu PVP Oyunu.\n\n\n<font color="#00ED00">•</font> Bu oyunda amacınız, fareleri Top topları ile itin ve fareleri öldürmek için <font color="#00ff00">Asit</font> Zemine veya <font color="#ff0000">Kırmızı</font> Alana itin. \nHayatta Kalan Son Fare Kazanır!\n<font color="#00ED00">•</font> <font color="#00ff00">Asit</font> Zeminleri ve <font color="#ff0000">Kırmızı</font> Alan sizi öldürür.\n<font color="#00ED00">•</font> Hediye Kutuları Etkinlik Verir. \n(Örnek: Çift savaş topu, Üçlü Top ve daha fazlası)\n',
            '\n<font color="#00ED00">•</font> Ateş etmek için "BOŞLUK" tuşu \n( Hareket Ettiğiniz Yöne Ateş Eder )\n<font color="#00ED00">•</font> Hediye Kutusundan Çıkan Kalkan İçin "B" Tuşu \n( Hareket Ettiğiniz Yöne Koyar. )',
-           '<font size="10"><font color="#00ED00">•</font> <font color="#FFFF00">Hız</font> : Farenizin Hareket Hızını 10 Yükseltir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Düşük Hız</font> : Farenizin Hareket Hızını 10 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Dörtlü Saldırı</font> : 4 Yöne Gülle Atar \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Çift Top</font> : Top Sayınızı 2 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Üçlü Savaş Topu</font> : Top Sayınızı 3 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomba</font> : Patlama Yaratır, Patlama% 30 (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Kalkan</font> : Kalkan Verir (Kalkan için "B" tuşu)\n<font color="#00ED00">•</font> <font color="#FFFF00">Küçük İksir</font> : Farenizin Büyüklüğünü 0,1 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Büyük İksir</font> : Farenizin Büyüklüğünü 0,1 Yükseltir \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Para</font> : Rastgele 1-2 Para Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir</font> : Farenizin Sırtına Peynir Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir Yok</font> : Farenizin Sırtından Peyniri Alır \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#ff0000">Not</font> : Bunlar Hediye Kutularından Gelen Etkinlikler.</font>',
+           '<font size="10"><font color="#00ED00">•</font> <font color="#FFFF00">Hız</font> : Farenizin Hareket Hızını 5 Yükseltir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Düşük Hız</font> : Farenizin Hareket Hızını 5 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Dörtlü Saldırı</font> : 4 Yöne Gülle Atar \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Çift Top</font> : Top Sayınızı 2 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Üçlü Savaş Topu</font> : Top Sayınızı 3 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomba</font> : Patlama Yaratır, Patlama% 30 (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Kalkan</font> : Kalkan Verir (Kalkan için "B" tuşu)\n<font color="#00ED00">•</font> <font color="#FFFF00">Küçük İksir</font> : Farenizin Büyüklüğünü 0,1 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Büyük İksir</font> : Farenizin Büyüklüğünü 0,1 Yükseltir \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Para</font> : Rastgele 1-2 Para Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir</font> : Farenizin Sırtına Peynir Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir Yok</font> : Farenizin Sırtından Peyniri Alır \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#ff0000">Not</font> : Bunlar Hediye Kutularından Gelen Etkinlikler.</font>',
            '\n<font color="#00ED00">•</font> Hediye Kutuları 0.50 Saniyede Bir Ortaya Çıkar \n<font color="#ffff00">( 1 Saniye = 2 Hediye Kutusu)</font>',
            '\n<font color="#00ED00">•</font> <font color="#ffff00">Modül Geliştirici</font> : <font color="#aa00ff">Poklava#0000</font>\n<font color="#00ED00">•</font> <font color="#ffff00">Fikir</font> Ve <font color="#ffff00">Harita Yapımcısı</font> : <font color="#0000FF">Kralizmox#0000</font>'}
 }
@@ -36,8 +36,8 @@ local button = {
 }
 local gameStarted, firstRun, newPlayer, playerWon, bonusTime, countDownTime, countDown, keys = false, true, false,
     false, 0, 0, 10, {0, 1, 2, 3, 32, 66, 72, 80}
-local colors = {"a", "b", "c", "d", "e", "f", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
-local color
+local colors = {"a", "b", "c", "d", "e", "f", "1", "2", "3", "4", "5", "6", "7", "8", "9"} -- for creating random colors
+local color -- global random color
 
 local communities = {
     [1] = "en",
@@ -267,7 +267,7 @@ local spawnPoints = {{{
     x = 960,
     y = 2200
 }}}
-
+tfm.exec.setRoomMaxPlayers (12)
 for _, i in next, {'AutoShaman', 'MinimalistMode', 'WatchCommand', 'MortCommand', 'AutoScore',
                    'PhysicalConsumables'} do
     tfm.exec["disable" .. i]()
@@ -342,7 +342,7 @@ eventNewPlayer = function(name)
     if not gameStarted then
         tfm.exec.respawnPlayer(name)
         tfm.exec.setNameColor(name, 0xffffff)
-        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
         local barrierPuttedId = 1
         for name in next, players do
             players[name].event.barrierId = barrierPuttedId
@@ -360,6 +360,7 @@ end
 
 eventPlayerLeft = function(name)
     players[name].playing = false
+    players[name].isReady = "no"
 end
 
 eventNewGame = function()
@@ -386,6 +387,7 @@ eventNewGame = function()
                 tfm.exec
                     .movePlayer(name, spawnPoints[mapPlaying][i].x, spawnPoints[mapPlaying][i].y, false, 0, 0, false)
                 removeShopImg(name)
+                tfm.exec.setNameColor(name, 0xff0000)
             end
         end
     else
@@ -408,7 +410,6 @@ eventNewGame = function()
             bonus = {}
             tfm.exec.disableAfkDeath()
             tfm.exec.disableAutoNewGame(false)
-            tfm.exec.setGameTime (16, true)
         ui.removeTextArea(textAreaIds.countDown)
         ui.removeTextArea(textAreaIds.aliveMice)
         for _, i in next, textAreaIds.gift do
@@ -425,7 +426,8 @@ eventNewGame = function()
             if players[name].imgs.aliveMice then
                 tfm.exec.removeImage(players[name].imgs.aliveMice)
             end
-            ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+            ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+            ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", nil, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)
             players[name] = {
                 community = players[name].community,
                 coin = players[name].coin,
@@ -527,16 +529,8 @@ eventChatCommand = function(name, cmd)
         for numbers in cmd:gmatch("^%s%d$") do
             arg[#arg + 1] = numbers
         end
-        if arg[1] == "a" then
-            gameStarted = true
-            for name in next, tfm.get.room.playerList do
-                if not tfm.get.room.playerList[name].isDead then
-                    players[name].playing = true
-                end
-            end
-            local i = math.random(2, 5)
-            mapPlaying = i - 1
-            tfm.exec.newGame(maps[i])
+        if arg[1] == "a" and getPlayerIsReady() >= 2 then
+            tfm.exec.setGameTime(2, true)
         elseif arg[1] == "b" then
             gameStarted = false
             tfm.exec.newGame(maps[1])
@@ -819,12 +813,14 @@ eventLoop = function(a, b)
         end
     else
         if getPlayerIsReady() < 2 then
-            tfm.exec.setGameTime(16, true)
+            tfm.exec.setGameTime(31, true)
         end
         if playerWon then
-            ui.addTextArea(1, "<p align='center'><font size='27'><font color='#" .. color .. "'> " .. playerWon ..
-                "</font><font color='#FFFFFF'> !</font></font></p>", nil, 100, 30, 600, 45, 0xffffff, "0x" .. color, 1,
+            local winner = {[1] = "<font color='#" .. color .. "'> " .. playerWon .." Won The Round !</font>", [2] = "<font color='#" .. color .. "'>" .. playerWon .." Turu Kazandı !</font>"}
+            for name in next, players do
+                ui.addTextArea(1, "<p align='center'><font size='25'>".. winner[players[name].community] .."</font></p>", nil, 100, 30, 600, 45, 0xffffff, "0x" .. color, 1,
                 true)
+            end
             tfm.exec.setNameColor(playerWon, "0x" .. color)
             for x = 125, 650, 25 do
                 tfm.exec.displayParticle(29, x, 35, 0, math.random(0, 3), nil, nil, nil)
@@ -839,16 +835,16 @@ eventPlayerBonusGrabbed = function(name, id)
     local event = math.random(1, 10)
     if event == 1 then
         if players[name].speed < 90 then
-            players[name].speed = players[name].speed + 10
+            players[name].speed = players[name].speed + 5
         else
-            players[name].speed = players[name].speed - 10
+            players[name].speed = players[name].speed - 5
             event = 2
         end
     elseif event == 2 then
         if players[name].speed > 10 then
-            players[name].speed = players[name].speed - 10
+            players[name].speed = players[name].speed - 5
         else
-            players[name].speed = players[name].speed + 10
+            players[name].speed = players[name].speed + 5
             event = 1
         end
     elseif event == 3 then
@@ -868,7 +864,7 @@ eventPlayerBonusGrabbed = function(name, id)
         until (count ~= players[name].obj.count)
         players[name].obj.count = count
     elseif event == 5 then
-        tfm.exec.explosion(bonus[id].x, bonus[id].y, 40, 20, true)
+        tfm.exec.explosion(bonus[id].x, bonus[id].y, 30, 20, true)
         tfm.exec.displayParticle(3, bonus[id].x, bonus[id].y, 0, 0, 0, 0, nil)
     elseif event == 6 then
         players[name].event.hasBarrier = true
@@ -919,11 +915,19 @@ end
 
 -------------------------------------------------
 
-getPlaying = function()
+getPlaying = function(a)
     local i = 0
+    if a == nil then
     for name in next, players do
         if players[name].playing then
             i = i + 1
+        end
+    end
+    else
+        for name in next, players do
+            if not tfm.get.room.playerList[name].isDead then
+                i = i + 1
+            end
         end
     end
     return i
@@ -1109,14 +1113,17 @@ eventTextAreaCallback = function(id, name, event)
         else
             players[name].community = 1
         end
-        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+         ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", nil, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)
     elseif event == "flagLeft" then
         if players[name].community > 1 then
             players[name].community = players[name].community - 1
         elseif players[name].community == 1 then
             players[name].community = #communities
         end
-        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+        
+        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+         ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", nil, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)
     elseif event == "drag1" then
         if players[name].ui.shopPage == 1 then
             players[name].inventory[1] = true
@@ -1278,10 +1285,17 @@ eventTextAreaCallback = function(id, name, event)
     elseif event == "readyButton" then
         if players[name].isReady == "no" then
             players[name].isReady = "yes"
+            tfm.exec.setNameColor(name, 0x00ff00)
         else
             players[name].isReady = "no"
+            tfm.exec.setNameColor(name, 0xffffff)
         end
-        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+        
+        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+         ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", nil, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)
+        if getPlayerIsReady() == getPlaying("alive") then
+            tfm.exec.setGameTime(1 , true)
+        end
     end
     if players[name].ui.shopOpened then
         removeShopImg(name)
@@ -1373,95 +1387,95 @@ displayShop = function(name)
         end
     end
 
-    players[name].imgs.shopUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 210, name, 1, 1, 0, 1, 0.5, 0.5)
-    players[name].imgs.shopMoneyImg = tfm.exec.addImage("166e9893b89.png", "&0", 175, 100, name, 1, 1, 0, 1, 0.5, 0.5)
-    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 150, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 250, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.shopUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 220, name, 1, 1, 0, 1, 0.5, 0.5)
+    players[name].imgs.shopMoneyImg = tfm.exec.addImage("166e9893b89.png", "&0", 175, 110, name, 1, 1, 0, 1, 0.5, 0.5)
+    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 160, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 260, name, 1, 1, 0, 1, nil, nil)
 
     ui.addTextArea(textAreaIds.shopUiArea.money, "<p align='right'><font color='#FFF500'><font size='20'>" ..
-        players[name].coin .. "</font></font></p>", name, 165, 85, 100, 30, 0xBC784B, 0xFFF500, 1, true)
+        players[name].coin .. "</font></font></p>", name, 165, 95, 100, 30, 0xBC784B, 0xFFF500, 1, true)
     ui.addTextArea(textAreaIds.shopUiArea.page,
         "<p align='center'><font size='19'><font color='#" .. color .. "'>" .. players[name].ui.shopPage ..
-            "</font></font></p>", name, 190, 213, 50, 25, 0xBC784B, 0x863E12, 1, true)
-    ui.addTextArea(textAreaIds.shopUiArea.rightArrow, "<a href='event:rightArrow'>\n\n\n</a>", name, 190, 150, 50, 50,
+            "</font></font></p>", name, 190, 223, 50, 25, 0xBC784B, 0x863E12, 1, true)
+    ui.addTextArea(textAreaIds.shopUiArea.rightArrow, "<a href='event:rightArrow'>\n\n\n</a>", name, 190, 160, 50, 50,
         nil, nil, 0, true)
-    ui.addTextArea(textAreaIds.shopUiArea.leftArrow, "<a href='event:leftArrow'>\n\n\n</a>", name, 190, 250, 50, 50,
+    ui.addTextArea(textAreaIds.shopUiArea.leftArrow, "<a href='event:leftArrow'>\n\n\n</a>", name, 190, 260, 50, 50,
         nil, nil, 0, true)
 
     if players[name].ui.shopPage == 1 then
-        players[name].inShop[1] = tfm.exec.addImage(cannon.normal, "&0", 350, 140, name, nil, nil, 0, 1, 0.5, 0.5)
+        players[name].inShop[1] = tfm.exec.addImage(cannon.normal, "&0", 350, 150, name, nil, nil, 0, 1, 0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[1],
             "<p align='center'><a href='event:drag1'>\n\n\n<font size='8'>" .. p["normal"] .. "</font>\n<font color='#" ..
-                c[1] .. "'>" .. x[1] .. "</font</p></a>", name, 333, 123, 34, 69, nil, "0x" .. c[1], 1, true)
+                c[1] .. "'>" .. x[1] .. "</font</p></a>", name, 333, 133, 34, 69, nil, "0x" .. c[1], 1, true)
 
-        players[name].inShop[2] = tfm.exec.addImage(cannon.silver, "&0", 450, 140, name, nil, nil, math.rad(90), 1, 0.5,
+        players[name].inShop[2] = tfm.exec.addImage(cannon.silver, "&0", 450, 150, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[2],
             "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p["silver"] .. "</font>\n<font color='#" ..
-                c[2] .. "'>" .. x[2] .. "</font></p></a>", name, 433, 123, 34, 69, nil, "0x" .. c[2], 1, true)
+                c[2] .. "'>" .. x[2] .. "</font></p></a>", name, 433, 133, 34, 69, nil, "0x" .. c[2], 1, true)
 
-        players[name].inShop[3] = tfm.exec.addImage(cannon.orange, "&0", 550, 140, name, nil, nil, math.rad(90), 1, 0.5,
+        players[name].inShop[3] = tfm.exec.addImage(cannon.orange, "&0", 550, 150, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[3],
             "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p["orange"] .. "</font>\n<font color='#" ..
-                c[3] .. "'>" .. x[3] .. "</font></p></a>", name, 533, 123, 34, 69, nil, "0x" .. c[3], 1, true)
+                c[3] .. "'>" .. x[3] .. "</font></p></a>", name, 533, 133, 34, 69, nil, "0x" .. c[3], 1, true)
 
-        players[name].inShop[4] = tfm.exec.addImage(cannon.bear, "&0", 350, 240, name, nil, nil, math.rad(90), 1, 0.5,
+        players[name].inShop[4] = tfm.exec.addImage(cannon.bear, "&0", 350, 250, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[4],
             "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p["bear"] .. "</font>\n<font color='#" ..
-                c[4] .. "'>" .. x[4] .. "</font></p></a>", name, 333, 223, 34, 69, nil, "0x" .. c[4], 1, true)
+                c[4] .. "'>" .. x[4] .. "</font></p></a>", name, 333, 233, 34, 69, nil, "0x" .. c[4], 1, true)
 
-        players[name].inShop[5] = tfm.exec.addImage(cannon.hamburger, "&0", 450, 240, name, nil, nil, math.rad(90), 1,
+        players[name].inShop[5] = tfm.exec.addImage(cannon.hamburger, "&0", 450, 250, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[5],
             "<p align='center'><a href='event:drag5'>\n\n\n<font size='9'>" .. p["hamburger"] ..
-                "</font>\n<font color='#" .. c[5] .. "'>" .. x[5] .. "</font></p></a>", name, 433, 223, 34, 69, nil,
+                "</font>\n<font color='#" .. c[5] .. "'>" .. x[5] .. "</font></p></a>", name, 433, 233, 34, 69, nil,
             "0x" .. c[5], 1, true)
 
-        players[name].inShop[6] = tfm.exec.addImage(cannon.golden, "&0", 550, 240, name, nil, nil, math.rad(90), 1, 0.5,
+        players[name].inShop[6] = tfm.exec.addImage(cannon.golden, "&0", 550, 250, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[6],
             "<p align='center'><a href='event:drag6'>\n\n\n<font size='9'>" .. p["golden"] .. "</font>\n<font color='#" ..
-                c[6] .. "'>" .. x[6] .. "</font></p></a>", name, 533, 223, 34, 69, nil, "0x" .. c[6], 1, true)
+                c[6] .. "'>" .. x[6] .. "</font></p></a>", name, 533, 233, 34, 69, nil, "0x" .. c[6], 1, true)
     elseif players[name].ui.shopPage == 2 then
-        players[name].inShop[1] = tfm.exec.addImage(cannon.pokeball, "&0", 350, 140, name, nil, nil, math.rad(90), 1,
+        players[name].inShop[1] = tfm.exec.addImage(cannon.pokeball, "&0", 350, 150, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[1],
             "<p align='center'><a href='event:drag1'>\n\n\n<font size='9'>" .. p["pokeball"] ..
-                "</font>\n<font color='#" .. c[7] .. "'>" .. x[7] .. "</font</p></a>", name, 333, 123, 34, 69, nil,
+                "</font>\n<font color='#" .. c[7] .. "'>" .. x[7] .. "</font</p></a>", name, 333, 133, 34, 69, nil,
             "0x" .. c[7], 1, true)
 
-        players[name].inShop[2] = tfm.exec.addImage(cannon.sheep, "&0", 450, 140, name, nil, nil, math.rad(90), 1, 0.5,
+        players[name].inShop[2] = tfm.exec.addImage(cannon.sheep, "&0", 450, 150, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[2],
             "<p align='center'><a href='event:drag2'>\n\n\n<font size='9'>" .. p["sheep"] .. "</font>\n<font color='#" ..
-                c[8] .. "'>" .. x[8] .. "</font></p></a>", name, 433, 123, 34, 69, nil, "0x" .. c[8], 1, true)
+                c[8] .. "'>" .. x[8] .. "</font></p></a>", name, 433, 133, 34, 69, nil, "0x" .. c[8], 1, true)
 
-        players[name].inShop[3] = tfm.exec.addImage(cannon.chicken, "&0", 550, 140, name, nil, nil, math.rad(90), 1,
+        players[name].inShop[3] = tfm.exec.addImage(cannon.chicken, "&0", 550, 150, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[3],
             "<p align='center'><a href='event:drag3'>\n\n\n<font size='9'>" .. p["chicken"] .. "</font>\n<font color='#" ..
-                c[9] .. "'>" .. x[9] .. "</font></p></a>", name, 533, 123, 34, 69, nil, "0x" .. c[9], 1, true)
+                c[9] .. "'>" .. x[9] .. "</font></p></a>", name, 533, 133, 34, 69, nil, "0x" .. c[9], 1, true)
 
-        players[name].inShop[4] = tfm.exec.addImage(cannon.soulFly, "&0", 350, 240, name, nil, nil, math.rad(90), 1,
+        players[name].inShop[4] = tfm.exec.addImage(cannon.soulFly, "&0", 350, 250, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[4],
             "<p align='center'><a href='event:drag4'>\n\n\n<font size='9'>" .. p["soulFly"] .. "</font>\n<font color='#" ..
-                c[10] .. "'>" .. x[10] .. "</font></p></a>", name, 333, 223, 34, 69, nil, "0x" .. c[10], 1, true)
+                c[10] .. "'>" .. x[10] .. "</font></p></a>", name, 333, 233, 34, 69, nil, "0x" .. c[10], 1, true)
 
-        players[name].inShop[5] = tfm.exec.addImage(cannon.devilAngel, "&0", 450, 240, name, nil, nil, math.rad(90), 1,
+        players[name].inShop[5] = tfm.exec.addImage(cannon.devilAngel, "&0", 450, 250, name, nil, nil, math.rad(90), 1,
                                       0.5, 0.5)
         ui.addTextArea(textAreaIds.shopUiArea[5],
             "<p align='center'><a href='event:drag5'>\n\n\n<font size='8'>" .. p["devilAngel"] ..
-                "</font>\n<font color='#" .. c[11] .. "'>" .. x[11] .. "</font></p></a>", name, 433, 223, 34, 69, nil,
+                "</font>\n<font color='#" .. c[11] .. "'>" .. x[11] .. "</font></p></a>", name, 433, 233, 34, 69, nil,
             "0x" .. c[11], 1, true)
 
-        players[name].inShop[6] = tfm.exec.addImage(cannon.thanos, "&0", 550, 240, name, nil, nil, math.rad(90), 1, 0.5,
+        players[name].inShop[6] = tfm.exec.addImage(cannon.thanos, "&0", 550, 250, name, nil, nil, math.rad(90), 1, 0.5,
                                       0.5)
         ui.addTextArea(textAreaIds.shopUiArea[6],
             "<p align='center'><a href='event:drag6'>\n\n\n<font size='8'>" .. p["thanos"] .. "</font>\n<font color='#" ..
-                c[12] .. "'>" .. x[12] .. "</font></p></a>", name, 533, 223, 34, 69, nil, "0x" .. c[12], 1, true)
+                c[12] .. "'>" .. x[12] .. "</font></p></a>", name, 533, 233, 34, 69, nil, "0x" .. c[12], 1, true)
     end
 end
 
@@ -1481,30 +1495,30 @@ end
 displayHelp = function(name)
     players[name].ui.helpMenuOpened = true
     players[name].imgs.helpUiImg = tfm.exec
-                                       .addImage("17201a440b4.png", ":0", 400, 210, name, nil, nil, 0, nil, 0.5, 0.5)
+                                       .addImage("17201a440b4.png", ":0", 400, 220, name, nil, nil, 0, nil, 0.5, 0.5)
 
-    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 150, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 250, name, 1, 1, 0, 1, nil, nil)
-    ui.addTextArea(textAreaIds.helpUiArea.rightArrow, "<a href='event:hRightArrow'>\n\n\n</a>", name, 190, 150, 50, 50,
+    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 160, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 260, name, 1, 1, 0, 1, nil, nil)
+    ui.addTextArea(textAreaIds.helpUiArea.rightArrow, "<a href='event:hRightArrow'>\n\n\n</a>", name, 190, 160, 50, 50,
         nil, nil, 0, true)
-    ui.addTextArea(textAreaIds.helpUiArea.leftArrow, "<a href='event:hLeftArrow'>\n\n\n</a>", name, 190, 250, 50, 50,
+    ui.addTextArea(textAreaIds.helpUiArea.leftArrow, "<a href='event:hLeftArrow'>\n\n\n</a>", name, 190, 260, 50, 50,
         nil, nil, 0, true)
 
-    players[name].imgs.flag = tfm.exec.addImage("" .. flags[players[name].community], "&0", 200, 99, name, 2, 2, 0, nil,
+    players[name].imgs.flag = tfm.exec.addImage("" .. flags[players[name].community], "&0", 200, 109, name, 2, 2, 0, nil,
                                   nil, nil)
     ui.addTextArea(textAreaIds.helpUiArea.flag, "<p aling='center'><font size='18'><font color='#" .. color ..
-        "'><a href='event:flagLeft'>←</a>        <a href='event:flagRight'>→</a></font></font></p>", name, 172, 95,
+        "'><a href='event:flagLeft'>←</a>        <a href='event:flagRight'>→</a></font></font></p>", name, 172, 105,
         90, 30, 0xBC784B, 0x863E12, 1, true)
 
     ui.addTextArea(textAreaIds.helpUiArea.page,
         "<p align='center'><font size='19'><font color='#" .. color .. "'>" .. players[name].ui.helpPage ..
-            "</font></font></p>", name, 190, 213, 50, 25, 0xBC784B, 0x863E12, 1, true)
+            "</font></font></p>", name, 190, 223, 50, 25, 0xBC784B, 0x863E12, 1, true)
 
     ui.addTextArea(textAreaIds.helpUiArea.title, "<p align ='center'><font size='22'><font color='#FF0000'>" ..
-        titles[players[name].community][players[name].ui.helpPage] .. "</font></font></p>", name, 290, 80, 350, 260,
+        titles[players[name].community][players[name].ui.helpPage] .. "</font></font></p>", name, 290, 90, 350, 260,
         0xBC784B, 0x863E12, 1, true)
     ui.addTextArea(textAreaIds.helpUiArea.mid, "<p align='left'><font color='#000000'>" ..
-        mids[players[name].community][players[name].ui.helpPage] .. "</font></p>", name, 290, 110, 350, 250, nil, nil,
+        mids[players[name].community][players[name].ui.helpPage] .. "</font></p>", name, 290, 120, 350, 250, nil, nil,
         0, true)
 end
 
