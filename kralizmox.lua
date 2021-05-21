@@ -343,6 +343,9 @@ eventNewPlayer = function(name)
         tfm.exec.respawnPlayer(name)
         tfm.exec.setNameColor(name, 0xffffff)
         ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+        if not firstRun then
+            ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)
+        end
         local barrierPuttedId = 1
         for name in next, players do
             players[name].event.barrierId = barrierPuttedId
@@ -1077,17 +1080,17 @@ eventTextAreaCallback = function(id, name, event)
         if players[name].ui.shopOpened then
             removeShop(name)
             ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
-            ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", nil, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)   
+            ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)   
         else
             if players[name].ui.helpMenuOpened then
                 removeHelp(name)
             else
                 ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
-                ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", nil, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)       
+                ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)       
             end
             displayShop(name)
-            ui.removeTextArea(textAreaIds.readyButton)
-            ui.removeTextArea(textAreaIds.aliveMice)
+            ui.removeTextArea(textAreaIds.readyButton, name)
+            ui.removeTextArea(textAreaIds.aliveMice, name)
         end
     elseif event == "rightArrow" and players[name].ui.shopPage < 2 then
         players[name].ui.shopPage = players[name].ui.shopPage + 1
@@ -1098,15 +1101,15 @@ eventTextAreaCallback = function(id, name, event)
             removeHelp(name)
             if not gameStarted then
                 ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='25'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 50, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
-                ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", nil, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)   
+                ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 367, 16, 16, 0xbc784B, 0xff0000, 1, true)   
             end
         else
             if players[name].ui.shopOpened then
                 removeShop(name)
             end
             displayHelp(name)
-            ui.removeTextArea(textAreaIds.readyButton)
-            ui.removeTextArea(textAreaIds.aliveMice)
+            ui.removeTextArea(textAreaIds.readyButton, name)
+            ui.removeTextArea(textAreaIds.aliveMice, name)
         end
     elseif event == "hRightArrow" then
         if players[name].ui.helpPage < 5 then
