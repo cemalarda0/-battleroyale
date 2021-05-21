@@ -20,16 +20,20 @@ local titles = {
 local mids = {
     [1] = {'\n<font color="#00ED00">•</font> Welcome To <font color="#ffff00"><font size="20">#battleroyale</font></font> Game! \nIts PVP Multiplayer Game.\n\n\n<font color="#00ED00">•</font> Your goal in this game, Push the mice with Cannon Balls And push to <font color="#00ff00">Acid</font> Grounds or <font color="#ff0000">Red</font> Zone to kill mice. \nLast Mice Survive to Win!\n<font color="#00ED00">•</font> <font color="#00ff00">Acid</font> Grounds and <font color="#ff0000">Red</font> Zone Will kill you.\n<font color="#00ED00">•</font> Gift Boxes Gives Events. \n( Example : Double Cannon Ball, Triple Cannon Ball And more )',
            '\n<font color="#00ED00">•</font> "SPACEBAR" key to shoot \n( It Shoots In The Direction In Which You Are Moving )\n<font color="#00ED00">•</font> Shield For "B" key From Gifts \n( Puts In The Direction You Move )',
-           '<font size="9"><font color="#00ED00">•</font> <font color="#FFFF00">Speed</font> : Increases Your Mouse Movement Speed By 10  \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Low Speed</font> : Decreases Your Mouse Movement Speed By 10 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Quadruple Attack </font> : Shoots In 4 Directions  ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Double Cannon Ball</font> : Sets Your Cannon Ball Counts to 2 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Triple Cannon Ball</font> : Sets Your Cannon Ball Counts to 3 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomb</font> : Only Gives Your Mice, Explosion 30% ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Shield</font> : Gives A Shield To You ( "B" key For shield )\n<font color="#00ED00">•</font> <font color="#FFFF00">Small Potion</font> : Decreases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Big Potion</font> : Increases The Size Of Your Mouse By 0.1 ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Money</font> : Gives Money 1-2 random ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Cheese</font> : Gives A Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">No Cheese</font> : Removes The Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FF0000">Note</font> : This Events From Gift Boxes.</font>',
+           '<font size="9"><font color="#00ED00">•</font> <font color="#FFFF00">Speed</font> : Increases Your Mouse Movement Speed By 10  \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Low Speed</font> : Decreases Your Mouse Movement Speed By 10 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Quadruple Attack </font> : Shoots In 4 Directions  ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Double Cannon Ball</font> : Sets Your Cannon Ball Counts to 2 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Triple Cannon Ball</font> : Sets Your Cannon Ball Counts to 3 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomb</font> : Only Gives Your Mice, Explosion 30% ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Shield</font> : Gives A Shield To You ( "B" key For shield )\n<font color="#00ED00">•</font> <font color="#FFFF00">Small Potion</font> : Decreases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Big Potion</font> : Increases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Money</font> : Gives Money 1-2 random ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Cheese</font> : Gives A Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">No Cheese</font> : Removes The Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FF0000">Note</font> : This Events From Gift Boxes.</font>',
            '\n<font color="#00ED00">•</font> Gift Boxes Spawn in 0.50 Second \n<font color="#ffff00">( 1 Second = 2 Gift Boxes )</font>',
            '\n<font color="#00ED00">•</font> <font color="#ffff00">Module Developer</font> By : <font color="#aa00ff">Poklava#0000</font>\n<font color="#00ED00">•</font> <font color="#ffff00">Maps</font> And <font color="#ffff00">Ideas</font> By : <font color="#0000FF">Kralizmox#0000</font>'},
     [2] = {'\n<font color="#00ED00">•</font> <font color="#ffff00"><font size="20">#battleroyale</font></font> Oyununa Hoş Geldiniz! \nÇok Oyunculu PVP Oyunu.\n\n\n<font color="#00ED00">•</font> Bu oyunda amacınız, fareleri Top topları ile itin ve fareleri öldürmek için <font color="#00ff00">Asit</font> Zemine veya <font color="#ff0000">Kırmızı</font> Alana itin. \nHayatta Kalan Son Fare Kazanır!\n<font color="#00ED00">•</font> <font color="#00ff00">Asit</font> Zeminleri ve <font color="#ff0000">Kırmızı</font> Alan sizi öldürür.\n<font color="#00ED00">•</font> Hediye Kutuları Etkinlik Verir. \n(Örnek: Çift savaş topu, Üçlü Top ve daha fazlası)\n',
-           '\n<font color="#00ED00">•</font> Ateş etmek için "BOŞLUK" tuşu \n( Hareket Ettiğiniz Yöne Ateş Eder )\n<font color="#00ED00">•</font> Hediyelerde "B" tuşu için Kalkan \n( Hareket Ettiğiniz Yöne Koyar. )',
-           '\n<font size="9"><font color="#00ED00">•</font> <font color="#FFFF00">Hız</font> : Farenizin Hareket Hızını 10 Yükseltir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Düşük Hız</font> : Farenizin Hareket Hızını 10 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Dörtlü Saldırı</font> : Sol, Sağ, Aşağı, Yukarı Gülle atar \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Çift Top</font> : Top Sayınızı 2 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Üçlü Savaş Topu</font> : Top Sayınızı 3 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomba</font> : Patlama Yaratır, Patlama% 30 (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Kalkan</font> : Kalkan Verir (Kalkan için "B" tuşu)\n<font color="#00ED00">•</font> <font color="#FFFF00">Küçük İksir</font> : Farenizin Büyüklüğünü 0,1 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Büyük İksir</font> : Farenizin Büyüklüğünü 0,1 Yükseltir \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Para</font> : 1 veya 2 Para Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir</font> : Farenizin Sırtına Peynir Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir Yok</font> : Farenizin Sırtından Peyniri Alır (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#ff0000">Not</font> : Bunlar Hediye Kutularından Gelen Etkinlikler.</font>',
+           '\n<font color="#00ED00">•</font> Ateş etmek için "BOŞLUK" tuşu \n( Hareket Ettiğiniz Yöne Ateş Eder )\n<font color="#00ED00">•</font> Hediye Kutusundan Çıkan Kalkan İçin "B" Tuşu \n( Hareket Ettiğiniz Yöne Koyar. )',
+           '<font size="10"><font color="#00ED00">•</font> <font color="#FFFF00">Hız</font> : Farenizin Hareket Hızını 10 Yükseltir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Düşük Hız</font> : Farenizin Hareket Hızını 10 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Dörtlü Saldırı</font> : 4 Yöne Gülle Atar \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Çift Top</font> : Top Sayınızı 2 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Üçlü Savaş Topu</font> : Top Sayınızı 3 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomba</font> : Patlama Yaratır, Patlama% 30 (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Kalkan</font> : Kalkan Verir (Kalkan için "B" tuşu)\n<font color="#00ED00">•</font> <font color="#FFFF00">Küçük İksir</font> : Farenizin Büyüklüğünü 0,1 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Büyük İksir</font> : Farenizin Büyüklüğünü 0,1 Yükseltir \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Para</font> : Rastgele 1-2 Para Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir</font> : Farenizin Sırtına Peynir Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir Yok</font> : Farenizin Sırtından Peyniri Alır \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#ff0000">Not</font> : Bunlar Hediye Kutularından Gelen Etkinlikler.</font>',
            '\n<font color="#00ED00">•</font> Hediye Kutuları 0.50 Saniyede Bir Ortaya Çıkar \n<font color="#ffff00">( 1 Saniye = 2 Hediye Kutusu)</font>',
            '\n<font color="#00ED00">•</font> <font color="#ffff00">Modül Geliştirici</font> : <font color="#aa00ff">Poklava#0000</font>\n<font color="#00ED00">•</font> <font color="#ffff00">Fikir</font> Ve <font color="#ffff00">Harita Yapımcısı</font> : <font color="#0000FF">Kralizmox#0000</font>'}
 }
 
+local button = {
+    ["yes"] = {[1] = "<font color='#ff0000'>Leave</font>", [2] = "<font color='#ff0000'>Çıkış</font>"},
+    ["no"] = {[1] = "<font color='#00FF00'>Fight!</font>", [2] = "<font color='#00FF00'>Savaş!</font>"}
+}
 local gameStarted, firstRun, newPlayer, playerWon, bonusTime, countDownTime, countDown, keys = false, true, false,
     false, 0, 0, 10, {0, 1, 2, 3, 32, 66, 72, 80}
 local colors = {"a", "b", "c", "d", "e", "f", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
@@ -40,6 +44,7 @@ local communities = {
     [2] = "tr"
 }
 local textAreaIds = {
+    readyButton = 95,
     countDown = 96,
     aliveMice = 97,
     shopArea = 98,
@@ -263,7 +268,7 @@ local spawnPoints = {{{
     y = 2200
 }}}
 
-for _, i in next, {'AutoShaman', 'MinimalistMode', 'WatchCommand', 'MortCommand', 'AutoNewGame', 'AutoScore',
+for _, i in next, {'AutoShaman', 'MinimalistMode', 'WatchCommand', 'MortCommand', 'AutoScore',
                    'PhysicalConsumables'} do
     tfm.exec["disable" .. i]()
 end
@@ -274,6 +279,7 @@ eventNewPlayer = function(name)
         community = 1,
         coin = 0,
         playing = false,
+        isReady = "no",
         cooldown = 1,
         speed = 50,
         moving = {
@@ -335,6 +341,8 @@ eventNewPlayer = function(name)
     end
     if not gameStarted then
         tfm.exec.respawnPlayer(name)
+        tfm.exec.setNameColor(name, 0xffffff)
+        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
         local barrierPuttedId = 1
         for name in next, players do
             players[name].event.barrierId = barrierPuttedId
@@ -363,7 +371,9 @@ eventNewGame = function()
         end
     end
     if gameStarted then
+        tfm.exec.disableAutoNewGame()
         tfm.exec.disableAfkDeath(false)
+        ui.removeTextArea(textAreaIds.readyButton)
         playerWon = false
         bonusTime = 0
         countDownTime = 0
@@ -379,13 +389,31 @@ eventNewGame = function()
             end
         end
     else
+        if getPlayerIsReady() >= 2 then
+            gameStarted = true
+            local i = math.random(2, 5)
+            mapPlaying = i - 1
+            tfm.exec.newGame(maps[i])
+            for name in next, tfm.get.room.playerList do
+                if players[name].isReady == "no" then
+                    tfm.exec.killPlayer(name)
+                end
+                if not tfm.get.room.playerList[name].isDead then
+                    players[name].playing = true
+                    players[name].isReady = "no"
+                end
+            end
+            eventNewGame()
+        else
+            bonus = {}
+            tfm.exec.disableAfkDeath()
+            tfm.exec.disableAutoNewGame(false)
+            tfm.exec.setGameTime (16, true)
         ui.removeTextArea(textAreaIds.countDown)
-        tfm.exec.disableAfkDeath()
-        bonus = {}
+        ui.removeTextArea(textAreaIds.aliveMice)
         for _, i in next, textAreaIds.gift do
             ui.removeTextArea(i)
         end
-        ui.removeTextArea(textAreaIds.aliveMice)
         for name in next, players do
             tfm.exec.setNameColor(name, 0xffffff)
             if firstRun then
@@ -397,10 +425,12 @@ eventNewGame = function()
             if players[name].imgs.aliveMice then
                 tfm.exec.removeImage(players[name].imgs.aliveMice)
             end
+            ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
             players[name] = {
                 community = players[name].community,
                 coin = players[name].coin,
                 playing = false,
+                isReady = "no",
                 cooldown = 1,
                 speed = 50,
                 moving = {
@@ -463,6 +493,7 @@ eventNewGame = function()
         end
     end
     firstRun = false
+end
 end
 
 eventPlayerDied = function(name)
@@ -757,6 +788,7 @@ eventLoop = function(a, b)
                 colors[math.random(#colors)] .. colors[math.random(#colors)] .. colors[math.random(#colors)]
     ui.setMapName("#<font color='#ff0000'>BATTLE</font><font color ='#" .. color .. "'>ROYALE</font>")
     if gameStarted then
+        tfm.exec.setGameTime(894, true)
         if a <= 12000 then
             countDownTime = countDownTime + 1
             if countDownTime >= 2 then
@@ -786,6 +818,9 @@ eventLoop = function(a, b)
             end
         end
     else
+        if getPlayerIsReady() < 2 then
+            tfm.exec.setGameTime(16, true)
+        end
         if playerWon then
             ui.addTextArea(1, "<p align='center'><font size='27'><font color='#" .. color .. "'> " .. playerWon ..
                 "</font><font color='#FFFFFF'> !</font></font></p>", nil, 100, 30, 600, 45, 0xffffff, "0x" .. color, 1,
@@ -1074,12 +1109,14 @@ eventTextAreaCallback = function(id, name, event)
         else
             players[name].community = 1
         end
+        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
     elseif event == "flagLeft" then
         if players[name].community > 1 then
             players[name].community = players[name].community - 1
         elseif players[name].community == 1 then
             players[name].community = #communities
         end
+        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
     elseif event == "drag1" then
         if players[name].ui.shopPage == 1 then
             players[name].inventory[1] = true
@@ -1238,6 +1275,13 @@ eventTextAreaCallback = function(id, name, event)
                 end
             end
         end
+    elseif event == "readyButton" then
+        if players[name].isReady == "no" then
+            players[name].isReady = "yes"
+        else
+            players[name].isReady = "no"
+        end
+        ui.addTextArea(textAreaIds.readyButton, "<p align='center'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></p>", name, 340, 380, 155, 20, 0x000000, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
     end
     if players[name].ui.shopOpened then
         removeShopImg(name)
@@ -1457,7 +1501,7 @@ displayHelp = function(name)
             "</font></font></p>", name, 190, 213, 50, 25, 0xBC784B, 0x863E12, 1, true)
 
     ui.addTextArea(textAreaIds.helpUiArea.title, "<p align ='center'><font size='22'><font color='#FF0000'>" ..
-        titles[players[name].community][players[name].ui.helpPage] .. "</font></font></p>", name, 290, 85, 350, 250,
+        titles[players[name].community][players[name].ui.helpPage] .. "</font></font></p>", name, 290, 80, 350, 260,
         0xBC784B, 0x863E12, 1, true)
     ui.addTextArea(textAreaIds.helpUiArea.mid, "<p align='left'><font color='#000000'>" ..
         mids[players[name].community][players[name].ui.helpPage] .. "</font></p>", name, 290, 110, 350, 250, nil, nil,
@@ -1479,4 +1523,14 @@ end
 decreaseCoin = function(name, decreaseValue)
     players[name].coin = tfm.get.room.playerList[name].score - decreaseValue
     tfm.exec.setPlayerScore(name, players[name].coin, false)
+end
+
+getPlayerIsReady = function()
+    local i = 0
+    for name in next, players do
+        if players[name].isReady == "yes" then
+            i = i + 1
+        end
+    end
+    return i
 end
