@@ -824,7 +824,9 @@ eventLoop = function(a, b)
                 ui.addTextArea(1, "<p align='center'><font size='25'>".. winner[players[name].community] .."</font></p>", nil, 100, 30, 600, 45, 0xffffff, "0x" .. color, 1,
                 true)
             end
-            tfm.exec.setNameColor(playerWon, "0x" .. color)
+            if players[playerWon].isReady == "no" then
+                tfm.exec.setNameColor(playerWon, "0x" .. color)
+            end
             for x = 125, 650, 25 do
                 tfm.exec.displayParticle(29, x, 35, 0, math.random(0, 3), nil, nil, nil)
             end
@@ -1080,13 +1082,21 @@ eventTextAreaCallback = function(id, name, event)
         if players[name].ui.shopOpened then
             removeShop(name)
             ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='28'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 45, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
-            ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)   
-        else
+            for name in next, players do
+                if not players[name].ui.shopOpened and not players[name].ui.helpMenuOpened then
+                    ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)   
+                end
+            end
+            else
             if players[name].ui.helpMenuOpened then
                 removeHelp(name)
             else
                 ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='28'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 45, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
-                ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)       
+                for name in next, players do
+                if not players[name].ui.shopOpened and not players[name].ui.helpMenuOpened then
+                    ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)   
+                end
+            end
             end
             displayShop(name)
             ui.removeTextArea(textAreaIds.readyButton, name)
@@ -1101,7 +1111,11 @@ eventTextAreaCallback = function(id, name, event)
             removeHelp(name)
             if not gameStarted then
                 ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='28'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 45, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
-                ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)   
+                for name in next, players do
+                if not players[name].ui.shopOpened and not players[name].ui.helpMenuOpened then
+                    ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)   
+                end
+            end
             end
         else
             if players[name].ui.shopOpened then
@@ -1303,7 +1317,11 @@ eventTextAreaCallback = function(id, name, event)
         end
         
         ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='28'><a href='event:readyButton'>".. button[players[name].isReady][players[name].community] .."</a></font></p>", name, 320, 350, 155, 45, 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
-         ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", nil, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)
+        for name in next, players do
+        if not players[name].ui.shopOpened and not players[name].ui.helpMenuOpened then
+            ui.addTextArea(textAreaIds.aliveMice, "<p align='center'><font size='10'><font color='#ff0000'>"..getPlayerIsReady().."</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)   
+        end
+    end
         if getPlayerIsReady() == getPlaying("alive") then
             tfm.exec.setGameTime(1 , true)
         end
