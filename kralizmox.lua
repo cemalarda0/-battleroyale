@@ -591,7 +591,7 @@ eventChatCommand = function(name, cmd)
         end
     end
 end
-eventMouse = function(name, x, y)
+--[[eventMouse = function(name, x, y)
     if admins[name] then
         players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, players[name][3] == 0 and x -
                                     players[name].obj.offset or x + players[name].obj.offset, y,
@@ -601,7 +601,7 @@ eventMouse = function(name, x, y)
                 cannon.positions[players[name].obj.img].x, cannon.positions[players[name].obj.img].y)
         end
     end
-end
+end]]
 
 eventKeyboard = function(name, key, down, x, y)
     if key == 1 then
@@ -1600,8 +1600,10 @@ removeHelp = function(name)
 end
 
 decreaseCoin = function(name, decreaseValue)
-    players[name].coin = tfm.get.room.playerList[name].score - decreaseValue
-    tfm.exec.setPlayerScore(name, players[name].coin, false)
+    if not tfm.get.room.playerList[name].isDead then
+        players[name].coin = tfm.get.room.playerList[name].score - decreaseValue
+        tfm.exec.setPlayerScore(name, players[name].coin, false)
+    end
 end
 
 getPlayerIsReady = function()
