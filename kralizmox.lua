@@ -286,7 +286,7 @@ eventNewPlayer = function(name)
         },
         inventory = {true, false, false, false, false, false},
         imgs = {flag, aliveMice, shopImg, helpImg, helpUiImg, shopUiImg, shopMoneyImgi, leftArrow, rightArrow,
-                closeButton},
+                closeButton, background},
         inShop = {},
         bag = {
             normal = true,
@@ -466,7 +466,7 @@ eventNewGame = function()
                     inventory = {players[name].inventory[1], players[name].inventory[2], players[name].inventory[3],
                                  players[name].inventory[4], players[name].inventory[5], players[name].inventory[6]},
                     imgs = {flag, aliveMice, shopImg, helpImg, helpUiImg, shopUiImg, shopMoneyImgi, leftArrow,
-                            rightArrow, closeButton},
+                            rightArrow, closeButton, background},
                     inShop = {},
                     bag = {
                         normal = true,
@@ -1147,9 +1147,13 @@ eventTextAreaCallback = function(id, name, event)
             ui.removeTextArea(textAreaIds.readyCount, name)
         end
     elseif event == "rightArrow" and players[name].ui.shopPage < 2 then
+        removeShop(name)
         players[name].ui.shopPage = players[name].ui.shopPage + 1
+        displayShop(name)
     elseif event == "leftArrow" and players[name].ui.shopPage > 1 then
+        removeShop(name)
         players[name].ui.shopPage = players[name].ui.shopPage - 1
+        displayShop(name)
     elseif event == "helpButton" then
         if players[name].ui.helpMenuOpened then
             removeHelp(name)
@@ -1293,10 +1297,11 @@ displayShop = function(name)
     end
 
     players[name].imgs.shopUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 220, name, 1, 1, 0, 1, 0.5, 0.5)
+    players[name].imgs.background = tfm.exec.addImage("177fc327747.jpg", ":1", 400, 220, name, 0.105, 0.35, 0, 0.70, 0.5, 0.5)
     players[name].imgs.shopMoneyImg = tfm.exec.addImage("166e9893b89.png", "&0", 175, 110, name, 1, 1, 0, 1, 0.5, 0.5)
-    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 160, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 260, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.closeButton = tfm.exec.addImage("171e178660d.png", ":1", 655, 76, name, 1, 1, 0, 1, 0.5, 0.5)
+    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":2", 190, 160, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":2", 190, 260, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.closeButton = tfm.exec.addImage("171e178660d.png", ":2", 655, 76, name, 1, 1, 0, 1, 0.5, 0.5)
 
     ui.addTextArea(textAreaIds.shopUiArea.money, "<p align='right'><font color='#FFF500'><font size='20'>" ..
         players[name].coin .. "</font></font></p>", name, 165, 95, 100, 30, 0xBC784B, 0xFFF500, 1, true)
@@ -1331,17 +1336,19 @@ end
 
 removeShop = function(name)
     players[name].ui.shopOpened = false
-    for i = 1, 12 do
-        if players[name].ui.shopPage == 1 and i <= 6 then
+    if players[name].ui.shopPage == 1 then
+        for i = 1, 6 do
             tfm.exec.removeImage(players[name].inShop[i])
-        elseif players[name].ui.shopPage == 2 and i > 6 then
+        end
+    elseif players[name].ui.shopPage == 2 then
+        for i = 7, 12 do
             tfm.exec.removeImage(players[name].inShop[i])
         end
     end
     for i in next, textAreaIds.shopUiArea do
         ui.removeTextArea(textAreaIds.shopUiArea[i], name)
     end
-    for _, i in next, {"shopUiImg", "shopMoneyImg", "rightArrow", "leftArrow", "closeButton"} do
+    for _, i in next, {"shopUiImg", "shopMoneyImg", "rightArrow", "leftArrow", "closeButton", "background"} do
         tfm.exec.removeImage(players[name].imgs[i])
     end
 end
@@ -1349,9 +1356,10 @@ end
 displayHelp = function(name)
     players[name].ui.helpMenuOpened = true
     players[name].imgs.helpUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 220, name, nil, nil, 0, nil, 0.5, 0.5)
-    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":1", 190, 160, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":1", 190, 260, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.closeButton = tfm.exec.addImage("171e178660d.png", ":1", 655, 76, name, 1, 1, 0, 1, 0.5, 0.5)
+    players[name].imgs.background = tfm.exec.addImage("177fc327747.jpg", ":1", 400, 220, name, 0.105, 0.35, 0, 0.70, 0.5, 0.5)
+    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":2", 190, 160, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":2", 190, 260, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.closeButton = tfm.exec.addImage("171e178660d.png", ":2", 655, 76, name, 1, 1, 0, 1, 0.5, 0.5)
     ui.addTextArea(textAreaIds.helpUiArea.rightArrow, "<a href='event:hRightArrow'>\n\n\n</a>", name, 190, 160, 50, 50,
         nil, nil, 0, true)
     ui.addTextArea(textAreaIds.helpUiArea.leftArrow, "<a href='event:hLeftArrow'>\n\n\n</a>", name, 190, 260, 50, 50,
@@ -1379,7 +1387,7 @@ end
 
 removeHelp = function(name)
     players[name].ui.helpMenuOpened = false
-    for _, i in next, {"helpUiImg", "rightArrow", "leftArrow", "flag", "closeButton"} do
+    for _, i in next, {"helpUiImg", "rightArrow", "leftArrow", "flag", "closeButton", "background"} do
         tfm.exec.removeImage(players[name].imgs[i])
     end
     for i in next, textAreaIds.helpUiArea do
