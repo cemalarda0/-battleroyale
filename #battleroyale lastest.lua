@@ -108,6 +108,10 @@ local cannon = {
     devilAngel = {img = "1687567eceb.png", x = -30, y = -28, price = 250, inv = 11},
     thanos = {img = "16a2193836b.png", x = -21, y = -17, price = 300, inv = 12}
 }
+local pos = {}
+for i in next, cannon do
+    pos[cannon[i].img] = i
+end
 local spawnPoints = {{{
     x = 779,
     y = 301
@@ -646,10 +650,6 @@ eventChatCommand = function(name, cmd)
 end
 --[[eventMouse = function(name, x, y)
     if admins[name] then
-        local pos = {}
-        for i in next, cannon do
-            pos[cannon[i].img] = i
-        end
         players[name].lastObj = tfm.exec.addShamanObject(players[name].obj.id, players[name][3] == 0 and x -
                                     players[name].obj.offset or x + players[name].obj.offset, y,
                                     players[name][3] == 0 and -90 or 90)
@@ -714,10 +714,6 @@ eventKeyboard = function(name, key, down, x, y)
     end
     if players[name].playing and key == 32 then
         if players[name].cooldown == 0 then
-            local pos = {}
-            for i in next, cannon do
-                pos[cannon[i].img] = i
-            end
             if players[name].lastObj then
                 tfm.exec.removeObject(players[name].lastObj)
             end
