@@ -21,18 +21,18 @@ local titles = {
 local mids = {
     [1] = {'\n<font color="#00ED00">•</font> Welcome To <font color="#ffff00"><font size="20">#battleroyale</font></font> Game! \nIts PVP Multiplayer Game.\n\n\n<font color="#00ED00">•</font> Your Goal In This Game, Push The Mice With Cannon Balls To <font color="#00ff00">Acid</font> Grounds Or <font color="#ff0000">Red</font> Zone And Kill Mice. \nLast Fighter Survive To Win!\n<font color="#00ED00">•</font> <font color="#00ff00">Acid</font> Grounds And <font color="#ff0000">Red</font> Zone Will Kill You.\n<font color="#00ED00">•</font> Gift Boxes Gives Events. \n( Example : Double Cannon Ball, Triple Cannon Ball And More )',
            '\n<font color="#00ED00">•</font> "SPACEBAR" Key To Shoot \n( It Shoots In The Direction In Which You Are Moving )\n<font color="#00ED00">•</font> Shield For "B" Key From Gifts \n( Puts In The Direction You Move )',
-           '<font size="9"><font color="#00ED00">•</font> <font color="#FFFF00">Speed</font> : Increases Your Mouse Movement Speed By 5  \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Low Speed</font> : Decreases Your Mouse Movement Speed By 5 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Quadruple Attack </font> : Shoots In 4 Directions  ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Double Cannon Ball</font> : Sets Your Cannon Ball Counts To 2 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Triple Cannon Ball</font> : Sets Your Cannon Ball Counts To 3 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomb</font> : Only Gives Your Mice, Explosion 30% ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Shield</font> : Gives A Shield To You ( "B" Key For Shield )\n<font color="#00ED00">•</font> <font color="#FFFF00">Small Potion</font> : Decreases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Big Potion</font> : Increases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Money</font> : Gives Money 1-2 Random ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Cheese</font> : Gives A Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">No Cheese</font> : Removes The Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FF0000">Note</font> : This Events From Gift Boxes.</font>',
+           '<font size="10.5"><font color="#00ED00">•</font> <font color="#FFFF00">Speed</font> : Increases Your Mouse Movement Speed By 5 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Low Speed</font> : Decreases Your Mouse Movement Speed By 5 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Quadruple Attack </font> : Shoots In 4 Directions ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Double Cannon Ball</font> : Sets Your Cannon Ball Counts To 2 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Triple Cannon Ball</font> : Sets Your Cannon Ball Counts To 3 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomb</font> : Only Gives Your Mice, Explosion 30% ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Shield</font> : Gives A Shield To You ( "B" Key For Shield )\n<font color="#00ED00">•</font> <font color="#FFFF00">Small Potion</font> : Decreases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Big Potion</font> : Increases The Size Of Your Mouse By 0.1 \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Money</font> : Gives Money 1-2 Random ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">Cheese</font> : Gives A Cheese On Your Mouse ( Uses auto )\n<font color="#00ED00">•</font> <font color="#FFFF00">No Cheese</font> : Removes The Cheese On Your Mouse \n( Uses auto )\n<font color="#00ED00">•</font> <font color="#FF0000">Note</font> : This Events From Gift Boxes.</font>',
            '\n<font color="#00ED00">•</font> Gift Boxes Spawn In 0.50 Second \n<font color="#ffff00">( 1 Second = 2 Gift Boxes )</font>\n<font color="#00ED00">•</font> Cross Shoot, Double Cannon Ball Event And Triple Cannon Ball Event Does Not Adjust.\n<font color="#00ED00">•</font> Total 12 Events In The Game.\n<font color="#00ED00">•</font> Total 5 Maps In The Game.\n<font color="#00ED00">•</font> Red Zone Fills The Map In 3 Minutes 10 Seconds\n<font color="#00ED00">•</font> Last Fighter Alive Earns 10 Coins.\n<font color="#ffff00">( Press "P", type !shop Or Click Cannon Ball Icon In The Top Right Corner For Open The Market )</font>\n<font color="#00ED00">•</font> Help Menu Language Affects The Whole Game.\n<font color="#00ED00">•</font> Click <font color="#00FF00">"Battle!"</font> To Play.\n<font color="#00ED00">•</font> The Number Next To The Battle Button Is The Number Of Fighters To Join The Game.</font>',
            '\n<font color="#00ED00">•</font> <font color="#ffff00">Module Developer</font> By : <font color="#aa00ff">Poklava#0000</font>\n<font color="#00ED00">•</font> <font color="#ffff00">Maps</font> And <font color="#ffff00">Ideas</font> By : <font color="#00FAFF">Kralizmox#0000</font>\n\n<font color="#00ED00">•</font> Please Report If You Find A Bug.</font>'},
     [2] = {'\n<font color="#00ED00">•</font> <font color="#ffff00"><font size="20">#battleroyale</font></font> Oyununa Hoş Geldiniz! \nÇok Oyunculu PVP Oyunu.\n\n\n<font color="#00ED00">•</font> Bu Oyunda Amacınız, Farelere Gülle Fırlatıp Onları İtmektir. <font color="#00ff00">Asit</font> Zemine Veya <font color="#ff0000">Kırmızı</font> Alana Değmeleri Onları Öldürecektir. \nHayatta Kalan Son Fare Kazanır!\n<font color="#00ED00">•</font> <font color="#00ff00">Asit</font> Zeminleri ve <font color="#ff0000">Kırmızı</font> Alan Sizi Öldürür.\n<font color="#00ED00">•</font> Hediye Kutuları Etkinlik Verir. \n(Örnek: Çift savaş topu, Üçlü Top ve daha fazlası)\n',
            '\n<font color="#00ED00">•</font> Ateş Etmek İçin "BOŞLUK" Tuşu \n( Hareket Ettiğiniz Yöne Ateş Eder )\n<font color="#00ED00">•</font> Hediye Kutusundan Çıkan Kalkan İçin "B" Tuşu \n( Hareket Ettiğiniz Yöne Koyar )',
-           '<font size="10"><font color="#00ED00">•</font> <font color="#FFFF00">Hız</font> : Farenizin Hareket Hızını 5 Yükseltir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Düşük Hız</font> : Farenizin Hareket Hızını 5 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Dörtlü Saldırı</font> : 4 Yöne Gülle Atar \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Çift Top</font> : Top Sayınızı 2 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Üçlü Savaş Topu</font> : Top Sayınızı 3 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomba</font> : Patlama Yaratır, Patlama% 30 (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Kalkan</font> : Kalkan Verir (Kalkan için "B" tuşu)\n<font color="#00ED00">•</font> <font color="#FFFF00">Küçük İksir</font> : Farenizin Büyüklüğünü 0,1 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Büyük İksir</font> : Farenizin Büyüklüğünü 0,1 Yükseltir \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Para</font> : Rastgele 1-2 Para Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir</font> : Farenizin Sırtına Peynir Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir Yok</font> : Farenizin Sırtından Peyniri Alır \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#ff0000">Not</font> : Bunlar Hediye Kutularından Gelen Etkinlikler.</font>',
+           '<font size="11"><font color="#00ED00">•</font> <font color="#FFFF00">Hız</font> : Farenizin Hareket Hızını 5 Yükseltir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Düşük Hız</font> : Farenizin Hareket Hızını 5 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Dörtlü Saldırı</font> : 4 Yöne Gülle Atar \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Çift Top</font> : Top Sayınızı 2 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Üçlü Savaş Topu</font> : Top Sayınızı 3 Yapar (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Bomba</font> : Patlama Yaratır, Patlama% 30 (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Kalkan</font> : Kalkan Verir (Kalkan için "B" tuşu)\n<font color="#00ED00">•</font> <font color="#FFFF00">Küçük İksir</font> : Farenizin Büyüklüğünü 0,1 Düşürür \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Büyük İksir</font> : Farenizin Büyüklüğünü 0,1 Yükseltir \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Para</font> : Rastgele 1-2 Para Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir</font> : Farenizin Sırtına Peynir Verir (Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#FFFF00">Peynir Yok</font> : Farenizin Sırtından Peyniri Alır \n(Otomatik kullanır)\n<font color="#00ED00">•</font> <font color="#ff0000">Not</font> : Bunlar Hediye Kutularından Gelen Etkinlikler.</font>',
            '\n<font color="#00ED00">•</font> Hediye Kutuları 0.50 Saniyede Bir Ortaya Çıkar\n<font color="#ffff00">( 1 Saniye = 2 Hediye Kutusu )</font>\n<font color="#00ED00">•</font> Çaprazlama Ateş, Çift Top Ve Üçlü Savaş Top Etkinliğinden Etkilenmez.\n<font color="#00ED00">•</font> Toplam 12 Etkinlik Vardır.\n<font color="#00ED00">•</font> Toplam 5 Harita Vardır.\n<font color="#00ED00">•</font> Kırmızı Alan Tüm Haritayı 3 Dakika 10 Saniyede Doldurur.\n<font color="#00ED00">•</font> Hayatta Kalan Son Savaşçı 10 Para Kazanır.\n<font color="#ffff00">( Market İçin "P" Tuşuna Basabilir, !market Yazabilir Veya Sağ Üst Köşedeki Gülle Simgesine Tıklayabilirsiniz. )</font>\n<font color="#00ED00">•</font> Yardım Menüsü Dili Tüm Oyunu Etkiler.\n<font color="#00ED00">•</font> Oynayabilmek İçin <font color="#00FF00">"Savaş!"</font> Butonuna Tıklayın.\n<font color="#00ED00">•</font> Savaş Butonunun Yanındaki Sayı Oyuna Katılacak Savaşçı Sayısıdır.</font>',
            '\n<font color="#00ED00">•</font> <font color="#ffff00">Modül Geliştirici</font> : <font color="#aa00ff">Poklava#0000</font>\n<font color="#00ED00">•</font> <font color="#ffff00">Fikir</font> Ve <font color="#ffff00">Harita Yapımcısı</font> : <font color="#00FAFF">Kralizmox#0000</font>\n\n<font color="#00ED00">•</font> Hata Bulursanız Lütfen Bildirin.</font>'}
 }
 local chatMsg = {
-    [1] = "<r>Welcome to <j><b>#BATTLEROYALE</b></j> Game!</r>\n<rose>If you want know how to play Press <t><b>H</b></t> <rose>or type <t><b>!help</b></t> <rose>for Help.",
-    [2] = "<j><b>#BATTLEROYALE</b></j> <r>Oyununa hoş geldiniz!\n<rose>Nasıl oynanacağını öğrenmek için <t><b>H</b></t> <rose>Tuşuna basın veya <t><b>!help</b></t> <rose>yazın."
+    [1] = "<r>Welcome to <j><b>#BATTLEROYALE</b></j> Game!</r>\n<rose>If you want know how to play Press <t><b>H</b></t> <rose>or type <t><b>!help</b></t> <rose>for Help.\n <b><r>The module is under development! Your data will not be saved.</r></b>",
+    [2] = "<j><b>#BATTLEROYALE</b></j> <r>Oyununa hoş geldiniz!\n<rose>Nasıl oynanacağını öğrenmek için <t><b>H</b></t> <rose>Tuşuna basın veya <t><b>!help</b></t> <rose>yazın.\n<b><r>Modül geliştirilme aşamasındadır! Verileriniz kaydedilmeyecek.</r></b>"
 }
 local button = {
     ["yes"] = {
@@ -58,6 +58,15 @@ local textAreaIds = {
     aliveMice = 97,
     shopArea = 98,
     helpArea = 99,
+    profileUiArea = {
+        playerName = 998,
+        playerInfos = 999,
+        closeButton = 94,
+        profileButton = 1000,
+        achievementButton = 1001,
+        xpCount = 1002,
+        xpBar = 1003
+    },
     shopUiArea = {
         money = 998,
         page = 999,
@@ -255,6 +264,7 @@ eventNewPlayer = function(name)
     players[name] = {
         community = roomCommunity[tfm.get.room.community] or 1,
         coin = 0,
+        level = 1,
         joined = true,
         playing = false,
         isReady = "no",
@@ -285,7 +295,7 @@ eventNewPlayer = function(name)
             money
         },
         inventory = {true, false, false, false, false, false},
-        imgs = {flag, aliveMice, shopImg, helpImg, helpUiImg, shopUiImg, shopMoneyImgi, leftArrow, rightArrow,
+        imgs = {flag, aliveMice, shopImg, helpImg, helpUiImg, shopUiImg, profileUiImg, shopMoneyImgi, leftArrow, rightArrow,
                 closeButton, background},
         inShop = {},
         bag = {
@@ -305,12 +315,19 @@ eventNewPlayer = function(name)
         ui = {
             shopOpened = false,
             helpMenuOpened = false,
+            profileOpened = false,
             shopPage = 1,
             helpPage = 1
+        },
+        profile = {
+            totalPlayed = 0,
+            totalCollectedGifts = 0,
+            totalWon = 0,
+            totalDead = 0,
+            maxMoney = 0,
         }
     }
     if not firstRun then
-        addShopImg(name, 745, 50)
         addHelpButton(name, 775, 50)
     end
     system.bindMouse(name, true)
@@ -326,6 +343,7 @@ eventNewPlayer = function(name)
             button[players[name].isReady][players[name].community] .. "</a></font></p>", name, 320, 350, 155, 45,
             0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
         if not firstRun then
+            addShopImg(name, 745, 50)
             ui.addTextArea(textAreaIds.readyCount, "<p align='center'><font size='10'><font color='#ff0000'>" ..
                 getPlayerIsReady() .. "</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)
         end
@@ -338,7 +356,7 @@ eventNewPlayer = function(name)
         updatePlaying(name)
         newPlayer = true
     end
-    tfm.exec.chatMessage(chatMsg, name)
+    tfm.exec.chatMessage(chatMsg[players[name].community], name)
 end
 
 for name in next, tfm.get.room.playerList do
@@ -354,7 +372,7 @@ eventPlayerLeft = function(name)
             ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='28'><a href='event:readyButton'>" ..
                 button[players[name].isReady][players[name].community] .. "</a></font></p>", name, 320, 350, 155, 45,
                 0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
-            if not players[name].ui.shopOpened and not players[name].ui.helpMenuOpened then
+            if not players[name].ui.shopOpened and not players[name].ui.helpMenuOpened and not players[name].ui.profileOpened then
                 ui.addTextArea(textAreaIds.readyCount, "<p align='center'><font size='10'><font color='#ff0000'>" ..
                     getPlayerIsReady() .. "</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)
             end
@@ -368,6 +386,8 @@ eventNewGame = function()
             removeShop(name)
         elseif players[name].ui.helpMenuOpened then
             removeHelp(name)
+        elseif players[name].ui.profileOpened then
+            removeProfile(name)
         end
     end
     if gameStarted then
@@ -403,6 +423,7 @@ eventNewGame = function()
                 if not tfm.get.room.playerList[name].isDead then
                     players[name].playing = true
                     players[name].isReady = "no"
+                    players[name].profile.totalPlayed = players[name].profile.totalPlayed + 1
                 end
             end
         else
@@ -434,6 +455,7 @@ eventNewGame = function()
                 players[name] = {
                     community = players[name].community,
                     coin = players[name].coin,
+                    level = players[name].level,
                     joined = true,
                     playing = false,
                     isReady = "no",
@@ -465,7 +487,7 @@ eventNewGame = function()
                     },
                     inventory = {players[name].inventory[1], players[name].inventory[2], players[name].inventory[3],
                                  players[name].inventory[4], players[name].inventory[5], players[name].inventory[6]},
-                    imgs = {flag, aliveMice, shopImg, helpImg, helpUiImg, shopUiImg, shopMoneyImgi, leftArrow,
+                    imgs = {flag, aliveMice, shopImg, helpImg, helpUiImg, shopUiImg, profileUiImg, shopMoneyImgi, leftArrow,
                             rightArrow, closeButton, background},
                     inShop = {},
                     bag = {
@@ -485,8 +507,16 @@ eventNewGame = function()
                     ui = {
                         shopOpened = false,
                         helpMenuOpened = false,
+                        profileOpened = false,
                         shopPage = players[name].ui.shopPage,
                         helpPage = players[name].ui.helpPage
+                    },
+                    profile = {
+                        totalPlayed = players[name].profile.totalPlayed,
+                        totalCollectedGifts = players[name].profile.totalCollectedGifts,
+                        totalWon = players[name].profile.totalWon,
+                        totalDead = players[name].profile.totalDead,
+                        maxMoney = players[name].profile.maxMoney,
                     }
                 }
                 addShopImg(name, 745, 50)
@@ -507,6 +537,7 @@ end
 eventPlayerDied = function(name)
     if gameStarted then
         players[name].playing = false
+        players[name].profile.totalDead = players[name].profile.totalDead + 1
         if getPlaying() == 1 then
             tfm.exec.newGame(maps[1])
             for name in next, players do
@@ -515,6 +546,8 @@ eventPlayerDied = function(name)
                     playerWon = name
                     players[name].playing = false
                     players[name].coin = players[name].coin + 10
+                    players[name].profile.totalWon = players[name].profile.totalWon + 1
+                    players[name].profile.maxMoney = players[name].profile.maxMoney + 10
                 end
             end
             gameStarted = false
@@ -543,9 +576,11 @@ eventChatCommand = function(name, cmd)
         elseif arg[1] == "money" then
             if players[arg[2]] and arg[3] then
                 decreaseCoin(arg[2], -(arg[3]))
+                players[arg[2]].profile.maxMoney = players[arg[2]].profile.maxMoney + arg[3]
             elseif arg[2] == "all" and arg[3] then
                 for name in next, players do
                     decreaseCoin(name, -(arg[3]))
+                    players[name].profile.maxMoney = players[name].profile.maxMoney + arg[3]
                 end
             end
             if players[name].ui.shopOpened then
@@ -558,6 +593,8 @@ eventChatCommand = function(name, cmd)
                     removeShop(arg[2])
                 elseif players[name].ui.helpMenuOpened then
                     removeHelp(arg[2])
+                elseif players[name].ui.profileOpened then
+                    removeProfile(arg[2])
                 end
                 eventTextAreaCallback(nil, arg[2], "readyButton")
             elseif arg[2] == "all" then
@@ -566,6 +603,8 @@ eventChatCommand = function(name, cmd)
                         removeShop(name)
                     elseif players[name].ui.helpMenuOpened then
                         removeHelp(name)
+                    elseif players[name].ui.profileOpened then
+                        removeProfile(name)
                     end
                     if players[name].isReady == "yes" then
                         eventTextAreaCallback(nil, name, "readyButton")
@@ -579,6 +618,30 @@ eventChatCommand = function(name, cmd)
         eventTextAreaCallback(nil, name, "helpButton")
     elseif arg[1] == "shop" or arg[1] == "market" then
         eventTextAreaCallback(nil, name, "shopButton")
+    elseif arg[1] == "profile" or arg[1] == "profil" or arg[1] == "p" then
+        if not players[name].ui.profileOpened then
+            if players[name].ui.helpMenuOpened then
+                removeHelp(name)
+            elseif players[name].ui.shopOpened then
+                removeShop(name)
+            end
+            ui.removeTextArea(textAreaIds.readyButton, name)
+            ui.removeTextArea(textAreaIds.readyCount, name)
+            if players[arg[2]] then
+                displayProfile(name, arg[2])
+            elseif arg[2] == nil then
+                displayProfile(name, name)
+            else
+                return
+            end
+        else
+            removeProfile(name)
+            ui.addTextArea(textAreaIds.readyButton, "<p align='center'><font size='28'><a href='event:readyButton'>" ..
+            button[players[name].isReady][players[name].community] .. "</a></font></p>", name, 320, 350, 155, 45,
+            0xBC784B, players[name].isReady == "no" and 0x00ff00 or 0xff0000, 1, true)
+            ui.addTextArea(textAreaIds.readyCount, "<p align='center'><font size='10'><font color='#ff0000'>" ..
+            getPlayerIsReady() .. "</font></font></p>", name, 450, 365, 16, 16, 0xbc784B, 0xff0000, 1, true)
+        end
     end
 end
 --[[eventMouse = function(name, x, y)
@@ -878,8 +941,12 @@ eventLoop = function(a, b)
                 [2] = "<font color='#" .. color .. "'>" .. playerWon .. " Turu Kazandı !</font>"
             }
             for name in next, players do
-                ui.addTextArea(1, "<p align='center'><font size='25'>" .. winner[players[name].community] ..
-                    "</font></p>", name, 100, 30, 600, 45, 0xffffff, "0x" .. color, 1, true)
+                if not players[name].ui.shopOpened and not players[name].ui.helpMenuOpened then
+                    ui.addTextArea(1, "<p align='center'><font size='25'>" .. winner[players[name].community] ..
+                        "</font></p>", name, 100, 30, 600, 45, 0xffffff, "0x" .. color, 1, true)
+                else
+                    ui.removeTextArea(1)
+                end
             end
             if players[playerWon].isReady == "no" then
                 tfm.exec.setNameColor(playerWon, "0x" .. color)
@@ -894,6 +961,7 @@ end
 eventPlayerBonusGrabbed = function(name, id)
     tfm.exec.removeImage(bonus[id].img)
     tfm.exec.removeBonus(id, nil)
+    players[name].profile.totalCollectedGifts = players[name].profile.totalCollectedGifts + 1
     local event = math.random(1, 10)
     if event == 1 then
         if players[name].speed < 90 then
@@ -957,6 +1025,7 @@ eventPlayerBonusGrabbed = function(name, id)
     elseif event == 10 then
         local i = math.random(1, 2)
         players[name].event.money = i
+        players[name].profile.maxMoney = players[name].profile.maxMoney + i
         players[name].coin = players[name].coin + i
         tfm.exec.setPlayerScore(name, players[name].coin, false)
         --[[elseif event == 100 then
@@ -1141,6 +1210,8 @@ eventTextAreaCallback = function(id, name, event)
         else
             if players[name].ui.helpMenuOpened then
                 removeHelp(name)
+            elseif players[name].ui.profileOpened then
+                eventChatCommand(name, "p")
             end
             displayShop(name)
             ui.removeTextArea(textAreaIds.readyButton, name)
@@ -1168,6 +1239,8 @@ eventTextAreaCallback = function(id, name, event)
         else
             if players[name].ui.shopOpened then
                 removeShop(name)
+            elseif players[name].ui.profileOpened then
+                eventChatCommand(name, "p")
             end
             displayHelp(name)
             ui.removeTextArea(textAreaIds.readyButton, name)
@@ -1197,6 +1270,8 @@ eventTextAreaCallback = function(id, name, event)
         elseif players[name].community == 1 then
             players[name].community = #communities
         end
+    elseif event == "profileButton" and players[name].ui.profileOpened then
+        eventChatCommand(name, "p")
     elseif event == "readyButton" then
         if players[name].isReady == "no" then
             players[name].isReady = "yes"
@@ -1216,7 +1291,7 @@ eventTextAreaCallback = function(id, name, event)
             end
         end
         if getPlayerIsReady() == getPlaying("alive") then
-            tfm.exec.setGameTime(1, true)
+            eventNewGame()
         end
     end
     if cannon[event] then
@@ -1355,33 +1430,33 @@ end
 
 displayHelp = function(name)
     players[name].ui.helpMenuOpened = true
-    players[name].imgs.helpUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 220, name, nil, nil, 0, nil, 0.5, 0.5)
-    players[name].imgs.background = tfm.exec.addImage("177fc327747.jpg", ":1", 400, 220, name, 0.105, 0.35, 0, 0.70, 0.5, 0.5)
-    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":2", 190, 160, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":2", 190, 260, name, 1, 1, 0, 1, nil, nil)
-    players[name].imgs.closeButton = tfm.exec.addImage("171e178660d.png", ":2", 655, 76, name, 1, 1, 0, 1, 0.5, 0.5)
-    ui.addTextArea(textAreaIds.helpUiArea.rightArrow, "<a href='event:hRightArrow'>\n\n\n</a>", name, 190, 160, 50, 50,
+    players[name].imgs.helpUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 400, 220, name, 1.1, 1.1, 0, nil, 0.5, 0.5)
+    players[name].imgs.background = tfm.exec.addImage("177fc327747.jpg", ":1", 400, 220, name, 0.116, 0.387, 0, 0.70, 0.5, 0.5)
+    players[name].imgs.rightArrow = tfm.exec.addImage("1729bab289f.png", ":2", 178, 160, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.leftArrow = tfm.exec.addImage("1729bab4011.png", ":2", 178, 260, name, 1, 1, 0, 1, nil, nil)
+    players[name].imgs.closeButton = tfm.exec.addImage("171e178660d.png", ":2", 680, 61, name, 1, 1, 0, 1, 0.5, 0.5)
+    ui.addTextArea(textAreaIds.helpUiArea.rightArrow, "<a href='event:hRightArrow'>\n\n\n</a>", name, 178, 160, 50, 50,
         nil, nil, 0, true)
-    ui.addTextArea(textAreaIds.helpUiArea.leftArrow, "<a href='event:hLeftArrow'>\n\n\n</a>", name, 190, 260, 50, 50,
+    ui.addTextArea(textAreaIds.helpUiArea.leftArrow, "<a href='event:hLeftArrow'>\n\n\n</a>", name, 178, 260, 50, 50,
         nil, nil, 0, true)
 
-    players[name].imgs.flag = tfm.exec.addImage("" .. flags[players[name].community], "&0", 200, 109, name, 2, 2, 0,
+    players[name].imgs.flag = tfm.exec.addImage("" .. flags[players[name].community], "&0", 185, 109, name, 2, 2, 0,
                                   nil, nil, nil)
     ui.addTextArea(textAreaIds.helpUiArea.flag,
         "<p aling='center'><font size='18'><font color='#000000'><a href='event:flagLeft'>←</a>        <a href='event:flagRight'>→</a></font></font></p>",
-        name, 172, 105, 90, 30, 0xBC784B, 0x863E12, 1, true)
+        name, 157, 105, 90, 30, 0xBC784B, 0x863E12, 1, true)
 
     ui.addTextArea(textAreaIds.helpUiArea.page,
         "<p align='center'><font size='19'><font color='#" .. color .. "'>" .. players[name].ui.helpPage ..
-            "</font></font></p>", name, 190, 223, 50, 25, 0xBC784B, 0x863E12, 1, true)
+            "</font></font></p>", name, 178, 223, 50, 25, 0xBC784B, 0x863E12, 1, true)
 
     ui.addTextArea(textAreaIds.helpUiArea.title, "<p align ='center'><font size='22'><font color='#FF0000'>" ..
-        titles[players[name].community][players[name].ui.helpPage] .. "</font></font></p>", name, 290, 90, 350, 260,
+        titles[players[name].community][players[name].ui.helpPage] .. "</font></font></p>", name, 288, 73, 380, 295,
         0xBC784B, 0x863E12, 1, true)
     ui.addTextArea(textAreaIds.helpUiArea.mid, "<p align='left'><font color='#000000'>" ..
-        mids[players[name].community][players[name].ui.helpPage] .. "</font></p>", name, 290, 120, 350, 250, nil, nil,
+        mids[players[name].community][players[name].ui.helpPage] .. "</font></p>", name, 290, 112, 376, 255, nil, nil,
         0, true)
-    ui.addTextArea(textAreaIds.helpUiArea.closeButton, "<a href='event:helpButton'>\n\n</a>", name, 645, 66, 19, 19,
+    ui.addTextArea(textAreaIds.helpUiArea.closeButton, "<a href='event:helpButton'>\n\n</a>", name, 670, 51, 19, 19,
         nil, nil, 0, true)
 end
 
@@ -1392,6 +1467,31 @@ removeHelp = function(name)
     end
     for i in next, textAreaIds.helpUiArea do
         ui.removeTextArea(textAreaIds.helpUiArea[i], name)
+    end
+end
+
+displayProfile = function(name, whos)
+    local infos = {
+        [1] = "<font color='#00ED00'>•</font> <font color='#FFFF00'>Total Rounds Played : </font>".. players[whos].profile.totalPlayed.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Total Collected Gift Boxes : </font>".. players[whos].profile.totalCollectedGifts.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Total Wins : </font>"..players[whos].profile.totalWon.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Total Deaths : </font>"..players[whos].profile.totalDead.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Total Earned Coins : </font>"..players[whos].profile.maxMoney.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Current Coins Count : </font>"..players[whos].coin.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Total Cannonballs Count : </font>"..getTotalCannonCount(whos).."\n\n",
+        [2] = "<font color='#00ED00'>•</font> <font color='#FFFF00'>Toplam Oynanan Turlar : </font>".. players[whos].profile.totalPlayed.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Toplam Toplanan Hediye Kutuları : </font>".. players[whos].profile.totalCollectedGifts.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Toplam Kazanma : </font>"..players[whos].profile.totalWon.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Toplam Ölüm : </font>"..players[whos].profile.totalDead.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Toplam Kazanılan Para : </font>"..players[whos].profile.maxMoney.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Mevcut Para Sayısı : </font>"..players[whos].coin.."\n\n<font color='#00ED00'>•</font> <font color='#FFFF00'>Toplam Gülle Sayısı : </font>"..getTotalCannonCount(whos).."\n\n"
+    }
+    players[name].ui.profileOpened = true
+    players[name].imgs.profileUiImg = tfm.exec.addImage("17201a440b4.png", ":0", 200, 100, name, 0.8, nil, 0, nil, nil, nil)
+    players[name].imgs.background = tfm.exec.addImage("177fc327747.jpg", ":1", 408, 249, name, 0.0843, 0.35, 0, 0.70, 0.5, 0.5)
+    players[name].imgs.closeButton = tfm.exec.addImage("171e178660d.png", ":2", 612, 107, name, 1, 1, 0, 1, 0.5, 0.5)
+
+    ui.addTextArea(textAreaIds.profileUiArea.playerName, "<p align ='center'><font size='19'><fc>"..whos.."</fc></font></p>", name, 210, 117, 400, 25, nil, nil, 0, true)
+    ui.addTextArea(textAreaIds.profileUiArea.playerInfos, "\n\n<font color='#000000'>"..infos[players[name].community].."</font>", name, 210, 160, 396, 225, 0xBC784B, 0x863E12, 1, true)
+    ui.addTextArea(textAreaIds.profileUiArea.closeButton, "<a href='event:profileButton'> \n\n </a>", name, 602, 98, 19, 19, nil, nil, 0, true)
+end
+
+removeProfile = function(name)
+    players[name].ui.profileOpened = false
+    for _, i in next, {"profileUiImg", "background", "closeButton"} do
+        tfm.exec.removeImage(players[name].imgs[i])
+    end
+    for i in next, textAreaIds.profileUiArea do
+        ui.removeTextArea(textAreaIds.profileUiArea[i], name)
     end
 end
 
@@ -1410,4 +1510,14 @@ getPlayerIsReady = function()
         end
     end
     return i
+end
+
+getTotalCannonCount = function(name)
+    local a = 0
+    for i in next, players[name].bag do
+        if players[name].bag[i] then
+            a = a + 1
+        end
+    end
+    return a
 end
